@@ -1,3 +1,51 @@
-[gd_scene format=3 uid="uid://dptn4c8o16t6p"]
+[gd_scene load_steps=3 format=3 uid="uid://dptn4c8o16t6p"]
+
+[ext_resource type="Texture2D" uid="uid://dxecq2i3eu8w6" path="res://map.png" id="1_wqbgy"]
+[ext_resource type="Theme" uid="uid://8osm8sqladbj" path="res://easyBtnTheme.tres" id="2_abt0y"]
 
 [node name="HUD" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [542.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.748052, 0.750869)
+texture = ExtResource("1_wqbgy")
+
+[node name="easyBtn" type="Button" parent="Sprite2D"]
+offset_left = -112.806
+offset_top = -208.964
+offset_right = 7.19382
+offset_bottom = -148.964
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_abt0y")
+theme_override_font_sizes/font_size = 25
+text = "Easy"
+
+[node name="mediumBtn" type="Button" parent="Sprite2D"]
+offset_left = -230.668
+offset_top = -60.0937
+offset_right = -110.668
+offset_bottom = -0.0937042
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 25
+text = "Medium"
+
+[node name="hardBtn" type="Button" parent="Sprite2D"]
+offset_left = -66.586
+offset_top = 153.037
+offset_right = 53.414
+offset_bottom = 213.037
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 25
+text = "Hard"
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -769.0
+offset_top = -390.0
+offset_right = 769.0
+offset_bottom = -252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.654902, 0.654902, 0.654902, 1)
+theme_override_font_sizes/font_size = 40
+text = "Choose the level"
+horizontal_alignment = 1
