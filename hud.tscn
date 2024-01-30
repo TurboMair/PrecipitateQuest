@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dptn4c8o16t6p"]
+[gd_scene load_steps=8 format=3 uid="uid://dptn4c8o16t6p"]
 
 [ext_resource type="Texture2D" uid="uid://5qwcc1pa77dc" path="res://Tiny Wonder UI Free/Heart.png" id="1_gxf2w"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xi2o5"]
 [ext_resource type="Texture2D" uid="uid://dsmv2gw5d1kkr" path="res://Tiny Wonder UI Free/buttons free.png" id="2_jy03p"]
 [ext_resource type="Texture2D" uid="uid://34hul7ox3dnu" path="res://Tiny Wonder UI Free/Pause Button (1).png" id="4_sxucm"]
 [ext_resource type="Texture2D" uid="uid://deepsrclgelyr" path="res://Tiny Wonder UI Free/Help Button(1).png" id="5_2pakf"]
+[ext_resource type="Texture2D" uid="uid://cnv6pwanw4b06" path="res://Tiny Wonder UI Free/Play Button (1).png" id="6_rl32k"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ft62q"]
 load_path = "res://.godot/imported/bars free.png-c2a9a08b89906049c942fdc78229c890.ctex"
@@ -30,33 +31,37 @@ position = Vector2(291.88, 165.77)
 scale = Vector2(5, 5.11)
 texture = ExtResource("1_gxf2w")
 
-[node name="ButtonsFree" type="Sprite2D" parent="."]
-position = Vector2(976.5, 324.5)
-scale = Vector2(7.0625, 19.8438)
+[node name="FlaskHolder" type="Sprite2D" parent="."]
+position = Vector2(979.5, 323)
+scale = Vector2(7.1875, 20.125)
 texture = ExtResource("2_jy03p")
 hframes = 2
 vframes = 3
 
-[node name="BarsFree" type="Sprite2D" parent="."]
+[node name="ProgressBar" type="Sprite2D" parent="."]
 position = Vector2(423.375, 57)
 scale = Vector2(16.026, 5.32031)
 texture = SubResource("CompressedTexture2D_ft62q")
 vframes = 4
 
-[node name="Pause Button" type="Button" parent="."]
-offset_left = 691.0
-offset_top = 111.0
-offset_right = 806.0
-offset_bottom = 235.0
-icon = ExtResource("4_sxucm")
-icon_alignment = 1
-expand_icon = true
+[node name="PauseButton" type="TextureButton" parent="."]
+offset_left = 688.0
+offset_top = 107.0
+offset_right = 801.0
+offset_bottom = 232.0
+toggle_mode = true
+texture_normal = ExtResource("4_sxucm")
+texture_pressed = ExtResource("6_rl32k")
+stretch_mode = 0
 
-[node name="Help Button" type="Button" parent="."]
-offset_left = 559.0
-offset_top = 114.0
-offset_right = 667.0
-offset_bottom = 236.0
-icon = ExtResource("5_2pakf")
-icon_alignment = 1
-expand_icon = true
+[node name="HelpButton" type="TextureButton" parent="."]
+offset_left = 555.0
+offset_top = 108.0
+offset_right = 669.0
+offset_bottom = 232.0
+toggle_mode = true
+texture_normal = ExtResource("5_2pakf")
+stretch_mode = 0
+
+[connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
+[connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]
