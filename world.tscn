@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwf2ws1dflsh2"]
+[gd_scene load_steps=3 format=3 uid="uid://dwf2ws1dflsh2"]
 
 [ext_resource type="Texture2D" uid="uid://b2yqnr4auaw0k" path="res://Godot Level Assets/Starter Tiles Platformer/SwampTiles/Water_1_16x16.png" id="1_n3wpm"]
+[ext_resource type="Texture2D" uid="uid://dpyjtxebwn8kc" path="res://Godot Level Assets/Starter Tiles Platformer/IceTiles/Ice_21_16x16.png" id="2_8v0xe"]
 
 [node name="World" type="Node"]
 
@@ -8,7 +9,12 @@
 texture_repeat = 3
 polygon = PackedVector2Array(0, 0, 64, 0, 64, 448, 264, 448, 448, 512, 448, 640, 576, 640, 576, 512, 768, 448, 1408, 448, 1600, 512, 1600, 640, 1728, 640, 1856, 640, 1856, 512, 2048, 448, 2752, 448, 2944, 512, 2944, 640, 3336, 640, 3336, 512, 3528, 448, 4288, 448, 4288, 640, 4416, 640, 4416, 448, 4544, 448, 4544, 632, 4672, 632, 4672, 448, 5376, 448, 5376, -8, 5576, -8, 5576, 648, 0, 648)
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="Water1" type="Polygon2D" parent="."]
 texture_repeat = 2
 texture = ExtResource("1_n3wpm")
 polygon = PackedVector2Array(448, 600, 464, 608, 480, 600, 496, 608, 512, 600, 528, 608, 544, 600, 560, 608, 576, 600, 576, 640, 448, 640)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("2_8v0xe")
+polygon = PackedVector2Array(1600, 616, 1616, 600, 1632, 616, 1656, 584, 1672, 608, 1696, 592, 1712, 608, 1736, 592, 1760, 616, 1784, 608, 1800, 624, 1816, 600, 1824, 608, 1840, 592, 1856, 616, 1856, 640, 1600, 640)
