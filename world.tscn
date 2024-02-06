@@ -34,7 +34,7 @@ texture = ExtResource("2_h3e6a")
 [sub_resource type="TileSet" id="TileSet_c5l2s"]
 sources/0 = SubResource("TileSetAtlasSource_5uj0d")
 
-[node name="World" type="Node"]
+[node name="World1" type="Node"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
