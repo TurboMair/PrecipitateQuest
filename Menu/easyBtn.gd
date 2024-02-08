@@ -8,6 +8,6 @@ func _ready():
 
 # Change the scene to an easy level
 func _on_pressed():
-	get_tree().change_scene_to_file("res://world.tscn") # change the scene name
+	get_tree().change_scene_to_file("res://demo.tscn") # change the scene name
 	
 	pass

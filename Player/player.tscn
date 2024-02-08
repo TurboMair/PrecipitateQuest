@@ -46,6 +46,7 @@ func switch_animation(motion):
 
 func _on_button_pressed():
 	switch_animation(\"water\")
+	get_tree().call_group(\"phial_throw_triggers\",\"throw_phial\")
 
 
 func _walk():
@@ -557,7 +558,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7ileu")
 }],
-"loop": true,
+"loop": false,
 "name": &"water",
 "speed": 5.0
 }]
@@ -1433,7 +1434,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xifv2")
 }],
-"loop": true,
+"loop": false,
 "name": &"water",
 "speed": 5.0
 }]
@@ -3651,7 +3652,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jean0")
 }],
-"loop": true,
+"loop": false,
 "name": &"water",
 "speed": 5.0
 }]
@@ -3734,7 +3735,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_un4tu")
 }],
-"loop": true,
+"loop": false,
 "name": &"water",
 "speed": 5.0
 }]
@@ -3817,48 +3818,50 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ey030")
 }],
-"loop": true,
+"loop": false,
 "name": &"water",
 "speed": 5.0
 }]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" groups=["phial_throw_triggers"]]
 position = Vector2(105, 101)
 scale = Vector2(5, 5)
 script = SubResource("GDScript_r2cud")
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_326uj")
-animation = &"walk"
+animation = &"water"
 
 [node name="Eyes" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_epyd8")
-animation = &"walk"
+animation = &"water"
 
 [node name="Clothes" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8m5xr")
-animation = &"walk"
+animation = &"water"
 
 [node name="Pants" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i0pem")
-animation = &"walk"
+animation = &"water"
 
 [node name="Hair" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jkgae")
-animation = &"walk"
+animation = &"water"
 
 [node name="Button" type="Button" parent="."]
-offset_left = 48.0
-offset_top = 0.6
-offset_right = 107.0
-offset_bottom = 31.6
+offset_left = 6.8
+offset_top = -17.8
+offset_right = 63.8
+offset_bottom = 13.2
+scale = Vector2(0.326503, 0.326248)
 text = "Water"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 47.4
-offset_top = 36.8
-offset_right = 106.4
-offset_bottom = 67.8
+offset_left = -17.2
+offset_top = -17.6
+offset_right = 41.8
+offset_bottom = 13.4
+scale = Vector2(0.350779, 0.350779)
 text = "Walk
 "
 
