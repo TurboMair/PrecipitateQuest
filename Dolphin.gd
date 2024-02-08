@@ -2,7 +2,7 @@ extends Node2D
 
 var dolphinNode : Node2D
 var textBox : TextEdit
-var outline : Sprite
+var outline : Sprite2D
 var closeButton : Button
 var dialogueOptions : Dictionary
 
