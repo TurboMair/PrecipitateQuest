@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" path="res://player_sprites/walk/char7_walk.png" id="7_kiefw"]
 [ext_resource type="Texture2D" path="res://player_sprites/walk/char8_walk.png" id="8_ty064"]
 [ext_resource type="Texture2D" path="res://player_sprites/walk/eyes/eyes_walk.png" id="9_hmcv0"]
-[ext_resource type="Texture2D" path="res://player_sprites/water/char4_water.png" id="10_sdduf"]
+[ext_resource type="Texture2D" path="res://player_sprites/water/char4_water (1).png" id="10_3fcuh"]
 [ext_resource type="Texture2D" path="res://player_sprites/walk/clothes/basic_walk.png" id="11_fhitn"]
 [ext_resource type="Texture2D" path="res://player_sprites/walk/clothes/suit_walk.png" id="11_owvwd"]
 [ext_resource type="Texture2D" path="res://player_sprites/water/eyes/eyes_water.png" id="12_168xa"]
@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" path="res://player_sprites/walk/clothes/witch_walk.png" id="17_ui17k"]
 [ext_resource type="Texture2D" path="res://player_sprites/walk/clothes/pants_walk.png" id="18_p8uqc"]
 [ext_resource type="Texture2D" path="res://player_sprites/walk/hair/emo_walk.png" id="19_j0b0p"]
-[ext_resource type="Texture2D" path="res://player_sprites/water/clothes/basic_water.png" id="20_5nkd0"]
+[ext_resource type="Texture2D" path="res://player_sprites/water/basic_water.png" id="20_6kvik"]
 [ext_resource type="Texture2D" path="res://player_sprites/water/clothes/pants_water.png" id="22_o24qn"]
 [ext_resource type="Texture2D" path="res://player_sprites/water/hair/emo_water.png" id="24_nfhee"]
 
@@ -281,13 +281,13 @@ region = Rect2(192, 64, 32, 32)
 atlas = ExtResource("4_htwj2")
 region = Rect2(224, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u16bs"]
-atlas = ExtResource("10_sdduf")
-region = Rect2(0, 59, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a05q"]
+atlas = ExtResource("10_3fcuh")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_54tml"]
-atlas = ExtResource("10_sdduf")
-region = Rect2(32, 59, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ileu"]
+atlas = ExtResource("10_3fcuh")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_326uj"]
 animations = [{
@@ -525,10 +525,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u16bs")
+"texture": SubResource("AtlasTexture_7a05q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_54tml")
+"texture": SubResource("AtlasTexture_7ileu")
 }],
 "loop": true,
 "name": &"water",
@@ -2563,13 +2563,13 @@ region = Rect2(1216, 64, 32, 32)
 atlas = ExtResource("11_fhitn")
 region = Rect2(1248, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qnfq7"]
-atlas = ExtResource("20_5nkd0")
-region = Rect2(256, 59, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_61wjs"]
+atlas = ExtResource("20_6kvik")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1giqb"]
-atlas = ExtResource("20_5nkd0")
-region = Rect2(288, 59, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jean0"]
+atlas = ExtResource("20_6kvik")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8m5xr"]
 animations = [{
@@ -3619,10 +3619,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qnfq7")
+"texture": SubResource("AtlasTexture_61wjs")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1giqb")
+"texture": SubResource("AtlasTexture_jean0")
 }],
 "loop": true,
 "name": &"water",
@@ -3803,7 +3803,6 @@ script = ExtResource("1_8gjb5")
 [node name="Character" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_326uj")
 animation = &"walk"
-frame_progress = 0.502292
 
 [node name="Eyes" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_epyd8")
