@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://dptn4c8o16t6p"]
+
+[ext_resource type="Script" path="res://HUD/hud.gd" id="1_nmsox"]
+[ext_resource type="Texture2D" uid="uid://cppybquisern6" path="res://Tiny Wonder UI Free/Heart.png" id="2_5itbj"]
+[ext_resource type="Texture2D" uid="uid://b2kqitf5e2oio" path="res://Tiny Wonder UI Free/buttons free.png" id="3_u2ywc"]
+[ext_resource type="Texture2D" uid="uid://bfqyfchc4i2ls" path="res://Tiny Wonder UI Free/Pause Button (1).png" id="4_jemih"]
+[ext_resource type="Texture2D" uid="uid://ca5ba720r3a0" path="res://Tiny Wonder UI Free/Play Button (1).png" id="5_8n1a4"]
+[ext_resource type="Texture2D" uid="uid://bfrcvtbcgod20" path="res://Tiny Wonder UI Free/Help Button(1).png" id="6_0jn7i"]
+[ext_resource type="Texture2D" uid="uid://cfb862h3jxacu" path="res://Tiny Wonder UI Free/Sound Button.png" id="7_ltdav"]
+[ext_resource type="Texture2D" uid="uid://bqr72vkndelsr" path="res://Tiny Wonder UI Free/Mute Button.png" id="8_6do1s"]
+[ext_resource type="Texture2D" uid="uid://bji5g6h7ysoyl" path="res://Tiny Wonder UI Free/Progress Bar.png" id="9_fqjca"]
+[ext_resource type="Texture2D" uid="uid://dxogo1ernon1" path="res://Tiny Wonder UI Free/Exit Button.png" id="10_a7x04"]
+
+[node name="HUD" type="Node2D"]
+script = ExtResource("1_nmsox")
+metadata/_edit_horizontal_guides_ = [-1.0]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Heart" type="Sprite2D" parent="."]
+position = Vector2(91.88, 165.77)
+scale = Vector2(5, 5.11)
+texture = ExtResource("2_5itbj")
+
+[node name="Heart2" type="Sprite2D" parent="."]
+position = Vector2(191.88, 165.77)
+scale = Vector2(5, 5.11)
+texture = ExtResource("2_5itbj")
+
+[node name="Heart3" type="Sprite2D" parent="."]
+position = Vector2(291.88, 165.77)
+scale = Vector2(5, 5.11)
+texture = ExtResource("2_5itbj")
+
+[node name="FlaskHolder" type="Sprite2D" parent="."]
+position = Vector2(979.5, 323)
+scale = Vector2(7.1875, 20.125)
+texture = ExtResource("3_u2ywc")
+hframes = 2
+vframes = 3
+
+[node name="PauseButton" type="TextureButton" parent="."]
+offset_left = 688.0
+offset_top = 107.0
+offset_right = 801.0
+offset_bottom = 232.0
+toggle_mode = true
+texture_normal = ExtResource("4_jemih")
+texture_pressed = ExtResource("5_8n1a4")
+stretch_mode = 0
+
+[node name="HelpButton" type="TextureButton" parent="."]
+offset_left = 555.0
+offset_top = 108.0
+offset_right = 669.0
+offset_bottom = 232.0
+toggle_mode = true
+texture_normal = ExtResource("6_0jn7i")
+stretch_mode = 0
+
+[node name="SoundButton" type="TextureButton" parent="."]
+offset_left = 416.0
+offset_top = 108.0
+offset_right = 534.0
+offset_bottom = 231.0
+toggle_mode = true
+texture_normal = ExtResource("7_ltdav")
+texture_pressed = ExtResource("8_6do1s")
+stretch_mode = 0
+
+[node name="ProgressBar" type="Sprite2D" parent="."]
+position = Vector2(421, 59)
+scale = Vector2(16, 8)
+texture = ExtResource("9_fqjca")
+hframes = 3
+vframes = 15
+
+[node name="ExitButton" type="TextureButton" parent="."]
+offset_left = 411.0
+offset_top = 259.0
+offset_right = 672.0
+offset_bottom = 375.0
+texture_normal = ExtResource("10_a7x04")
+stretch_mode = 0
+
+[connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
+[connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]
