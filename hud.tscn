@@ -82,3 +82,17 @@ texture_progress = ExtResource("9_4cfsk")
 [connection signal="pressed" from="Sprite2D/easyBtn" to="Sprite2D/easyBtn" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D/mediumBtn" to="Sprite2D/mediumBtn" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D/hardBtn" to="Sprite2D/hardBtn" method="_on_pressed"]
+
+[gd_scene load_steps=2 format=3 uid="uid://dptn4c8o16t6p"]
+
+[ext_resource type="Script" path="res://Dolphin.gd" id="1_tftap"]
+
+[node name="HUD" type="Node2D"]
+
+[node name="Dolphin" type="Node2D" parent="."]
+script = ExtResource("1_tftap")
+
+[node name="TextEdit" type="TextEdit" parent="Dolphin"]
+offset_right = 8.0
+offset_bottom = 8.0
+
