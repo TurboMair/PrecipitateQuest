@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://dptn4c8o16t6p"]
+
+[ext_resource type="Texture2D" uid="uid://cn3wpds4raxhr" path="res://Menu/map.png" id="1_07trg"]
+[ext_resource type="Theme" uid="uid://8osm8sqladbj" path="res://Menu/easyBtnTheme.tres" id="2_hk2t6"]
+[ext_resource type="Script" path="res://Menu/easyBtn.gd" id="3_of21e"]
+[ext_resource type="Theme" uid="uid://qr8g7shfjvj8" path="res://Menu/mediumBtnTheme.tres" id="4_s3viw"]
+[ext_resource type="Script" path="res://Menu/mediumBtn.gd" id="5_8m78n"]
+[ext_resource type="Theme" uid="uid://b3afne6bnthe5" path="res://Menu/hardBtnTheme.tres" id="6_122h3"]
+[ext_resource type="Script" path="res://Menu/hardBtn.gd" id="7_pkp0i"]
+[ext_resource type="Texture2D" uid="uid://bstfm74xp12g3" path="res://Menu/progress-bar.png" id="8_wh14f"]
+[ext_resource type="Texture2D" uid="uid://bcwlxd1te574u" path="res://Menu/progress-bar-inner.png" id="9_50u6g"]
+
+[node name="HUD" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [542.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.748052, 0.750869)
+texture = ExtResource("1_07trg")
+
+[node name="easyBtn" type="Button" parent="Sprite2D"]
+offset_left = -112.806
+offset_top = -208.964
+offset_right = 7.19382
+offset_bottom = -148.964
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_hk2t6")
+theme_override_font_sizes/font_size = 28
+text = "Easy"
+script = ExtResource("3_of21e")
+
+[node name="mediumBtn" type="Button" parent="Sprite2D"]
+offset_left = -234.0
+offset_top = -60.0
+offset_right = -106.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_s3viw")
+theme_override_font_sizes/font_size = 28
+text = "Medium"
+script = ExtResource("5_8m78n")
+
+[node name="hardBtn" type="Button" parent="Sprite2D"]
+offset_left = -71.0
+offset_top = 153.0
+offset_right = 53.0
+offset_bottom = 213.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("6_122h3")
+theme_override_font_sizes/font_size = 28
+text = "Hard"
+script = ExtResource("7_pkp0i")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -770.0
+offset_top = -402.201
+offset_right = 768.0
+offset_bottom = -264.201
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.654902, 0.654902, 0.654902, 1)
+theme_override_font_sizes/font_size = 40
+text = "Choose the level"
+horizontal_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Sprite2D"]
+anchors_preset = -1
+anchor_left = 0.942
+anchor_top = 0.5
+anchor_right = 0.976
+anchor_bottom = 0.5
+offset_left = -770.68
+offset_top = -740.5
+offset_right = -167.04
+offset_bottom = 7523.5
+scale = Vector2(0.08, 0.08)
+max_value = 90.0
+step = 30.0
+value = 30.0
+fill_mode = 3
+texture_under = ExtResource("8_wh14f")
+texture_progress = ExtResource("9_50u6g")
+
+[connection signal="pressed" from="Sprite2D/easyBtn" to="Sprite2D/easyBtn" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D/mediumBtn" to="Sprite2D/mediumBtn" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D/hardBtn" to="Sprite2D/hardBtn" method="_on_pressed"]
