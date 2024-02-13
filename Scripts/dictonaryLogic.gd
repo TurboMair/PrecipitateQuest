@@ -22,6 +22,7 @@ var puddle_dict = {
 	"Hg":["S", "CO3"]#19 #20
 	
 	
+	
 	}
 #Call this anytime the player clicks on the phial
 func throw_phial(phial_compound, puddle_key):
