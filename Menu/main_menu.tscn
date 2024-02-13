@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://3wst5lguyl3g"]
+[gd_scene load_steps=12 format=3 uid="uid://3wst5lguyl3g"]
 
 [ext_resource type="Texture2D" uid="uid://cd7ty7a2xchk1" path="res://Menu/pixel_map.png" id="1_p3itc"]
 [ext_resource type="Theme" uid="uid://dtfm3qxc0t47w" path="res://Menu/easyBtnTheme.tres" id="2_hk2t6"]
@@ -7,22 +7,27 @@
 [ext_resource type="Script" path="res://Menu/mediumBtn.gd" id="5_8m78n"]
 [ext_resource type="Theme" uid="uid://bnwldjhaaj2bn" path="res://Menu/hardBtnTheme.tres" id="6_122h3"]
 [ext_resource type="Script" path="res://Menu/hardBtn.gd" id="7_pkp0i"]
+[ext_resource type="FontFile" path="res://Menu/prstartk.ttf" id="8_3w1oe"]
 [ext_resource type="Texture2D" uid="uid://bttik1u756mrj" path="res://Menu/progress-bar.png" id="8_wh14f"]
 [ext_resource type="Texture2D" uid="uid://dt7lxjc6ryrvv" path="res://Menu/progress-bar-inner.png" id="9_50u6g"]
+[ext_resource type="Texture2D" uid="uid://bq4v4xd7bfn2b" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="11_kdh7d"]
 
 [node name="HUD" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [542.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(665.121, 380.837)
-scale = Vector2(0.280476, 0.247302)
+position = Vector2(588, 346)
+scale = Vector2(3.12647, 3.00694)
 texture = ExtResource("1_p3itc")
 
 [node name="easyBtn" type="Button" parent="Sprite2D"]
-offset_left = -1197.78
-offset_top = -253.04
-offset_right = -1077.78
-offset_bottom = -193.04
+anchors_preset = -1
+anchor_left = 5.715
+anchor_right = 5.715
+offset_left = -1939.3
+offset_top = -94.4482
+offset_right = -1819.3
+offset_bottom = -34.4482
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_hk2t6")
 theme_override_font_sizes/font_size = 28
@@ -30,10 +35,10 @@ text = "Easy"
 script = ExtResource("3_of21e")
 
 [node name="mediumBtn" type="Button" parent="Sprite2D"]
-offset_left = -1220.5
-offset_top = -123.857
-offset_right = -1092.5
-offset_bottom = -63.8565
+offset_left = -355.186
+offset_top = -15.9725
+offset_right = -235.186
+offset_bottom = 31.0275
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_s3viw")
 theme_override_font_sizes/font_size = 28
@@ -41,10 +46,10 @@ text = "Medium"
 script = ExtResource("5_8m78n")
 
 [node name="hardBtn" type="Button" parent="Sprite2D"]
-offset_left = -983.889
-offset_top = -101.216
-offset_right = -859.889
-offset_bottom = -41.216
+offset_left = -339.995
+offset_top = -87.797
+offset_right = -215.995
+offset_bottom = -27.797
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_122h3")
 theme_override_font_sizes/font_size = 28
@@ -52,15 +57,17 @@ text = "Hard"
 script = ExtResource("7_pkp0i")
 
 [node name="Label" type="Label" parent="Sprite2D"]
-offset_left = -770.0
-offset_top = -402.201
-offset_right = 768.0
-offset_bottom = -264.201
+offset_left = -188.0
+offset_top = -110.0
+offset_right = 180.0
+offset_bottom = -81.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.654902, 0.654902, 0.654902, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("8_3w1oe")
+theme_override_font_sizes/font_size = 7
 text = "Choose the level"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Sprite2D"]
 anchors_preset = -1
@@ -68,10 +75,10 @@ anchor_left = 0.942
 anchor_top = 0.5
 anchor_right = 0.976
 anchor_bottom = 0.5
-offset_left = -334.447
-offset_top = -767.111
-offset_right = 269.193
-offset_bottom = 7496.89
+offset_left = 1285.48
+offset_top = -452.957
+offset_right = 1931.78
+offset_bottom = 7811.04
 scale = Vector2(0.08, 0.08)
 max_value = 90.0
 step = 30.0
@@ -79,6 +86,14 @@ value = 30.0
 fill_mode = 3
 texture_under = ExtResource("8_wh14f")
 texture_progress = ExtResource("9_50u6g")
+
+[node name="ProgressBar" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(160, 0)
+rotation = -1.5708
+scale = Vector2(3.05396, -2.02115)
+texture = ExtResource("11_kdh7d")
+hframes = 3
+vframes = 15
 
 [connection signal="pressed" from="Sprite2D/easyBtn" to="Sprite2D/easyBtn" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D/mediumBtn" to="Sprite2D/mediumBtn" method="_on_pressed"]
