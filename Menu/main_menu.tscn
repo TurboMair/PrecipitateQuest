@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dt7lxjc6ryrvv" path="res://Menu/progress-bar-inner.png" id="9_50u6g"]
 [ext_resource type="Texture2D" uid="uid://bq4v4xd7bfn2b" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="11_kdh7d"]
 
-[node name="HUD" type="Node2D"]
+[node name="menu" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [542.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
