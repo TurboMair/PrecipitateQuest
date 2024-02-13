@@ -11,13 +11,8 @@ config_version=5
 [application]
 
 config/name="Software Engineering"
-run/main_scene="res://Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[display]
-
-window/stretch/mode="viewport"
 
 [rendering]
 

@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://dptn4c8o16t6p"]
 
 [ext_resource type="Script" path="res://HUD/hud.gd" id="1_xi2o5"]
-[ext_resource type="Texture2D" uid="uid://dbomqvfot7u0" path="res://HUD/Tiny Wonder UI Free/Heart.png" id="2_v6xko"]
-[ext_resource type="Texture2D" uid="uid://c8l0mbogod0lh" path="res://HUD/Tiny Wonder UI Free/buttons free.png" id="3_hglok"]
-[ext_resource type="Texture2D" uid="uid://n2raxygy4dw0" path="res://HUD/Tiny Wonder UI Free/Pause Button (1).png" id="4_yp3ev"]
-[ext_resource type="Texture2D" uid="uid://bthixq8613lkx" path="res://HUD/Tiny Wonder UI Free/Play Button (1).png" id="5_a7d0l"]
-[ext_resource type="Texture2D" uid="uid://6l1a8q4ixi13" path="res://HUD/Tiny Wonder UI Free/Help Button(1).png" id="6_o6m5u"]
-[ext_resource type="Texture2D" uid="uid://bggu5id6s0kan" path="res://HUD/Tiny Wonder UI Free/Sound Button.png" id="7_3kgfw"]
-[ext_resource type="Texture2D" uid="uid://cvtnm0ofhwtkr" path="res://HUD/Tiny Wonder UI Free/Mute Button.png" id="8_wqc0t"]
-[ext_resource type="Texture2D" uid="uid://b8j5hb1u201f8" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="9_biomo"]
-[ext_resource type="Texture2D" uid="uid://ccfvmtxuf153k" path="res://HUD/Tiny Wonder UI Free/Exit Button.png" id="10_f6u5e"]
+[ext_resource type="Texture2D" uid="uid://ctggd6vbdmvs" path="res://HUD/Tiny Wonder UI Free/Heart.png" id="2_v6xko"]
+[ext_resource type="Texture2D" uid="uid://k6107ixfmf6n" path="res://HUD/Tiny Wonder UI Free/buttons free.png" id="3_hglok"]
+[ext_resource type="Texture2D" uid="uid://vhmj06ypayyp" path="res://HUD/Tiny Wonder UI Free/Pause Button (1).png" id="4_yp3ev"]
+[ext_resource type="Texture2D" uid="uid://creqoh5infp5o" path="res://HUD/Tiny Wonder UI Free/Play Button (1).png" id="5_a7d0l"]
+[ext_resource type="Texture2D" uid="uid://ce0m3gi365153" path="res://HUD/Tiny Wonder UI Free/Help Button(1).png" id="6_o6m5u"]
+[ext_resource type="Texture2D" uid="uid://ctst0w5dmilcs" path="res://HUD/Tiny Wonder UI Free/Sound Button.png" id="7_3kgfw"]
+[ext_resource type="Texture2D" uid="uid://fb4ddarta1xe" path="res://HUD/Tiny Wonder UI Free/Mute Button.png" id="8_wqc0t"]
+[ext_resource type="Texture2D" uid="uid://4630d3jvb2tv" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="9_biomo"]
+[ext_resource type="Texture2D" uid="uid://ich4f3vu88p1" path="res://HUD/Tiny Wonder UI Free/Exit Button.png" id="10_f6u5e"]
 
 [node name="HUD" type="Node2D"]
 script = ExtResource("1_xi2o5")
@@ -82,6 +82,27 @@ offset_right = 672.0
 offset_bottom = 375.0
 texture_normal = ExtResource("10_f6u5e")
 stretch_mode = 0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 883.0
+offset_top = 117.0
+offset_right = 1086.0
+offset_bottom = 241.0
+text = "Button"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 883.0
+offset_top = 257.0
+offset_right = 1086.0
+offset_bottom = 381.0
+text = "Button"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 882.0
+offset_top = 398.0
+offset_right = 1085.0
+offset_bottom = 522.0
+text = "Button"
 
 [connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
 [connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]
