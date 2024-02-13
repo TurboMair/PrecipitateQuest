@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm5twet16p3gy"]
 
-[ext_resource type="Texture2D" uid="uid://cdkb6y2td1go8" path="res://Background Assets/Sky_Blue.png" id="1_immbq"]
-[ext_resource type="Texture2D" uid="uid://dv8lcmepdxwlx" path="res://Background Assets/vecteezy_mountain-clipart-design-illustration_9380801.png" id="2_d4r06"]
+[ext_resource type="Texture2D" path="res://Background Assets/Sky_Blue.png" id="1_immbq"]
+[ext_resource type="Texture2D" path="res://Background Assets/vecteezy_mountain-clipart-design-illustration_9380801.png" id="2_d4r06"]
 [ext_resource type="TileSet" uid="uid://64j66ierjs7n" path="res://Level/ground.tres" id="3_eli88"]
 
 [node name="World1" type="Node"]
