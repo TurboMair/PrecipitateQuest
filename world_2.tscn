@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxwfp2kg412in"]
+
+[ext_resource type="Texture2D" path="res://Background Assets/735b6a_solid_color_background_icolorpalette.png" id="1_nthit"]
+[ext_resource type="Texture2D" uid="uid://djm8xx4mvd2to" path="res://Level/Godot Level Assets/Starter Tiles Platformer/DarkCastle.png" id="3_sfwer"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ayds"]
+texture = ExtResource("3_sfwer")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7vvs3"]
+sources/0 = SubResource("TileSetAtlasSource_8ayds")
+
+[node name="World2" type="Node"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1440, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(856, 280)
+scale = Vector2(0.446875, 0.362963)
+texture = ExtResource("1_nthit")
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(482.5, 304)
+scale = Vector2(0.120625, 0.113891)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_7vvs3")
+format = 2
+layer_0/tile_data = PackedInt32Array(1835008, 0, 0, 1900544, 0, 0, 1966080, 0, 0, 2031616, 0, 0, 2097152, 0, 0, 2162688, 0, 0, 2228224, 0, 0, 2293760, 0, 0, 2359296, 0, 0, 2424832, 0, 0, 2490368, 0, 0, 2555904, 0, 0, 2621440, 0, 0, 2686976, 0, 0, 2686977, 0, 0, 2621441, 0, 0, 2555905, 0, 0, 2490369, 0, 0, 2424833, 0, 0, 2359297, 0, 0, 2293761, 0, 0, 2228225, 0, 0, 2162689, 0, 0, 2097153, 0, 0, 2031617, 0, 0, 1966081, 0, 0, 1900545, 0, 0, 1835009, 0, 0, 1835010, 0, 0, 1900546, 0, 0, 1966082, 0, 0, 2031618, 0, 0, 2097154, 0, 0, 2162690, 0, 0, 2228226, 0, 0, 2293762, 0, 0, 2359298, 0, 0, 2424834, 0, 0, 2490370, 0, 0, 2555906, 0, 0, 2621442, 0, 0, 2686978, 0, 0, 2686979, 0, 0, 2621443, 0, 0, 2555907, 0, 0, 2490371, 0, 0, 2424835, 0, 0, 2359299, 0, 0, 2293763, 0, 0, 2228227, 0, 0, 2162691, 0, 0, 2097155, 0, 0, 2031619, 0, 0, 1966083, 0, 0, 1900547, 0, 0, 1835011, 0, 0, 1835012, 0, 0, 1900548, 0, 0, 1966084, 0, 0, 2031620, 0, 0, 2097156, 0, 0, 2162692, 0, 0, 2228228, 0, 0, 2293764, 0, 0, 2359300, 0, 0, 2424836, 0, 0, 2490372, 0, 0, 2555908, 0, 0, 2621444, 0, 0, 2686980, 0, 0, 2686981, 0, 0, 2621445, 0, 0, 2555909, 0, 0, 2490373, 0, 0, 2424837, 0, 0, 2359301, 0, 0, 2293765, 0, 0, 2228229, 0, 0, 2162693, 0, 0, 2162694, 0, 0, 2162695, 0, 0, 2097159, 0, 0, 2031623, 0, 0, 1966087, 0, 0, 1900551, 0, 0, 1835015, 0, 0, 1835014, 0, 0, 1835013, 0, 0, 1900549, 0, 0, 1966085, 0, 0, 2031621, 0, 0, 2097157, 0, 0, 2097158, 0, 0, 2031622, 0, 0, 1966086, 0, 0, 1900550, 0, 0)
