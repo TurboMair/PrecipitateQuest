@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://3wst5lguyl3g"]
+[gd_scene load_steps=10 format=3 uid="uid://3wst5lguyl3g"]
 
 [ext_resource type="Texture2D" uid="uid://cd7ty7a2xchk1" path="res://Menu/pixel_map.png" id="1_p3itc"]
 [ext_resource type="Theme" uid="uid://dtfm3qxc0t47w" path="res://Menu/easyBtnTheme.tres" id="2_hk2t6"]
@@ -7,9 +7,7 @@
 [ext_resource type="Script" path="res://Menu/mediumBtn.gd" id="5_8m78n"]
 [ext_resource type="Theme" uid="uid://bnwldjhaaj2bn" path="res://Menu/hardBtnTheme.tres" id="6_122h3"]
 [ext_resource type="Script" path="res://Menu/hardBtn.gd" id="7_pkp0i"]
-[ext_resource type="FontFile" path="res://Menu/prstartk.ttf" id="8_3w1oe"]
-[ext_resource type="Texture2D" uid="uid://bttik1u756mrj" path="res://Menu/progress-bar.png" id="8_wh14f"]
-[ext_resource type="Texture2D" uid="uid://dt7lxjc6ryrvv" path="res://Menu/progress-bar-inner.png" id="9_50u6g"]
+[ext_resource type="FontFile" uid="uid://dqjbqt4p40xcl" path="res://Menu/prstartk.ttf" id="8_3w1oe"]
 [ext_resource type="Texture2D" uid="uid://bq4v4xd7bfn2b" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="11_kdh7d"]
 
 [node name="menu" type="Node2D"]
@@ -24,10 +22,10 @@ texture = ExtResource("1_p3itc")
 anchors_preset = -1
 anchor_left = 5.715
 anchor_right = 5.715
-offset_left = -1939.3
-offset_top = -94.4482
-offset_right = -1819.3
-offset_bottom = -34.4482
+offset_left = -1801.12
+offset_top = -184.906
+offset_right = -1681.12
+offset_bottom = -124.906
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_hk2t6")
 theme_override_font_sizes/font_size = 28
@@ -75,17 +73,15 @@ anchor_left = 0.942
 anchor_top = 0.5
 anchor_right = 0.976
 anchor_bottom = 0.5
-offset_left = 1285.48
-offset_top = -452.957
-offset_right = 1931.78
-offset_bottom = 7811.04
+offset_left = 18.246
+offset_top = -261.026
+offset_right = 843.542
+offset_bottom = 1646.97
 scale = Vector2(0.08, 0.08)
 max_value = 90.0
 step = 30.0
 value = 30.0
 fill_mode = 3
-texture_under = ExtResource("8_wh14f")
-texture_progress = ExtResource("9_50u6g")
 
 [node name="ProgressBar" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(160, 0)
