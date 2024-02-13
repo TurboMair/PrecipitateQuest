@@ -1,28 +1,28 @@
 [gd_scene load_steps=10 format=3 uid="uid://3wst5lguyl3g"]
 
-[ext_resource type="Texture2D" path="res://Menu/map.png" id="1_07trg"]
+[ext_resource type="Texture2D" uid="uid://cd7ty7a2xchk1" path="res://Menu/pixel_map.png" id="1_p3itc"]
 [ext_resource type="Theme" uid="uid://dtfm3qxc0t47w" path="res://Menu/easyBtnTheme.tres" id="2_hk2t6"]
 [ext_resource type="Script" path="res://Menu/easyBtn.gd" id="3_of21e"]
 [ext_resource type="Theme" uid="uid://bnkpb60cpbt88" path="res://Menu/mediumBtnTheme.tres" id="4_s3viw"]
 [ext_resource type="Script" path="res://Menu/mediumBtn.gd" id="5_8m78n"]
 [ext_resource type="Theme" uid="uid://bnwldjhaaj2bn" path="res://Menu/hardBtnTheme.tres" id="6_122h3"]
 [ext_resource type="Script" path="res://Menu/hardBtn.gd" id="7_pkp0i"]
-[ext_resource type="Texture2D" path="res://Menu/progress-bar.png" id="8_wh14f"]
-[ext_resource type="Texture2D" path="res://Menu/progress-bar-inner.png" id="9_50u6g"]
+[ext_resource type="Texture2D" uid="uid://bttik1u756mrj" path="res://Menu/progress-bar.png" id="8_wh14f"]
+[ext_resource type="Texture2D" uid="uid://dt7lxjc6ryrvv" path="res://Menu/progress-bar-inner.png" id="9_50u6g"]
 
 [node name="HUD" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [542.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
-scale = Vector2(0.748052, 0.750869)
-texture = ExtResource("1_07trg")
+position = Vector2(665.121, 380.837)
+scale = Vector2(0.280476, 0.247302)
+texture = ExtResource("1_p3itc")
 
 [node name="easyBtn" type="Button" parent="Sprite2D"]
-offset_left = -112.806
-offset_top = -208.964
-offset_right = 7.19382
-offset_bottom = -148.964
+offset_left = -1197.78
+offset_top = -253.04
+offset_right = -1077.78
+offset_bottom = -193.04
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_hk2t6")
 theme_override_font_sizes/font_size = 28
@@ -30,9 +30,10 @@ text = "Easy"
 script = ExtResource("3_of21e")
 
 [node name="mediumBtn" type="Button" parent="Sprite2D"]
-offset_left = -234.0
-offset_top = -60.0
-offset_right = -106.0
+offset_left = -1220.5
+offset_top = -123.857
+offset_right = -1092.5
+offset_bottom = -63.8565
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_s3viw")
 theme_override_font_sizes/font_size = 28
@@ -40,10 +41,10 @@ text = "Medium"
 script = ExtResource("5_8m78n")
 
 [node name="hardBtn" type="Button" parent="Sprite2D"]
-offset_left = -71.0
-offset_top = 153.0
-offset_right = 53.0
-offset_bottom = 213.0
+offset_left = -983.889
+offset_top = -101.216
+offset_right = -859.889
+offset_bottom = -41.216
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_122h3")
 theme_override_font_sizes/font_size = 28
@@ -67,10 +68,10 @@ anchor_left = 0.942
 anchor_top = 0.5
 anchor_right = 0.976
 anchor_bottom = 0.5
-offset_left = -770.68
-offset_top = -740.5
-offset_right = -167.04
-offset_bottom = 7523.5
+offset_left = -334.447
+offset_top = -767.111
+offset_right = 269.193
+offset_bottom = 7496.89
 scale = Vector2(0.08, 0.08)
 max_value = 90.0
 step = 30.0
