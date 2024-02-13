@@ -40,3 +40,5 @@ func handle_non_matching_compound():
 	#any other logic for invalid phial
 	return
 	
+func process_button(value):
+	print(value)

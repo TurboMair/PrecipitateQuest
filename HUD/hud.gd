@@ -1,6 +1,8 @@
 extends Node2D
 
-
+var button1 = "1"
+var button2 = "2"
+var button3 = "3"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$HelpButton.hide()
@@ -42,3 +44,7 @@ func _on_help_button_toggled(toggled_on):
 		$PauseButton.show()
 	
 	
+
+
+func _on_button1_pressed():
+	$ScienceScript.process_button(button1)
