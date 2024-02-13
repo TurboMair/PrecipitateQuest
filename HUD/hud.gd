@@ -48,3 +48,9 @@ func _on_help_button_toggled(toggled_on):
 
 func _on_button1_pressed():
 	$ScienceScript.process_button(button1)
+	
+func _on_button2_pressed():
+	$ScienceScript.process_button(button2)
+	
+func _on_button3_pressed():
+	$ScienceScript.process_button(button3)
