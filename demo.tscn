@@ -11,4 +11,4 @@
 [node name="HUD" parent="." instance=ExtResource("2_4nghu")]
 
 [node name="Player" parent="." instance=ExtResource("3_aomi0")]
-position = Vector2(447, 363)
+position = Vector2(399, 359)

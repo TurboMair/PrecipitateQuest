@@ -549,7 +549,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -557,10 +557,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7ileu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o648o")
 }],
 "loop": false,
 "name": &"water",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auru8"]
@@ -1425,7 +1428,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1433,10 +1436,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xifv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpfac")
 }],
 "loop": false,
 "name": &"water",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eovfs"]
@@ -3643,7 +3649,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -3651,10 +3657,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jean0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roeyx")
 }],
 "loop": false,
 "name": &"water",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0iudl"]
@@ -3726,7 +3735,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -3734,10 +3743,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_un4tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iudl")
 }],
 "loop": false,
 "name": &"water",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlsce"]
@@ -3809,7 +3821,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -3817,10 +3829,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ey030")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a80x3")
 }],
 "loop": false,
 "name": &"water",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [node name="Player" type="Node2D" groups=["phial_throw_triggers"]]
@@ -3830,19 +3845,19 @@ script = SubResource("GDScript_r2cud")
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_326uj")
-animation = &"water"
+animation = &"walk"
 
 [node name="Eyes" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_epyd8")
-animation = &"water"
+animation = &"walk"
 
 [node name="Clothes" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8m5xr")
-animation = &"water"
+animation = &"walk"
 
 [node name="Pants" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i0pem")
-animation = &"water"
+animation = &"walk"
 
 [node name="Hair" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jkgae")
