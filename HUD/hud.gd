@@ -44,9 +44,6 @@ func _on_help_button_toggled(toggled_on):
 		$FlaskHolder.show()
 		$ProgressBar.show()
 		$PauseButton.show()
-	
-	
-
 
 func _on_button1_pressed():
 	$ScienceScript.throw_phial(puddle, button1)
