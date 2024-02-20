@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://byhjq4vdfkyb0"]
+
+[ext_resource type="FontFile" uid="uid://ccbbhvib05t58" path="res://Sprites/VCR_OSD_MONO_1.001.ttf" id="1_nhenw"]
+
+[node name="Help" type="Node2D"]
+
+[node name="HelpLabel" type="Label" parent="."]
+offset_left = 250.0
+offset_top = 200.0
+offset_right = 850.0
+offset_bottom = 215.0
+theme_override_fonts/font = ExtResource("1_nhenw")
+text = "Point and click the correct flask to make progress on each level"
+horizontal_alignment = 1
+vertical_alignment = 1
