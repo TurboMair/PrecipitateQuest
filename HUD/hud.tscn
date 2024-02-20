@@ -84,21 +84,21 @@ offset_bottom = 375.0
 texture_normal = ExtResource("10_f6u5e")
 stretch_mode = 0
 
-[node name="Button" type="Button" parent="."]
+[node name="ChemButton" type="Button" parent="."]
 offset_left = 883.0
 offset_top = 117.0
 offset_right = 1086.0
 offset_bottom = 241.0
 text = "Button"
 
-[node name="Button2" type="Button" parent="."]
+[node name="ChemButton2" type="Button" parent="."]
 offset_left = 883.0
 offset_top = 257.0
 offset_right = 1086.0
 offset_bottom = 381.0
 text = "Button"
 
-[node name="Button3" type="Button" parent="."]
+[node name="ChemButton3" type="Button" parent="."]
 offset_left = 882.0
 offset_top = 398.0
 offset_right = 1085.0
@@ -111,6 +111,6 @@ script = ExtResource("11_6gm85")
 
 [connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
 [connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]
-[connection signal="pressed" from="Button" to="." method="_on_button1_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button3_pressed"]
+[connection signal="pressed" from="ChemButton" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="ChemButton2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="ChemButton3" to="." method="_on_button3_pressed"]

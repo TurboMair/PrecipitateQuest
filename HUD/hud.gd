@@ -1,9 +1,11 @@
 extends Node2D
 
-var button1 = "1"
-var button2 = "2"
-var button3 = "3"
+var button1 = $ChemButton.text
+var button2 = $ChemButton2.text
+var button3 = $ChemButton3.text
+var puddle = $PuddleLabel.bbcode_text
 # Called when the node enters the scene tree for the first time.
+
 func _ready():
 	$HelpButton.hide()
 	$SoundButton.hide()
@@ -47,10 +49,10 @@ func _on_help_button_toggled(toggled_on):
 
 
 func _on_button1_pressed():
-	$ScienceScript.process_button(button1)
+	$ScienceScript.throw_phial(puddle, button1)
 	
 func _on_button2_pressed():
-	$ScienceScript.process_button(button2)
+	$ScienceScript.throw_phial(puddle, button2)
 	
 func _on_button3_pressed():
-	$ScienceScript.process_button(button3)
+	$ScienceScript.throw_phial(puddle, button3)
