@@ -1,16 +1,19 @@
 extends Node2D
 
-var button1 = "AgBr"
-var button2 = "MgCO3"
-var button3 = "Hg2(NO3)2"
-var puddle = "KCl"
+var button1 
+var button2
+var button3
+var puddle 
+var science
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
 	$HelpButton.hide()
 	$SoundButton.hide()
 	$ExitButton.hide()
-
+	science = $ScienceScript
+	science.startGameText()
+	updateText()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -45,11 +48,22 @@ func _on_help_button_toggled(toggled_on):
 		$ProgressBar.show()
 		$PauseButton.show()
 
-func _on_button1_pressed():
-	$ScienceScript.throw_phial(puddle, button1)
-	
-func _on_button2_pressed():
-	$ScienceScript.throw_phial(puddle, button2)
-	
-func _on_button3_pressed():
-	$ScienceScript.throw_phial(puddle, button3)
+func updateText():
+	$ChemButton/Label.text = button1
+	$ChemButton2/Label.text = button2
+	$ChemButton3/Label.text = button3
+	$Label.text = puddle
+
+func _on_chem_button_pressed():
+	science.throw_phial(puddle, button1)
+	pass # Replace with function body.
+
+
+func _on_chem_button_2_pressed():
+	science.throw_phial(puddle, button2)
+	pass # Replace with function body.
+
+
+func _on_chem_button_3_pressed():
+	science.throw_phial(puddle, button3)
+	pass # Replace with function body.

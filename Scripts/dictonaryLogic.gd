@@ -50,6 +50,7 @@ func throw_phial(puddle_key, phial_compound):
 	if phial_compound == correct_dict[puddle_key]:
 		turn_puddle_solid(puddle_key)
 		print("correct")
+		#update buttons and puddle
 	else:
 		handle_non_matching_compound()
 		print("inccorect")
@@ -65,8 +66,14 @@ func handle_non_matching_compound():
 	#any other logic for invalid phial
 	return
 	
-func update_text(b1, b2, b3, puddle):
-	$ChemButton.text = b1
-	$ChemButton2.text = b2
-	$ChemButton.text = b3
-	
+func startGameText():
+	var randomList = problem_dict["KCl"]
+	get_parent().puddle = "KCl"
+	randomList.shuffle()
+	get_parent().button1 = randomList[0]
+	randomList.pop_front()
+	get_parent().button2 = randomList[0]
+	randomList.pop_front()
+	get_parent().button3 = randomList[0]
+	randomList.pop_front()
+	pass
