@@ -20,8 +20,10 @@ script = ExtResource("1_yhgue")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -120.0
-offset_right = 589.0
+offset_left = 1.0
+offset_top = -123.0
+offset_right = 640.0
+offset_bottom = 25.0
 grow_vertical = 0
 theme_override_constants/margin_left = 35
 theme_override_constants/margin_bottom = 35
@@ -59,9 +61,12 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("1_jrr42")
 theme_override_font_sizes/font_size = 23
-text = "Welcome to the Ocean Laboratory. My name is Dolph and I shall guide you thorugh this treacherous land . . ."
 autowrap_mode = 3
+justification_flags = 131
 clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+text_direction = 1
 
 [node name="end" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2

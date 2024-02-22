@@ -2,10 +2,15 @@ extends CanvasLayer
 	
 @onready var textbox_container = $TextboxContainer
 @onready var label = $TextboxContainer/MarginContainer/HBoxContainer/label
+@onready var tween : Tween = create_tween()
+
 # Called when the node enters the scene tree for the first time.
 
+const CHAR_READ_RATE = 0.5
+
 func _ready():
-	label.text = "Welcome to the Ocean Laboratory!"
+	#hide_textbox()
+	update_dolphin_textbox("Welcome to the Ocean Laboratory, where the water is contaminated with lead (Pb). My name is Dolph and I shall LEAD you through this treacherous land.")
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,13 +48,15 @@ var dialogue_dict = {
 	"Hg":"Mercury (I) is the polyatomic ion form of mercury. Like mercury (II), it can be removed from water using precipitation reactions. "
 	#["K2S", "NA2CO3"],#19 #20
 }
-	
-func update_dolphin_textbox(condition: String):
-	# Check if the condition exists in the dialogue dictionary
-	if dialogue_dict.has(condition):
-		var dialogue = dialogue_dict[condition]
-		label.text = dialogue
-		show_textbox()
-	else:
-		hide_textbox()
 
+
+func update_dolphin_textbox(next_text):
+	label.text = next_text
+	show_textbox()
+	tween.tween_property(label, "visible_ratio", 1, 5).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT).set_delay(0.1)
+	tween.connect("finished", on_tween_finished)
+
+
+# Callback function to be called when the tween completes
+func on_tween_finished():
+	print("Tween done!")
