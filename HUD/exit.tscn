@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://crfoxm1d7v57t"]
+
+[ext_resource type="FontFile" uid="uid://cihx7duxkwgta" path="res://HUD/Tiny Wonder UI Free/VCR_OSD_MONO_1.001.ttf" id="1_ln07k"]
+[ext_resource type="Script" path="res://HUD/exit.gd" id="1_lx5jo"]
+
+[node name="Exit" type="Node2D"]
+script = ExtResource("1_lx5jo")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 300.0
+offset_top = 200.0
+offset_right = 822.0
+offset_bottom = 244.0
+theme_override_fonts/font = ExtResource("1_ln07k")
+theme_override_font_sizes/font_size = 50
+text = "Exit to main menu?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="YesButton" type="Button" parent="."]
+offset_left = 357.0
+offset_top = 315.0
+offset_right = 394.0
+offset_bottom = 338.0
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("1_ln07k")
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+offset_left = 625.0
+offset_top = 315.0
+offset_right = 662.0
+offset_bottom = 338.0
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("1_ln07k")
+text = "No"
+
+[connection signal="pressed" from="NoButton" to="." method="_on_no_button_pressed"]
