@@ -1,0 +1,157 @@
+[gd_scene load_steps=14 format=3 uid="uid://dptn4c8o16t6p"]
+
+[ext_resource type="Script" path="res://HUD/hud.gd" id="1_xi2o5"]
+[ext_resource type="Texture2D" uid="uid://b078io6wmx4er" path="res://HUD/Sprites/Heart.png" id="2_v6xko"]
+[ext_resource type="Texture2D" uid="uid://b4u7xi3y2lgnu" path="res://HUD/Sprites/buttons free.png" id="3_hglok"]
+[ext_resource type="Texture2D" uid="uid://8vxq4wq5qeac" path="res://HUD/Sprites/Pause Button (1).png" id="4_yp3ev"]
+[ext_resource type="Texture2D" uid="uid://dhoj01tx5crqb" path="res://HUD/Sprites/Play Button (1).png" id="5_a7d0l"]
+[ext_resource type="Texture2D" uid="uid://dgumtyw5kf8m8" path="res://HUD/Sprites/Help Button(1).png" id="6_o6m5u"]
+[ext_resource type="Texture2D" uid="uid://r07wk6cknag8" path="res://HUD/Sprites/Sound Button.png" id="7_3kgfw"]
+[ext_resource type="Texture2D" uid="uid://c53qb7ar8dcs0" path="res://HUD/Sprites/Mute Button.png" id="8_wqc0t"]
+[ext_resource type="Texture2D" uid="uid://cynh7dv3a5lr1" path="res://HUD/Sprites/Progress Bar.png" id="9_biomo"]
+[ext_resource type="Texture2D" uid="uid://cc4snaxyemi2a" path="res://HUD/Sprites/Exit Button.png" id="10_f6u5e"]
+[ext_resource type="Script" path="res://Scripts/dictonaryLogic.gd" id="11_6gm85"]
+[ext_resource type="Texture2D" uid="uid://dye283i0qty1j" path="res://HUD/Sprites/Flask.png" id="11_kf7og"]
+[ext_resource type="FontFile" uid="uid://dls6ikh8j35uo" path="res://HUD/Sprites/VCR_OSD_MONO_1.001.ttf" id="12_csgle"]
+
+[node name="HUD" type="Node2D"]
+script = ExtResource("1_xi2o5")
+metadata/_edit_horizontal_guides_ = [-1.0]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Heart" type="Sprite2D" parent="."]
+position = Vector2(91.88, 165.77)
+scale = Vector2(5, 5.11)
+texture = ExtResource("2_v6xko")
+
+[node name="Heart2" type="Sprite2D" parent="."]
+position = Vector2(191.88, 165.77)
+scale = Vector2(5, 5.11)
+texture = ExtResource("2_v6xko")
+
+[node name="Heart3" type="Sprite2D" parent="."]
+position = Vector2(291.88, 165.77)
+scale = Vector2(5, 5.11)
+texture = ExtResource("2_v6xko")
+
+[node name="FlaskHolder" type="Sprite2D" parent="."]
+position = Vector2(979.5, 235.5)
+scale = Vector2(7.1875, 13.7187)
+texture = ExtResource("3_hglok")
+hframes = 2
+vframes = 3
+
+[node name="PauseButton" type="TextureButton" parent="."]
+offset_left = 688.0
+offset_top = 107.0
+offset_right = 801.0
+offset_bottom = 232.0
+toggle_mode = true
+texture_normal = ExtResource("4_yp3ev")
+texture_pressed = ExtResource("5_a7d0l")
+stretch_mode = 0
+
+[node name="HelpButton" type="TextureButton" parent="."]
+offset_left = 555.0
+offset_top = 108.0
+offset_right = 669.0
+offset_bottom = 232.0
+toggle_mode = true
+texture_normal = ExtResource("6_o6m5u")
+stretch_mode = 0
+
+[node name="SoundButton" type="TextureButton" parent="."]
+offset_left = 416.0
+offset_top = 108.0
+offset_right = 534.0
+offset_bottom = 231.0
+toggle_mode = true
+texture_normal = ExtResource("7_3kgfw")
+texture_pressed = ExtResource("8_wqc0t")
+stretch_mode = 0
+
+[node name="ProgressBar" type="Sprite2D" parent="."]
+position = Vector2(421, 59)
+scale = Vector2(16, 8)
+texture = ExtResource("9_biomo")
+hframes = 3
+vframes = 15
+
+[node name="ExitButton" type="TextureButton" parent="."]
+offset_left = 411.0
+offset_top = 259.0
+offset_right = 672.0
+offset_bottom = 375.0
+texture_normal = ExtResource("10_f6u5e")
+stretch_mode = 0
+
+[node name="ChemButton" type="TextureButton" parent="."]
+offset_left = 880.0
+offset_top = 90.0
+offset_right = 925.0
+offset_bottom = 154.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("11_kf7og")
+
+[node name="Label" type="Label" parent="ChemButton"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 35.0
+offset_right = 44.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("12_csgle")
+text = "H20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChemButton2" type="TextureButton" parent="."]
+offset_left = 990.0
+offset_top = 90.0
+offset_right = 1035.0
+offset_bottom = 154.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("11_kf7og")
+
+[node name="Label" type="Label" parent="ChemButton2"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 35.0
+offset_right = 44.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("12_csgle")
+text = "H20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChemButton3" type="TextureButton" parent="."]
+offset_left = 932.0
+offset_top = 235.0
+offset_right = 977.0
+offset_bottom = 299.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("11_kf7og")
+
+[node name="Label" type="Label" parent="ChemButton3"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 35.0
+offset_right = 44.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("12_csgle")
+text = "H20
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScienceScript" type="Node2D" parent="."]
+position = Vector2(883, 117)
+script = ExtResource("11_6gm85")
+
+[connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="ChemButton" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="ChemButton2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="ChemButton3" to="." method="_on_button3_pressed"]
