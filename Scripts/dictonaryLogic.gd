@@ -20,9 +20,8 @@ var puddle_dict = {
 	"":"",#17 ?
 	"?":"",#18 ?
 	"Hg":["S", "CO3"]#19 #20
-	
-	
 	}
+	
 #Call this anytime the player clicks on the phial
 func throw_phial(phial_compound, puddle_key):
 	if phial_compound == puddle_dict[puddle_key]:
