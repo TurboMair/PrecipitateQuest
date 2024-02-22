@@ -1,9 +1,9 @@
 extends Node2D
 
-var button1 = $ChemButton.text
-var button2 = $ChemButton2.text
-var button3 = $ChemButton3.text
-var puddle = $PuddleLabel.bbcode_text
+var button1 = "AgBr"
+var button2 = "MgCO3"
+var button3 = "Hg2(NO3)2"
+var puddle = "KCl"
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
