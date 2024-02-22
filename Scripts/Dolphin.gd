@@ -46,8 +46,9 @@ var dialogue_dict = {
 	"Na4PO4OH":"Tooth enamel and bone are ionic compounds made of calcium, phosphate, and hydroxide ions. Minerals with this same chemical formula, but different crystalline structures are found in nature. They all form by precipitation reactions. ",
 	"Na4AsO4OH":"Arsenate is found in minerals. It can make its way into groundwater and be carcinogenic. There are several ways to remove the arsenate ion from water. One way is through precipitation reactions. ",
 	"Hg":"Mercury (I) is the polyatomic ion form of mercury. Like mercury (II), it can be removed from water using precipitation reactions. "
+	
+	}
 	#["K2S", "NA2CO3"],#19 #20
-}
 
 
 func update_dolphin_textbox(next_text):

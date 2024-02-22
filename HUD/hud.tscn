@@ -1,15 +1,27 @@
-[gd_scene load_steps=11 format=3 uid="uid://dptn4c8o16t6p"]
+[gd_scene load_steps=15 format=3 uid="uid://dptn4c8o16t6p"]
 
 [ext_resource type="Script" path="res://HUD/hud.gd" id="1_xi2o5"]
-[ext_resource type="Texture2D" uid="uid://dbomqvfot7u0" path="res://HUD/Tiny Wonder UI Free/Heart.png" id="2_v6xko"]
-[ext_resource type="Texture2D" uid="uid://c8l0mbogod0lh" path="res://HUD/Tiny Wonder UI Free/buttons free.png" id="3_hglok"]
-[ext_resource type="Texture2D" uid="uid://n2raxygy4dw0" path="res://HUD/Tiny Wonder UI Free/Pause Button (1).png" id="4_yp3ev"]
-[ext_resource type="Texture2D" uid="uid://bthixq8613lkx" path="res://HUD/Tiny Wonder UI Free/Play Button (1).png" id="5_a7d0l"]
-[ext_resource type="Texture2D" uid="uid://6l1a8q4ixi13" path="res://HUD/Tiny Wonder UI Free/Help Button(1).png" id="6_o6m5u"]
-[ext_resource type="Texture2D" uid="uid://bggu5id6s0kan" path="res://HUD/Tiny Wonder UI Free/Sound Button.png" id="7_3kgfw"]
-[ext_resource type="Texture2D" uid="uid://cvtnm0ofhwtkr" path="res://HUD/Tiny Wonder UI Free/Mute Button.png" id="8_wqc0t"]
-[ext_resource type="Texture2D" uid="uid://b8j5hb1u201f8" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="9_biomo"]
-[ext_resource type="Texture2D" uid="uid://ccfvmtxuf153k" path="res://HUD/Tiny Wonder UI Free/Exit Button.png" id="10_f6u5e"]
+[ext_resource type="Texture2D" uid="uid://0bks4ip4ko32" path="res://HUD/Tiny Wonder UI Free/Heart.png" id="2_v6xko"]
+[ext_resource type="Texture2D" uid="uid://bj88q15llkrk0" path="res://HUD/Tiny Wonder UI Free/buttons free.png" id="3_hglok"]
+[ext_resource type="Texture2D" uid="uid://14r13dqe57w0" path="res://HUD/Tiny Wonder UI Free/Pause Button (1).png" id="4_yp3ev"]
+[ext_resource type="Texture2D" uid="uid://1sng5nfl1e6f" path="res://HUD/Tiny Wonder UI Free/Play Button (1).png" id="5_a7d0l"]
+[ext_resource type="Texture2D" uid="uid://dp1oune2p4sus" path="res://HUD/Tiny Wonder UI Free/Help Button(1).png" id="6_o6m5u"]
+[ext_resource type="Texture2D" uid="uid://dxvbfre5dyuvj" path="res://HUD/Tiny Wonder UI Free/Sound Button.png" id="7_3kgfw"]
+[ext_resource type="Texture2D" uid="uid://bgwg1qku11p77" path="res://HUD/Tiny Wonder UI Free/Mute Button.png" id="8_wqc0t"]
+[ext_resource type="Texture2D" uid="uid://dpavhiarilknr" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="9_biomo"]
+[ext_resource type="Texture2D" uid="uid://cit0t3eswcrm6" path="res://HUD/Tiny Wonder UI Free/Exit Button.png" id="10_f6u5e"]
+[ext_resource type="Script" path="res://Scripts/dolphin.gd" id="11_b4a6t"]
+[ext_resource type="FontFile" uid="uid://d0yaeqqerhgqm" path="res://Scripts/BitFontMakerSporty.ttf" id="12_37mmf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i4j3h"]
+bg_color = Color(0.000517908, 0.00841649, 0.000568138, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.996078, 0.972549, 0.980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgxyb"]
 
 [node name="HUD" type="Node2D"]
 script = ExtResource("1_xi2o5")
@@ -82,6 +94,68 @@ offset_right = 672.0
 offset_bottom = 375.0
 texture_normal = ExtResource("10_f6u5e")
 stretch_mode = 0
+
+[node name="DolphinTextBox" type="CanvasLayer" parent="."]
+script = ExtResource("11_b4a6t")
+
+[node name="TextboxContainer" type="MarginContainer" parent="DolphinTextBox"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -771.0
+offset_right = 640.0
+offset_bottom = -623.0
+grow_vertical = 0
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_bottom = 35
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="DolphinTextBox/TextboxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i4j3h")
+
+[node name="MarginContainer" type="MarginContainer" parent="DolphinTextBox/TextboxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="DolphinTextBox/TextboxContainer/MarginContainer"]
+modulate = Color(0.235294, 0.411765, 0.388235, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tgxyb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DolphinTextBox/TextboxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="start" type="Label" parent="DolphinTextBox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("12_37mmf")
+theme_override_font_sizes/font_size = 23
+text = "^_"
+
+[node name="label" type="Label" parent="DolphinTextBox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("12_37mmf")
+theme_override_font_sizes/font_size = 23
+autowrap_mode = 3
+justification_flags = 131
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+text_direction = 1
+
+[node name="end" type="Label" parent="DolphinTextBox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("12_37mmf")
+theme_override_font_sizes/font_size = 23
+text = "#"
 
 [connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
 [connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]
