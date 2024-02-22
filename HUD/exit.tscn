@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://crfoxm1d7v57t"]
 
-[ext_resource type="FontFile" uid="uid://cihx7duxkwgta" path="res://HUD/Tiny Wonder UI Free/VCR_OSD_MONO_1.001.ttf" id="1_ln07k"]
+[ext_resource type="FontFile" uid="uid://cihx7duxkwgta" path="res://HUD/Sprites/VCR_OSD_MONO_1.001.ttf" id="1_ln07k"]
 [ext_resource type="Script" path="res://HUD/exit.gd" id="1_lx5jo"]
 
 [node name="Exit" type="Node2D"]
