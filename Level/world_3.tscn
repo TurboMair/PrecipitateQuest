@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbq5lwyugab4l"]
 
-[ext_resource type="Texture2D" uid="uid://whc63pwrvk4m" path="res://Level/Godot Level Assets/Starter Tiles Platformer/OutdoorHouseSet.png" id="1_edof8"]
+[ext_resource type="Texture2D" uid="uid://cjkbn30h5wotb" path="res://Level/Godot Level Assets/Starter Tiles Platformer/OutdoorHouseSet.png" id="1_edof8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6k45s"]
 texture = ExtResource("1_edof8")

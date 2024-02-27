@@ -1,96 +1,521 @@
-[gd_scene load_steps=10 format=3 uid="uid://3wst5lguyl3g"]
+[gd_scene load_steps=25 format=3 uid="uid://3wst5lguyl3g"]
 
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_a3tfa"]
+[ext_resource type="Texture2D" uid="uid://bg6tqg46vlhj2" path="res://Menu/background.png" id="1_gqkss"]
 [ext_resource type="Texture2D" uid="uid://cd7ty7a2xchk1" path="res://Menu/pixel_map.png" id="1_p3itc"]
-[ext_resource type="Theme" uid="uid://dtfm3qxc0t47w" path="res://Menu/easyBtnTheme.tres" id="2_hk2t6"]
-[ext_resource type="Script" path="res://Menu/easyBtn.gd" id="3_of21e"]
-[ext_resource type="Theme" uid="uid://bnkpb60cpbt88" path="res://Menu/mediumBtnTheme.tres" id="4_s3viw"]
-[ext_resource type="Script" path="res://Menu/mediumBtn.gd" id="5_8m78n"]
-[ext_resource type="Theme" uid="uid://bnwldjhaaj2bn" path="res://Menu/hardBtnTheme.tres" id="6_122h3"]
-[ext_resource type="Script" path="res://Menu/hardBtn.gd" id="7_pkp0i"]
+[ext_resource type="Texture2D" uid="uid://0hy4bja3etmf" path="res://Menu/menu.png.png" id="2_s1j5r"]
+[ext_resource type="Texture2D" uid="uid://bl171p5fk2ohh" path="res://Menu/paper.png" id="3_xiavd"]
+[ext_resource type="Texture2D" uid="uid://bammg3p1cuyyi" path="res://Menu/option3.png" id="6_3imrc"]
+[ext_resource type="Texture2D" uid="uid://cxunbcbilvdm" path="res://Menu/grabber.png" id="7_arfjf"]
 [ext_resource type="FontFile" uid="uid://dqjbqt4p40xcl" path="res://Menu/prstartk.ttf" id="8_3w1oe"]
+[ext_resource type="Texture2D" uid="uid://do70old2d537" path="res://Menu/back-button.png" id="9_ewsxw"]
+[ext_resource type="FontFile" uid="uid://3bb8e7jke0gt" path="res://Menu/prstart.ttf" id="10_im8wy"]
+[ext_resource type="Texture2D" uid="uid://jddftvavwgn" path="res://Menu/hover-back-button.png" id="10_p53p0"]
 [ext_resource type="Texture2D" uid="uid://bq4v4xd7bfn2b" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="11_kdh7d"]
+[ext_resource type="Theme" uid="uid://binb8tymyiycd" path="res://Menu/mainMenu-button.tres" id="13_kyqvf"]
+[ext_resource type="AudioStream" uid="uid://bk1uw88dqwk2u" path="res://Menu/BGM.mp3" id="14_iwete"]
+[ext_resource type="AudioStream" uid="uid://tappobeeknki" path="res://Menu/sound-effect.mp3" id="14_j7oga"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3q28l"]
+bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md36i"]
+bg_color = Color(0.447059, 0.168627, 0.00392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0es4y"]
+bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otglv"]
+bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m8lkg"]
+bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txc44"]
+bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xucqo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aydve"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_juiy7"]
 
 [node name="menu" type="Node2D"]
+position = Vector2(-315, 691)
+script = ExtResource("1_a3tfa")
 metadata/_edit_horizontal_guides_ = [542.0]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(588, 346)
+[node name="mainMenu" type="Node2D" parent="."]
+
+[node name="main-background" type="Sprite2D" parent="mainMenu"]
+position = Vector2(890.745, -367.396)
+scale = Vector2(2.95254, 2.6967)
+texture = ExtResource("2_s1j5r")
+
+[node name="main-title" type="Label" parent="mainMenu"]
+offset_left = 319.485
+offset_top = -528.792
+offset_right = 4129.49
+offset_bottom = -427.792
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_shadow_color = Color(0.309804, 0.309804, 0.309804, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 35
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 50
+theme_override_constants/shadow_outline_size = 14
+theme_override_fonts/font = ExtResource("8_3w1oe")
+theme_override_font_sizes/font_size = 100
+text = "Lead Eliminator
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="main-startBtn" type="Button" parent="mainMenu"]
+offset_left = 798.485
+offset_top = -399.792
+offset_right = 988.485
+offset_bottom = -353.792
+scale = Vector2(1, 0.997915)
+theme = ExtResource("13_kyqvf")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("10_im8wy")
+theme_override_font_sizes/font_size = 15
+text = "Game Start"
+metadata/_edit_use_anchors_ = true
+
+[node name="main-optionBtn" type="Button" parent="mainMenu"]
+offset_left = 799.485
+offset_top = -341.792
+offset_right = 989.485
+offset_bottom = -295.792
+theme = ExtResource("13_kyqvf")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("10_im8wy")
+theme_override_font_sizes/font_size = 15
+text = "Options"
+metadata/_edit_use_anchors_ = true
+
+[node name="main-descBtn" type="Button" parent="mainMenu"]
+offset_left = 798.485
+offset_top = -284.792
+offset_right = 988.485
+offset_bottom = -238.792
+theme = ExtResource("13_kyqvf")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("10_im8wy")
+theme_override_font_sizes/font_size = 15
+text = "How to play"
+metadata/_edit_use_anchors_ = true
+
+[node name="optionMenu" type="Node2D" parent="."]
+visible = false
+
+[node name="option-background" type="Sprite2D" parent="optionMenu"]
+position = Vector2(891.001, -367)
+scale = Vector2(2.95385, 2.7)
+texture = ExtResource("2_s1j5r")
+
+[node name="option" type="Sprite2D" parent="optionMenu"]
+position = Vector2(896, -370.375)
+scale = Vector2(2.90625, 2.52832)
+texture = ExtResource("6_3imrc")
+
+[node name="option-title" type="Label" parent="optionMenu"]
+anchors_preset = -1
+anchor_left = -7.81695
+anchor_top = -0.00139648
+anchor_right = -7.81695
+anchor_bottom = -0.00139646
+offset_left = 333.001
+offset_top = -564.005
+offset_right = 4163.0
+offset_bottom = -404.005
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("8_3w1oe")
+theme_override_font_sizes/font_size = 90
+text = "Options"
+horizontal_alignment = 1
+
+[node name="option-master" type="Label" parent="optionMenu"]
+anchors_preset = -1
+anchor_left = -0.0902343
+anchor_top = -0.119834
+anchor_right = 0.218359
+anchor_bottom = -0.041707
+offset_left = 633.0
+offset_top = -493.005
+offset_right = 753.0
+offset_bottom = -443.005
+size_flags_vertical = 7
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("8_3w1oe")
+theme_override_font_sizes/font_size = 20
+text = "Master"
+vertical_alignment = 1
+
+[node name="option-music" type="Label" parent="optionMenu"]
+anchors_preset = -1
+anchor_left = -0.171889
+anchor_top = -0.0879538
+anchor_right = -0.137164
+anchor_bottom = -0.0879538
+offset_left = 633.0
+offset_top = -424.005
+offset_right = 758.0
+offset_bottom = -391.005
+size_flags_vertical = 7
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("8_3w1oe")
+theme_override_font_sizes/font_size = 20
+text = "Music"
+vertical_alignment = 1
+
+[node name="option-sfx" type="Label" parent="optionMenu"]
+anchors_preset = -1
+anchor_left = 0.00926275
+anchor_top = 0.111634
+anchor_right = 0.00926275
+anchor_bottom = 0.111634
+offset_left = 633.0
+offset_top = -364.005
+offset_right = 873.0
+offset_bottom = -333.005
+size_flags_vertical = 7
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("8_3w1oe")
+theme_override_font_sizes/font_size = 20
+text = "Sound Fx"
+vertical_alignment = 1
+
+[node name="option-masterSlider" type="HSlider" parent="optionMenu"]
+anchors_preset = -1
+anchor_left = 0.358277
+anchor_top = 0.175481
+anchor_right = 0.358277
+anchor_bottom = 0.175483
+offset_left = 818.001
+offset_top = -500.005
+offset_right = 943.001
+offset_bottom = -455.005
+scale = Vector2(1.5, 1.5)
+size_flags_vertical = 2
+theme_override_icons/grabber = ExtResource("7_arfjf")
+theme_override_icons/grabber_highlight = ExtResource("7_arfjf")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_3q28l")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_md36i")
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="option-musicSlider" type="HSlider" parent="optionMenu"]
+anchors_preset = -1
+anchor_left = -0.0776288
+anchor_top = 0.157438
+anchor_right = -0.0776288
+anchor_bottom = 0.157438
+offset_left = 818.001
+offset_top = -440.0
+offset_right = 943.001
+offset_bottom = -395.0
+scale = Vector2(1.5, 1.5)
+size_flags_vertical = 2
+theme_override_icons/grabber = ExtResource("7_arfjf")
+theme_override_icons/grabber_highlight = ExtResource("7_arfjf")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_0es4y")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_otglv")
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="option-sfxSlider" type="HSlider" parent="optionMenu"]
+anchors_preset = -1
+anchor_left = -0.0125587
+anchor_top = 0.091293
+anchor_right = -0.0125587
+anchor_bottom = 0.091293
+offset_left = 818.001
+offset_top = -383.0
+offset_right = 943.001
+offset_bottom = -338.0
+scale = Vector2(1.5, 1.5)
+size_flags_vertical = 2
+theme_override_icons/grabber = ExtResource("7_arfjf")
+theme_override_icons/grabber_highlight = ExtResource("7_arfjf")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_m8lkg")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_txc44")
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="option-masterBox" type="CheckButton" parent="optionMenu"]
+offset_left = 1025.0
+offset_top = -485.0
+offset_right = 1069.0
+offset_bottom = -461.0
+scale = Vector2(1.5, 1.5)
+
+[node name="option-sfxBox" type="CheckButton" parent="optionMenu"]
+offset_left = 1024.0
+offset_top = -367.0
+offset_right = 1068.0
+offset_bottom = -343.0
+scale = Vector2(1.5, 1.5)
+
+[node name="option-musicBox" type="CheckButton" parent="optionMenu"]
+offset_left = 1025.0
+offset_top = -425.0
+offset_right = 1069.0
+offset_bottom = -401.0
+scale = Vector2(1.5, 1.5)
+
+[node name="option-backBtn" type="TextureButton" parent="optionMenu"]
+anchors_preset = -1
+anchor_left = -4.79159e-05
+anchor_top = -0.09188
+anchor_right = 0.582809
+anchor_bottom = 0.66812
+offset_left = 386.001
+offset_top = -187.005
+offset_right = 1328.0
+offset_bottom = 695.995
+scale = Vector2(0.12, 0.12)
+texture_normal = ExtResource("9_ewsxw")
+texture_pressed = ExtResource("10_p53p0")
+texture_hover = ExtResource("10_p53p0")
+stretch_mode = 0
+
+[node name="descMenu" type="Node2D" parent="."]
+visible = false
+
+[node name="desc-background" type="Sprite2D" parent="descMenu"]
+position = Vector2(891.001, -367)
+scale = Vector2(2.95385, 2.7)
+texture = ExtResource("2_s1j5r")
+
+[node name="desc" type="Sprite2D" parent="descMenu"]
+position = Vector2(889, -363)
+scale = Vector2(0.455368, 0.559091)
+texture = ExtResource("3_xiavd")
+
+[node name="desc-title" type="Label" parent="descMenu/desc"]
+anchors_preset = -1
+anchor_left = -0.000117831
+anchor_top = -4.74964e-05
+anchor_right = 2.25703
+anchor_bottom = -4.74964e-05
+offset_left = -1341.46
+offset_top = -261.381
+offset_right = 2468.54
+offset_bottom = -101.381
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("8_3w1oe")
+theme_override_font_sizes/font_size = 160
+text = "About"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="desc-backBtn" type="TextureButton" parent="descMenu/desc"]
+anchors_preset = -1
+anchor_left = -4.79159e-05
+anchor_top = -0.100062
+anchor_right = 0.599952
+anchor_bottom = 0.71812
+offset_left = -865.125
+offset_top = 288.93
+offset_right = -609.125
+offset_bottom = 544.93
+scale = Vector2(0.116396, 0.115767)
+texture_normal = ExtResource("9_ewsxw")
+texture_pressed = ExtResource("10_p53p0")
+texture_hover = ExtResource("10_p53p0")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="desc-content" type="Label" parent="descMenu/desc"]
+anchors_preset = -1
+anchor_left = -0.0952623
+anchor_top = -0.0684436
+anchor_right = 1.53507
+anchor_bottom = -0.0684436
+offset_left = -1041.6
+offset_top = 254.15
+offset_right = 3674.4
+offset_bottom = 414.15
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("8_3w1oe")
+theme_override_font_sizes/font_size = 50
+text = "Created by Travis Rogers, Anthony Jack, Haebin Noh, Chad Potter, Julai Dangol, Owen Graham"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="mapMenu" type="Node2D" parent="."]
+visible = false
+position = Vector2(659.49, -1377.01)
+
+[node name="map-background" type="Sprite2D" parent="mapMenu"]
+position = Vector2(231.261, 1009.89)
+scale = Vector2(0.261705, 0.261515)
+texture = ExtResource("1_gqkss")
+
+[node name="map" type="Sprite2D" parent="mapMenu"]
+position = Vector2(240.262, 1031.89)
 scale = Vector2(3.12647, 3.00694)
 texture = ExtResource("1_p3itc")
 
-[node name="easyBtn" type="Button" parent="Sprite2D"]
-anchors_preset = -1
-anchor_left = 5.715
-anchor_right = 5.715
-offset_left = -1801.12
-offset_top = -184.906
-offset_right = -1681.12
-offset_bottom = -124.906
-mouse_default_cursor_shape = 2
-theme = ExtResource("2_hk2t6")
-theme_override_font_sizes/font_size = 28
-text = "Easy"
-script = ExtResource("3_of21e")
-
-[node name="mediumBtn" type="Button" parent="Sprite2D"]
-offset_left = -355.186
-offset_top = -15.9725
-offset_right = -235.186
-offset_bottom = 31.0275
-mouse_default_cursor_shape = 2
-theme = ExtResource("4_s3viw")
-theme_override_font_sizes/font_size = 28
-text = "Medium"
-script = ExtResource("5_8m78n")
-
-[node name="hardBtn" type="Button" parent="Sprite2D"]
-offset_left = -339.995
-offset_top = -87.797
-offset_right = -215.995
-offset_bottom = -27.797
-mouse_default_cursor_shape = 2
-theme = ExtResource("6_122h3")
-theme_override_font_sizes/font_size = 28
-text = "Hard"
-script = ExtResource("7_pkp0i")
-
-[node name="Label" type="Label" parent="Sprite2D"]
-offset_left = -188.0
-offset_top = -110.0
-offset_right = 180.0
-offset_bottom = -81.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.654902, 0.654902, 0.654902, 1)
-theme_override_fonts/font = ExtResource("8_3w1oe")
-theme_override_font_sizes/font_size = 7
-text = "Choose the level"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Sprite2D"]
-anchors_preset = -1
-anchor_left = 0.942
-anchor_top = 0.5
-anchor_right = 0.976
-anchor_bottom = 0.5
-offset_left = 18.246
-offset_top = -261.026
-offset_right = 843.542
-offset_bottom = 1646.97
-scale = Vector2(0.08, 0.08)
-max_value = 90.0
-step = 30.0
-value = 30.0
-fill_mode = 3
-
-[node name="ProgressBar" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(160, 0)
+[node name="map-progressBar" type="Sprite2D" parent="mapMenu/map"]
+position = Vector2(160.53, -8.3141)
 rotation = -1.5708
-scale = Vector2(3.05396, -2.02115)
+scale = Vector2(3.05396, -1.84844)
 texture = ExtResource("11_kdh7d")
 hframes = 3
 vframes = 15
 
-[connection signal="pressed" from="Sprite2D/easyBtn" to="Sprite2D/easyBtn" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/mediumBtn" to="Sprite2D/mediumBtn" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/hardBtn" to="Sprite2D/hardBtn" method="_on_pressed"]
+[node name="map-easyBtn" type="Button" parent="mapMenu/map"]
+offset_left = -79.9624
+offset_top = -58.1987
+offset_right = -11.9624
+offset_bottom = -27.1987
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.733333, 0.733333, 0.733333, 1)
+theme_override_colors/font_hover_color = Color(0.866667, 0.866667, 0.866667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("10_im8wy")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xucqo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xucqo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xucqo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xucqo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xucqo")
+text = "Easy"
+metadata/_edit_use_anchors_ = true
+
+[node name="map-mediumBtn" type="Button" parent="mapMenu/map"]
+offset_left = -39.3415
+offset_top = 16.9608
+offset_right = 26.6585
+offset_bottom = 28.9608
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.733333, 0.733333, 0.733333, 1)
+theme_override_colors/font_hover_color = Color(0.866667, 0.866667, 0.866667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("10_im8wy")
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aydve")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_aydve")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_aydve")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_aydve")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aydve")
+text = "Medium"
+metadata/_edit_use_anchors_ = true
+
+[node name="map-hardBtn" type="Button" parent="mapMenu/map"]
+offset_left = 15.9925
+offset_top = -10.642
+offset_right = 59.9925
+offset_bottom = 1.35795
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.733333, 0.733333, 0.733333, 1)
+theme_override_colors/font_hover_color = Color(0.866667, 0.866667, 0.866667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("10_im8wy")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_juiy7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_juiy7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_juiy7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_juiy7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_juiy7")
+text = "Hard"
+metadata/_edit_use_anchors_ = true
+
+[node name="map-backBtn" type="TextureButton" parent="mapMenu/map"]
+offset_left = -178.156
+offset_top = 67.1779
+offset_right = 77.8438
+offset_bottom = 323.178
+scale = Vector2(0.12, 0.12)
+texture_normal = ExtResource("9_ewsxw")
+texture_pressed = ExtResource("10_p53p0")
+texture_hover = ExtResource("10_p53p0")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="map-tutorialBtn" type="Button" parent="mapMenu/map"]
+offset_left = 97.2342
+offset_top = 86.1341
+offset_right = 247.234
+offset_bottom = 97.1341
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.733333, 0.733333, 0.733333, 1)
+theme_override_colors/font_hover_color = Color(0.866667, 0.866667, 0.866667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_im8wy")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aydve")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_aydve")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_aydve")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_aydve")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aydve")
+text = "Need tutorial?"
+metadata/_edit_use_anchors_ = true
+
+[node name="map-title" type="Label" parent="mapMenu"]
+offset_left = -82.4885
+offset_top = 724.003
+offset_right = 589.511
+offset_bottom = 767.003
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.654902, 0.654902, 0.654902, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("8_3w1oe")
+theme_override_font_sizes/font_size = 20
+text = "Choose the level"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="background-music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_iwete")
+bus = &"master"
+
+[node name="sound-effect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_j7oga")
+bus = &"sfx"
+
+[connection signal="pressed" from="mainMenu/main-startBtn" to="." method="_on_mainstart_btn_pressed"]
+[connection signal="pressed" from="mainMenu/main-optionBtn" to="." method="_on_mainoption_btn_pressed"]
+[connection signal="pressed" from="mainMenu/main-descBtn" to="." method="_on_maindesc_btn_pressed"]
+[connection signal="pressed" from="mainMenu/main-descBtn" to="." method="_on_mainexit_btn_pressed"]
+[connection signal="value_changed" from="optionMenu/option-masterSlider" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="optionMenu/option-musicSlider" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="optionMenu/option-sfxSlider" to="." method="_on_sfx_value_changed"]
+[connection signal="toggled" from="optionMenu/option-masterBox" to="." method="_on_optionmaster_box_toggled"]
+[connection signal="pressed" from="optionMenu/option-backBtn" to="." method="_on_optionback_btn_pressed"]
+[connection signal="pressed" from="optionMenu/option-backBtn" to="." method="_on_mapback_btn_pressed"]
+[connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_optionback_btn_pressed"]
+[connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_mapback_btn_pressed"]
+[connection signal="pressed" from="mapMenu/map/map-easyBtn" to="." method="_on_mapeasy_btn_pressed"]
+[connection signal="pressed" from="mapMenu/map/map-mediumBtn" to="." method="_on_mapmedium_btn_pressed"]
+[connection signal="pressed" from="mapMenu/map/map-hardBtn" to="." method="_on_maphard_btn_pressed"]
+[connection signal="pressed" from="mapMenu/map/map-backBtn" to="." method="_on_mapback_btn_pressed"]
+[connection signal="pressed" from="mapMenu/map/map-tutorialBtn" to="." method="_on_maptutorial_btn_pressed"]

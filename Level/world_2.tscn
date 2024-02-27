@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bxwfp2kg412in"]
 
-[ext_resource type="Texture2D" uid="uid://damu6iduutx68" path="res://Level/Background Assets/salmon-color-solid-background-1920x1080.png" id="1_ipug7"]
-[ext_resource type="Texture2D" uid="uid://137fcsvwhay6" path="res://Level/Background Assets/kisspng-skyline-silhouette-clip-art-5ad9c0799fd044.5290281915242200256546.png" id="2_8wkm5"]
-[ext_resource type="Texture2D" uid="uid://djm8xx4mvd2to" path="res://Level/Godot Level Assets/Starter Tiles Platformer/DarkCastle.png" id="3_sfwer"]
+[ext_resource type="Texture2D" uid="uid://ci8dfx0npwk6x" path="res://Level/Background Assets/salmon-color-solid-background-1920x1080.png" id="1_ipug7"]
+[ext_resource type="Texture2D" uid="uid://brmkw7b8ovird" path="res://Level/Background Assets/kisspng-skyline-silhouette-clip-art-5ad9c0799fd044.5290281915242200256546.png" id="2_8wkm5"]
+[ext_resource type="Texture2D" uid="uid://djelhgebicde8" path="res://Level/Godot Level Assets/Starter Tiles Platformer/DarkCastle.png" id="3_sfwer"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ayds"]
 texture = ExtResource("3_sfwer")

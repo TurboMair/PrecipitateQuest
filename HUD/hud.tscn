@@ -1,30 +1,18 @@
-[gd_scene load_steps=18 format=3 uid="uid://dptn4c8o16t6p"]
+[gd_scene load_steps=14 format=3 uid="uid://dptn4c8o16t6p"]
 
 [ext_resource type="Script" path="res://HUD/hud.gd" id="1_xi2o5"]
-[ext_resource type="Texture2D" uid="uid://cf1gxm6fh5w76" path="res://HUD/Sprites/Heart.png" id="2_v6xko"]
-[ext_resource type="Texture2D" uid="uid://tsxhg3onavg7" path="res://HUD/Sprites/buttons free.png" id="3_hglok"]
-[ext_resource type="Texture2D" uid="uid://ds3bxyobsnrgm" path="res://HUD/Sprites/Pause Button (1).png" id="4_yp3ev"]
-[ext_resource type="Texture2D" uid="uid://cdmh44owmemfy" path="res://HUD/Sprites/Play Button (1).png" id="5_a7d0l"]
-[ext_resource type="Texture2D" uid="uid://bnvi6n7ada6pa" path="res://HUD/Sprites/Help Button(1).png" id="6_o6m5u"]
-[ext_resource type="Texture2D" uid="uid://xjp47y1ho6ok" path="res://HUD/Sprites/Sound Button.png" id="7_3kgfw"]
-[ext_resource type="Texture2D" uid="uid://lofhfjr8rkab" path="res://HUD/Sprites/Mute Button.png" id="8_wqc0t"]
-[ext_resource type="Texture2D" uid="uid://bvyjas8f7ymu3" path="res://HUD/Sprites/Progress Bar.png" id="9_biomo"]
-[ext_resource type="Texture2D" uid="uid://d3et36ekdxqxs" path="res://HUD/Sprites/Exit Button.png" id="10_f6u5e"]
+[ext_resource type="Texture2D" uid="uid://dco4t7w0uoejo" path="res://HUD/Tiny Wonder UI Free/Heart.png" id="2_v6xko"]
+[ext_resource type="Texture2D" uid="uid://bn74vcqt0n286" path="res://HUD/Tiny Wonder UI Free/buttons free.png" id="3_hglok"]
+[ext_resource type="Texture2D" uid="uid://d4cbjr7axpc1r" path="res://HUD/Tiny Wonder UI Free/Pause Button (1).png" id="4_yp3ev"]
+[ext_resource type="Texture2D" uid="uid://ds0jl7s46rkk8" path="res://HUD/Tiny Wonder UI Free/Play Button (1).png" id="5_a7d0l"]
+[ext_resource type="Texture2D" uid="uid://86rxmkyauc2m" path="res://HUD/Tiny Wonder UI Free/Help Button(1).png" id="6_o6m5u"]
+[ext_resource type="Texture2D" uid="uid://cimo3bpchjqkc" path="res://HUD/Tiny Wonder UI Free/Sound Button.png" id="7_3kgfw"]
+[ext_resource type="Texture2D" uid="uid://dn21xc31fmk0k" path="res://HUD/Tiny Wonder UI Free/Mute Button.png" id="8_wqc0t"]
+[ext_resource type="Texture2D" uid="uid://bq4v4xd7bfn2b" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="9_biomo"]
+[ext_resource type="Texture2D" uid="uid://bb2s0p37p1vxe" path="res://HUD/Tiny Wonder UI Free/Exit Button.png" id="10_f6u5e"]
 [ext_resource type="Script" path="res://Scripts/dictonaryLogic.gd" id="11_6gm85"]
-[ext_resource type="FontFile" uid="uid://d0yaeqqerhgqm" path="res://Scripts/BitFontMakerSporty.ttf" id="12_37mmf"]
-[ext_resource type="Texture2D" uid="uid://ds07skb3bd50j" path="res://HUD/Sprites/Flask.png" id="12_n6dbn"]
-[ext_resource type="FontFile" uid="uid://y3thn2ckbbfg" path="res://HUD/Sprites/VCR_OSD_MONO_1.001.ttf" id="13_b5v7w"]
-[ext_resource type="Script" path="res://Scripts/Dolphin.gd" id="14_et76i"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8fuf"]
-bg_color = Color(0.000517908, 0.00841649, 0.000568138, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.996078, 0.972549, 0.980392, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f75gr"]
+[ext_resource type="Texture2D" uid="uid://cgw6ne2issrqc" path="res://HUD/Tiny Wonder UI Free/Flask.png" id="12_n6dbn"]
+[ext_resource type="FontFile" uid="uid://cp0s5dbydk28k" path="res://HUD/Tiny Wonder UI Free/VCR_OSD_MONO_1.001.ttf" id="13_b5v7w"]
 
 [node name="HUD" type="Node2D"]
 script = ExtResource("1_xi2o5")
@@ -159,73 +147,6 @@ text = "H20
 "
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Puddle"
-
-[node name="DolphinTextBox" type="CanvasLayer" parent="."]
-script = ExtResource("14_et76i")
-
-[node name="TextboxContainer" type="MarginContainer" parent="DolphinTextBox"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -123.0
-offset_right = 640.0
-offset_bottom = 25.0
-grow_vertical = 0
-theme_override_constants/margin_left = 35
-theme_override_constants/margin_bottom = 35
-metadata/_edit_group_ = true
-
-[node name="Panel" type="Panel" parent="DolphinTextBox/TextboxContainer"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_t8fuf")
-
-[node name="MarginContainer" type="MarginContainer" parent="DolphinTextBox/TextboxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="Panel" type="Panel" parent="DolphinTextBox/TextboxContainer/MarginContainer"]
-modulate = Color(0.235294, 0.411765, 0.388235, 1)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_f75gr")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="DolphinTextBox/TextboxContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="start" type="Label" parent="DolphinTextBox/TextboxContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("12_37mmf")
-theme_override_font_sizes/font_size = 23
-text = "^_"
-
-[node name="label" type="Label" parent="DolphinTextBox/TextboxContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("12_37mmf")
-theme_override_font_sizes/font_size = 23
-autowrap_mode = 3
-justification_flags = 131
-clip_text = true
-visible_characters = 0
-visible_ratio = 0.0
-text_direction = 1
-
-[node name="end" type="Label" parent="DolphinTextBox/TextboxContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_fonts/font = ExtResource("12_37mmf")
-theme_override_font_sizes/font_size = 23
-text = "#"
 
 [connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
 [connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]

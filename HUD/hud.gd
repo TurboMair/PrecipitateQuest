@@ -52,7 +52,7 @@ func updateText():
 	$ChemButton/Label.text = button1
 	$ChemButton2/Label.text = button2
 	$ChemButton3/Label.text = button3
-	$Label.text = puddle
+	#$Label.text = puddle
 
 func _on_chem_button_pressed():
 	science.throw_phial(puddle, button1)
