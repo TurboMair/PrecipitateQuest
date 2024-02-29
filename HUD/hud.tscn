@@ -229,3 +229,6 @@ text = "#"
 
 [connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
 [connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]
+[connection signal="button_up" from="ChemButton" to="." method="_on_chem_button_button_up"]
+[connection signal="button_up" from="ChemButton2" to="." method="_on_chem_button_2_button_up"]
+[connection signal="button_up" from="ChemButton3" to="." method="_on_chem_button_3_button_up"]

@@ -3,14 +3,16 @@ extends CanvasLayer
 @onready var textbox_container = $TextboxContainer
 @onready var label = $TextboxContainer/MarginContainer/HBoxContainer/label
 @onready var tween : Tween = create_tween()
+@onready var help_button = $HUD/HelpButton
+@onready var play_button = $HUD/PauseButton
 
 # Called when the node enters the scene tree for the first time.
 
 const CHAR_READ_RATE = 0.5
 
 func _ready():
-	#hide_textbox()
-	update_dolphin_textbox("Welcome to the Ocean Laboratory, where the water is contaminated with lead (Pb). My name is Dolph and I shall LEAD you through this treacherous land.")
+	hide_textbox()
+	#update_dolphin_textbox("Welcome to the Ocean Laboratory, where the water is contaminated with lead (Pb). My name is Dolph and I shall LEAD you through this treacherous land.")
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -63,5 +65,5 @@ func on_tween_finished():
 	print("Tween done!")
 
 #How to grab info
-var b1 = $HUD.puddle
-var dialogue = dialogue_dict[$HUD.puddle]
+#var b1 = $HUD.puddle
+#var dialogue = dialogue_dict[$HUD.puddle]
