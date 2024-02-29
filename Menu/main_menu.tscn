@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://3wst5lguyl3g"]
+[gd_scene load_steps=29 format=3 uid="uid://3wst5lguyl3g"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_a3tfa"]
 [ext_resource type="Texture2D" uid="uid://bg6tqg46vlhj2" path="res://Menu/background.png" id="1_gqkss"]
 [ext_resource type="Texture2D" uid="uid://cd7ty7a2xchk1" path="res://Menu/pixel_map.png" id="1_p3itc"]
+[ext_resource type="Shader" path="res://Menu/scroll.gdshader" id="2_adine"]
 [ext_resource type="Texture2D" uid="uid://0hy4bja3etmf" path="res://Menu/menu.png.png" id="2_s1j5r"]
 [ext_resource type="Texture2D" uid="uid://bl171p5fk2ohh" path="res://Menu/paper.png" id="3_xiavd"]
 [ext_resource type="Texture2D" uid="uid://bammg3p1cuyyi" path="res://Menu/option3.png" id="6_3imrc"]
@@ -15,6 +16,12 @@
 [ext_resource type="Theme" uid="uid://binb8tymyiycd" path="res://Menu/mainMenu-button.tres" id="13_kyqvf"]
 [ext_resource type="AudioStream" uid="uid://bk1uw88dqwk2u" path="res://Menu/BGM.mp3" id="14_iwete"]
 [ext_resource type="AudioStream" uid="uid://tappobeeknki" path="res://Menu/sound-effect.mp3" id="14_j7oga"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ob2h1"]
+shader = ExtResource("2_adine")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qng0b"]
+shader = ExtResource("2_adine")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3q28l"]
 bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
@@ -34,6 +41,9 @@ bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txc44"]
 bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_csxcn"]
+shader = ExtResource("2_adine")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xucqo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aydve"]
@@ -48,15 +58,17 @@ metadata/_edit_horizontal_guides_ = [542.0]
 [node name="mainMenu" type="Node2D" parent="."]
 
 [node name="main-background" type="Sprite2D" parent="mainMenu"]
-position = Vector2(890.745, -367.396)
-scale = Vector2(2.95254, 2.6967)
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ob2h1")
+position = Vector2(890.745, -350)
+scale = Vector2(2.95254, 2.84167)
 texture = ExtResource("2_s1j5r")
 
 [node name="main-title" type="Label" parent="mainMenu"]
-offset_left = 319.485
-offset_top = -528.792
-offset_right = 4129.49
-offset_bottom = -427.792
+offset_left = 315.0
+offset_top = -506.0
+offset_right = 4155.0
+offset_bottom = -395.0
 scale = Vector2(0.3, 0.3)
 theme_override_colors/font_shadow_color = Color(0.309804, 0.309804, 0.309804, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -65,31 +77,29 @@ theme_override_constants/shadow_offset_y = 20
 theme_override_constants/outline_size = 50
 theme_override_constants/shadow_outline_size = 14
 theme_override_fonts/font = ExtResource("8_3w1oe")
-theme_override_font_sizes/font_size = 100
-text = "Lead Eliminator
-"
+theme_override_font_sizes/font_size = 115
+text = "PRECIPITATE REQUEST"
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="main-startBtn" type="Button" parent="mainMenu"]
-offset_left = 798.485
-offset_top = -399.792
-offset_right = 988.485
-offset_bottom = -353.792
+offset_left = 797.0
+offset_top = -378.0
+offset_right = 987.0
+offset_bottom = -332.0
 scale = Vector2(1, 0.997915)
 theme = ExtResource("13_kyqvf")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("10_im8wy")
 theme_override_font_sizes/font_size = 15
-text = "Game Start"
+text = "Game start"
 metadata/_edit_use_anchors_ = true
 
 [node name="main-optionBtn" type="Button" parent="mainMenu"]
-offset_left = 799.485
-offset_top = -341.792
-offset_right = 989.485
-offset_bottom = -295.792
+offset_left = 798.0
+offset_top = -320.0
+offset_right = 988.0
+offset_bottom = -274.0
 theme = ExtResource("13_kyqvf")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
@@ -99,10 +109,10 @@ text = "Options"
 metadata/_edit_use_anchors_ = true
 
 [node name="main-descBtn" type="Button" parent="mainMenu"]
-offset_left = 798.485
-offset_top = -284.792
-offset_right = 988.485
-offset_bottom = -238.792
+offset_left = 797.0
+offset_top = -263.0
+offset_right = 987.0
+offset_bottom = -217.0
 theme = ExtResource("13_kyqvf")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
@@ -115,8 +125,10 @@ metadata/_edit_use_anchors_ = true
 visible = false
 
 [node name="option-background" type="Sprite2D" parent="optionMenu"]
-position = Vector2(891.001, -367)
-scale = Vector2(2.95385, 2.7)
+texture_repeat = 2
+material = SubResource("ShaderMaterial_qng0b")
+position = Vector2(891.001, -350)
+scale = Vector2(2.95385, 2.84167)
 texture = ExtResource("2_s1j5r")
 
 [node name="option" type="Sprite2D" parent="optionMenu"]
@@ -297,8 +309,10 @@ stretch_mode = 0
 visible = false
 
 [node name="desc-background" type="Sprite2D" parent="descMenu"]
-position = Vector2(891.001, -367)
-scale = Vector2(2.95385, 2.7)
+texture_repeat = 2
+material = SubResource("ShaderMaterial_csxcn")
+position = Vector2(891.001, -350)
+scale = Vector2(2.95385, 2.84167)
 texture = ExtResource("2_s1j5r")
 
 [node name="desc" type="Sprite2D" parent="descMenu"]
@@ -510,10 +524,10 @@ bus = &"sfx"
 [connection signal="value_changed" from="optionMenu/option-musicSlider" to="." method="_on_music_value_changed"]
 [connection signal="value_changed" from="optionMenu/option-sfxSlider" to="." method="_on_sfx_value_changed"]
 [connection signal="toggled" from="optionMenu/option-masterBox" to="." method="_on_optionmaster_box_toggled"]
-[connection signal="pressed" from="optionMenu/option-backBtn" to="." method="_on_optionback_btn_pressed"]
 [connection signal="pressed" from="optionMenu/option-backBtn" to="." method="_on_mapback_btn_pressed"]
-[connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_optionback_btn_pressed"]
+[connection signal="pressed" from="optionMenu/option-backBtn" to="." method="_on_optionback_btn_pressed"]
 [connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_mapback_btn_pressed"]
+[connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_optionback_btn_pressed"]
 [connection signal="pressed" from="mapMenu/map/map-easyBtn" to="." method="_on_mapeasy_btn_pressed"]
 [connection signal="pressed" from="mapMenu/map/map-mediumBtn" to="." method="_on_mapmedium_btn_pressed"]
 [connection signal="pressed" from="mapMenu/map/map-hardBtn" to="." method="_on_maphard_btn_pressed"]
