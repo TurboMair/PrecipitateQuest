@@ -14,7 +14,6 @@ func _ready():
 
 # Start Button - Go to the Map
 func _on_mainstart_btn_pressed():
-	$"sound-effect".play()
 	$mapMenu.visible = true
 	$mainMenu.visible = false
 	$optionMenu.visible = false
@@ -23,14 +22,12 @@ func _on_mainstart_btn_pressed():
 
 # Options Button - Go to the option
 func _on_mainoption_btn_pressed():
-	$"sound-effect".play()
 	$mapMenu.visible = false
 	$mainMenu.visible = false
 	$optionMenu.visible = true
 	$descMenu.visible = false
 
 func _on_maindesc_btn_pressed():
-	$"sound-effect".play()
 	$mapMenu.visible = false
 	$mainMenu.visible = false
 	$optionMenu.visible = false
@@ -42,7 +39,6 @@ func _on_maindesc_btn_pressed():
 
 # Back Button: Go back to the main menu
 func _on_optionback_btn_pressed():
-	$"sound-effect".play()
 	$mapMenu.visible = false
 	$mainMenu.visible = true
 	$optionMenu.visible = false
@@ -80,7 +76,6 @@ func _on_sfx_value_changed(value):
 
 # Easy level Button: Go to the easy level game
 func _on_mapeasy_btn_pressed():
-	$"sound-effect".play()
 	$mapMenu.visible = false
 	$mainMenu.visible = false
 	$optionMenu.visible = false
@@ -89,7 +84,6 @@ func _on_mapeasy_btn_pressed():
 
 # Medium level Button: Go to the medium level game
 func _on_mapmedium_btn_pressed():
-	$"sound-effect".play()
 	$mapMenu.visible = false
 	$mainMenu.visible = false
 	$optionMenu.visible = false
@@ -98,7 +92,6 @@ func _on_mapmedium_btn_pressed():
 
 # Hard level Button: Go to the hard level game
 func _on_maphard_btn_pressed():
-	$"sound-effect".play()
 	$mapMenu.visible = false
 	$mainMenu.visible = false
 	$optionMenu.visible = false
@@ -107,7 +100,6 @@ func _on_maphard_btn_pressed():
 	
 # Tutorial Button: Go to the tutorial
 func _on_maptutorial_btn_pressed():
-	$"sound-effect".play()
 	$mapMenu.visible = false
 	$mainMenu.visible = false
 	$optionMenu.visible = false
@@ -116,7 +108,6 @@ func _on_maptutorial_btn_pressed():
 
 # Back Button: Go back to the main menu
 func _on_mapback_btn_pressed():
-	$"sound-effect".play()
 	$mapMenu.visible = false
 	$mainMenu.visible = true
 	$optionMenu.visible = false

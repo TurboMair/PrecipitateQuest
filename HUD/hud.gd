@@ -67,7 +67,3 @@ func _on_chem_button_2_pressed():
 func _on_chem_button_3_pressed():
 	science.throw_phial(puddle, button3)
 	pass # Replace with function body.
-
-
-func _on_exit_button_pressed():
-	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
