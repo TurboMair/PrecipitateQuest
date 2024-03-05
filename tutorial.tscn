@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0kwnk47mcg2e"]
+[gd_scene load_steps=7 format=3 uid="uid://d0kwnk47mcg2e"]
 
 [ext_resource type="Texture2D" path="res://Level/Godot Level Assets/Starter Tiles Platformer/Swampset.png" id="1_evw47"]
+[ext_resource type="PackedScene" uid="uid://b565oesslveuk" path="res://puddle.tscn" id="1_jule7"]
 [ext_resource type="PackedScene" path="res://Player/player.tscn" id="2_87qvg"]
 [ext_resource type="PackedScene" path="res://HUD/hud.tscn" id="3_tx0iq"]
 
@@ -36,6 +37,10 @@ texture = ExtResource("1_evw47")
 sources/0 = SubResource("TileSetAtlasSource_uru4b")
 
 [node name="Tutorial" type="Node"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_jule7")]
+position = Vector2(408, 424)
+scale = Vector2(2, 2)
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(3, 3)
