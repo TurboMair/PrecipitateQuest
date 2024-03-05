@@ -49,10 +49,10 @@ func _on_help_button_toggled(toggled_on):
 		$PauseButton.show()
 
 func updateText():
-	$ChemButton/Label.text = button1
-	$ChemButton2/Label.text = button2
-	$ChemButton3/Label.text = button3
-	#$Label.text = puddle
+	$ChemButton/ChemButton1Label.text = button1
+	$ChemButton2/ChemButton2Label.text = button2
+	$ChemButton3/ChemButton3Label.text = button3
+	$puddle.text = puddle
 
 func _on_chem_button_pressed():
 	science.throw_phial(puddle, button1)

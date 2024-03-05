@@ -19,7 +19,12 @@ func switch_animation(motion):
 
 func _on_button_pressed():
 	switch_animation("water")
+	get_tree().call_group("phial_throw_triggers","throw_phial")
+	$Splash.play()
 
 
 func _walk():
 	switch_animation("walk")
+
+func throw_phial():
+		switch_animation("water")
