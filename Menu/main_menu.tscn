@@ -1,27 +1,24 @@
 [gd_scene load_steps=29 format=3 uid="uid://3wst5lguyl3g"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_a3tfa"]
-[ext_resource type="Texture2D" uid="uid://bg6tqg46vlhj2" path="res://Menu/background.png" id="1_gqkss"]
-[ext_resource type="Texture2D" uid="uid://cd7ty7a2xchk1" path="res://Menu/pixel_map.png" id="1_p3itc"]
-[ext_resource type="Shader" path="res://Menu/scroll.gdshader" id="2_adine"]
-[ext_resource type="Texture2D" uid="uid://0hy4bja3etmf" path="res://Menu/menu.png.png" id="2_s1j5r"]
-[ext_resource type="Texture2D" uid="uid://bl171p5fk2ohh" path="res://Menu/paper.png" id="3_xiavd"]
-[ext_resource type="Texture2D" uid="uid://bammg3p1cuyyi" path="res://Menu/option3.png" id="6_3imrc"]
-[ext_resource type="Texture2D" uid="uid://cxunbcbilvdm" path="res://Menu/grabber.png" id="7_arfjf"]
-[ext_resource type="FontFile" uid="uid://dqjbqt4p40xcl" path="res://Menu/prstartk.ttf" id="8_3w1oe"]
-[ext_resource type="Texture2D" uid="uid://do70old2d537" path="res://Menu/back-button.png" id="9_ewsxw"]
-[ext_resource type="FontFile" uid="uid://3bb8e7jke0gt" path="res://Menu/prstart.ttf" id="10_im8wy"]
-[ext_resource type="Texture2D" uid="uid://jddftvavwgn" path="res://Menu/hover-back-button.png" id="10_p53p0"]
-[ext_resource type="Texture2D" uid="uid://bq4v4xd7bfn2b" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="11_kdh7d"]
+[ext_resource type="Texture2D" uid="uid://h3krohth8r2p" path="res://Assets/background.png" id="1_gqkss"]
+[ext_resource type="Texture2D" uid="uid://da0xjidu4g53y" path="res://Assets/pixel_map.png" id="1_p3itc"]
+[ext_resource type="Texture2D" uid="uid://b7itd3t515owx" path="res://Assets/Level/Background/Sky_bg_1.png" id="2_aalpp"]
+[ext_resource type="Texture2D" uid="uid://dgeu0feuwmk3j" path="res://Assets/Level/Background/Clouds_bg_1.png" id="3_6j0cd"]
+[ext_resource type="Texture2D" uid="uid://cieqtlxytqit5" path="res://Assets/paper.png" id="3_xiavd"]
+[ext_resource type="Texture2D" uid="uid://b1pcyrxjq23ve" path="res://Assets/Level/Background/Far tree_bg_1.png" id="4_0wgmq"]
+[ext_resource type="Texture2D" uid="uid://ban6o4w58iney" path="res://Assets/Level/Background/Near Tree_bg_1.png" id="5_odsrp"]
+[ext_resource type="Texture2D" uid="uid://bmg36x54pi61o" path="res://Assets/option.png" id="6_3imrc"]
+[ext_resource type="Texture2D" uid="uid://c6cae1l8f8sgh" path="res://Assets/Level/Background/Ground_bg_1.png" id="6_ovrkj"]
+[ext_resource type="Texture2D" uid="uid://b1m0ewvdvutk5" path="res://Assets/grabber.png" id="7_arfjf"]
+[ext_resource type="FontFile" uid="uid://dna4lel1576fg" path="res://Assets/prstartk.ttf" id="8_3w1oe"]
+[ext_resource type="Texture2D" uid="uid://4qpxmvc3smp7" path="res://Assets/back-button.png" id="9_ewsxw"]
+[ext_resource type="FontFile" uid="uid://c30xrmbkwmqhl" path="res://Assets/prstart.ttf" id="10_im8wy"]
+[ext_resource type="Texture2D" uid="uid://bpsyhv2bwmdel" path="res://Assets/hover-back-button.png" id="10_p53p0"]
+[ext_resource type="Texture2D" uid="uid://byo8moitmvlkd" path="res://Assets/progress-bar-inner.png" id="11_kdh7d"]
 [ext_resource type="Theme" uid="uid://binb8tymyiycd" path="res://Menu/mainMenu-button.tres" id="13_kyqvf"]
-[ext_resource type="AudioStream" uid="uid://bk1uw88dqwk2u" path="res://Menu/BGM.mp3" id="14_iwete"]
-[ext_resource type="AudioStream" uid="uid://tappobeeknki" path="res://Menu/sound-effect.mp3" id="14_j7oga"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ob2h1"]
-shader = ExtResource("2_adine")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qng0b"]
-shader = ExtResource("2_adine")
+[ext_resource type="AudioStream" uid="uid://cq6t5bboqts5s" path="res://Assets/BGM.mp3" id="14_iwete"]
+[ext_resource type="AudioStream" uid="uid://hlmi3tkfxw3b" path="res://Assets/sound-effect.mp3" id="14_j7oga"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3q28l"]
 bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
@@ -41,9 +38,6 @@ bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txc44"]
 bg_color = Color(0.445433, 0.169658, 0.00396458, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_csxcn"]
-shader = ExtResource("2_adine")
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xucqo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aydve"]
@@ -55,14 +49,63 @@ position = Vector2(-315, 691)
 script = ExtResource("1_a3tfa")
 metadata/_edit_horizontal_guides_ = [542.0]
 
-[node name="mainMenu" type="Node2D" parent="."]
+[node name="background" type="ParallaxBackground" parent="."]
 
-[node name="main-background" type="Sprite2D" parent="mainMenu"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="background"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1151, 0)
+
+[node name="Sky" type="Sprite2D" parent="background/ParallaxLayer"]
+texture_filter = 2
 texture_repeat = 2
-material = SubResource("ShaderMaterial_ob2h1")
-position = Vector2(890.745, -350)
+position = Vector2(575.745, 341)
 scale = Vector2(2.95254, 2.84167)
-texture = ExtResource("2_s1j5r")
+texture = ExtResource("2_aalpp")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="background"]
+motion_scale = Vector2(-0.2, -0.2)
+motion_mirroring = Vector2(1151, 0)
+
+[node name="Clouds" type="Sprite2D" parent="background/ParallaxLayer2"]
+texture_filter = 2
+texture_repeat = 2
+position = Vector2(575.745, 341)
+scale = Vector2(2.95254, 2.84167)
+texture = ExtResource("3_6j0cd")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="background"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1151, 0)
+
+[node name="Far Tree" type="Sprite2D" parent="background/ParallaxLayer3"]
+texture_filter = 2
+texture_repeat = 2
+position = Vector2(575.745, 341)
+scale = Vector2(2.95254, 2.84167)
+texture = ExtResource("4_0wgmq")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="background"]
+motion_scale = Vector2(0.85, 0.85)
+motion_mirroring = Vector2(1151, 0)
+
+[node name="Near Tree" type="Sprite2D" parent="background/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(575.745, 341)
+scale = Vector2(2.95254, 2.84167)
+texture = ExtResource("5_odsrp")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="background"]
+motion_mirroring = Vector2(1151, 0)
+
+[node name="Ground" type="Sprite2D" parent="background/ParallaxLayer5"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(575.745, 341)
+scale = Vector2(2.95254, 2.84167)
+texture = ExtResource("6_ovrkj")
+
+[node name="mainMenu" type="Node2D" parent="."]
 
 [node name="main-title" type="Label" parent="mainMenu"]
 offset_left = 315.0
@@ -78,8 +121,9 @@ theme_override_constants/outline_size = 50
 theme_override_constants/shadow_outline_size = 14
 theme_override_fonts/font = ExtResource("8_3w1oe")
 theme_override_font_sizes/font_size = 115
-text = "PRECIPITATE REQUEST"
+text = "PRECIPITATE QUEST"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="main-startBtn" type="Button" parent="mainMenu"]
 offset_left = 797.0
@@ -92,7 +136,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("10_im8wy")
 theme_override_font_sizes/font_size = 15
-text = "Game start"
+text = "Start Game"
 metadata/_edit_use_anchors_ = true
 
 [node name="main-optionBtn" type="Button" parent="mainMenu"]
@@ -118,18 +162,11 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("10_im8wy")
 theme_override_font_sizes/font_size = 15
-text = "How to play"
+text = "About"
 metadata/_edit_use_anchors_ = true
 
 [node name="optionMenu" type="Node2D" parent="."]
 visible = false
-
-[node name="option-background" type="Sprite2D" parent="optionMenu"]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_qng0b")
-position = Vector2(891.001, -350)
-scale = Vector2(2.95385, 2.84167)
-texture = ExtResource("2_s1j5r")
 
 [node name="option" type="Sprite2D" parent="optionMenu"]
 position = Vector2(896, -370.375)
@@ -308,13 +345,6 @@ stretch_mode = 0
 [node name="descMenu" type="Node2D" parent="."]
 visible = false
 
-[node name="desc-background" type="Sprite2D" parent="descMenu"]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_csxcn")
-position = Vector2(891.001, -350)
-scale = Vector2(2.95385, 2.84167)
-texture = ExtResource("2_s1j5r")
-
 [node name="desc" type="Sprite2D" parent="descMenu"]
 position = Vector2(889, -363)
 scale = Vector2(0.455368, 0.559091)
@@ -390,6 +420,7 @@ scale = Vector2(3.12647, 3.00694)
 texture = ExtResource("1_p3itc")
 
 [node name="map-progressBar" type="Sprite2D" parent="mapMenu/map"]
+visible = false
 position = Vector2(160.53, -8.3141)
 rotation = -1.5708
 scale = Vector2(3.05396, -1.84844)
@@ -471,11 +502,15 @@ stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="map-tutorialBtn" type="Button" parent="mapMenu/map"]
-offset_left = 97.2342
-offset_top = 86.1341
-offset_right = 247.234
-offset_bottom = 97.1341
-scale = Vector2(0.5, 0.5)
+anchors_preset = -1
+anchor_left = -0.000882387
+anchor_top = 0.000637472
+anchor_right = -0.000882387
+anchor_bottom = 0.000637472
+offset_left = 28.2261
+offset_top = 87.8368
+offset_right = 178.226
+offset_bottom = 98.8368
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.733333, 0.733333, 0.733333, 1)
 theme_override_colors/font_hover_color = Color(0.866667, 0.866667, 0.866667, 1)
@@ -488,33 +523,30 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_aydve")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_aydve")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_aydve")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_aydve")
-text = "Need tutorial?"
+text = "Tutorial"
 metadata/_edit_use_anchors_ = true
 
 [node name="map-title" type="Label" parent="mapMenu"]
-offset_left = -82.4885
-offset_top = 724.003
-offset_right = 589.511
-offset_bottom = 767.003
+offset_left = -343.0
+offset_top = 724.0
+offset_right = 807.0
+offset_bottom = 767.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.654902, 0.654902, 0.654902, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("8_3w1oe")
-theme_override_font_sizes/font_size = 20
-text = "Choose the level"
+theme_override_font_sizes/font_size = 30
+text = "Choose a level"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="background-music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_iwete")
-bus = &"master"
 
 [node name="sound-effect" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_j7oga")
-bus = &"sfx"
 
 [connection signal="pressed" from="mainMenu/main-startBtn" to="." method="_on_mainstart_btn_pressed"]
 [connection signal="pressed" from="mainMenu/main-optionBtn" to="." method="_on_mainoption_btn_pressed"]
@@ -524,12 +556,12 @@ bus = &"sfx"
 [connection signal="value_changed" from="optionMenu/option-musicSlider" to="." method="_on_music_value_changed"]
 [connection signal="value_changed" from="optionMenu/option-sfxSlider" to="." method="_on_sfx_value_changed"]
 [connection signal="toggled" from="optionMenu/option-masterBox" to="." method="_on_optionmaster_box_toggled"]
-[connection signal="pressed" from="optionMenu/option-backBtn" to="." method="_on_mapback_btn_pressed"]
 [connection signal="pressed" from="optionMenu/option-backBtn" to="." method="_on_optionback_btn_pressed"]
-[connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_mapback_btn_pressed"]
+[connection signal="pressed" from="optionMenu/option-backBtn" to="." method="_on_mapback_btn_pressed"]
 [connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_optionback_btn_pressed"]
-[connection signal="pressed" from="mapMenu/map/map-easyBtn" to="." method="_on_mapeasy_btn_pressed"]
-[connection signal="pressed" from="mapMenu/map/map-mediumBtn" to="." method="_on_mapmedium_btn_pressed"]
-[connection signal="pressed" from="mapMenu/map/map-hardBtn" to="." method="_on_maphard_btn_pressed"]
+[connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_mapback_btn_pressed"]
+[connection signal="pressed" from="mapMenu/map/map-easyBtn" to="." method="_on_mapbtn_pressed" binds= ["easy"]]
+[connection signal="pressed" from="mapMenu/map/map-mediumBtn" to="." method="_on_mapbtn_pressed" binds= ["medium"]]
+[connection signal="pressed" from="mapMenu/map/map-hardBtn" to="." method="_on_mapbtn_pressed" binds= ["hard"]]
 [connection signal="pressed" from="mapMenu/map/map-backBtn" to="." method="_on_mapback_btn_pressed"]
-[connection signal="pressed" from="mapMenu/map/map-tutorialBtn" to="." method="_on_maptutorial_btn_pressed"]
+[connection signal="pressed" from="mapMenu/map/map-tutorialBtn" to="." method="_on_mapbtn_pressed" binds= ["tutorial"]]

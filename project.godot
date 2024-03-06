@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Software Engineering"
+config/name="Precipitate Quest"
 run/main_scene="res://Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Icon.png"
@@ -18,6 +18,10 @@ config/icon="res://Icon.png"
 [display]
 
 window/stretch/mode="viewport"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [rendering]
 

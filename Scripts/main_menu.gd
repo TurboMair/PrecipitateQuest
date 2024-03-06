@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 var music_playing = true
 var background_music: AudioStreamPlayer2D
@@ -6,8 +6,9 @@ var background_music: AudioStreamPlayer2D
 func _ready():
 	background_music = $"background-music"
 	background_music.play()
-	
-	
+
+func _process(delta):
+	$background.scroll_offset.x -= 60*delta
 # --------------------------------------------------------------
 # Main Menu code
 # --------------------------------------------------------------
@@ -78,41 +79,14 @@ func _on_sfx_value_changed(value):
 # Map code
 # --------------------------------------------------------------
 
-# Easy level Button: Go to the easy level game
-func _on_mapeasy_btn_pressed():
+#Switch scene
+func _on_mapbtn_pressed(level):
 	$"sound-effect".play()
 	$mapMenu.visible = false
 	$mainMenu.visible = false
 	$optionMenu.visible = false
 	$descMenu.visible = false
-	get_tree().change_scene_to_file("res://lvl_one.tscn")
-
-# Medium level Button: Go to the medium level game
-func _on_mapmedium_btn_pressed():
-	$"sound-effect".play()
-	$mapMenu.visible = false
-	$mainMenu.visible = false
-	$optionMenu.visible = false
-	$descMenu.visible = false
-	get_tree().change_scene_to_file("res://lvl_two.tscn")
-
-# Hard level Button: Go to the hard level game
-func _on_maphard_btn_pressed():
-	$"sound-effect".play()
-	$mapMenu.visible = false
-	$mainMenu.visible = false
-	$optionMenu.visible = false
-	$descMenu.visible = false
-	get_tree().change_scene_to_file("res://lvl_three.tscn")
-	
-# Tutorial Button: Go to the tutorial
-func _on_maptutorial_btn_pressed():
-	$"sound-effect".play()
-	$mapMenu.visible = false
-	$mainMenu.visible = false
-	$optionMenu.visible = false
-	$descMenu.visible = false
-	get_tree().change_scene_to_file("res://tutorial.tscn")
+	get_tree().change_scene_to_file("res://" + level + ".tscn")
 
 # Back Button: Go back to the main menu
 func _on_mapback_btn_pressed():

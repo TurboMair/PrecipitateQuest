@@ -1,14 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3dnjgesd5r7d"]
+[gd_scene load_steps=4 format=3 uid="uid://cnumjljuewa4n"]
 
-[ext_resource type="PackedScene" uid="uid://bm5twet16p3gy" path="res://Level/world_1.tscn" id="1_5tpy3"]
-[ext_resource type="PackedScene" uid="uid://crpxmt80bemi8" path="res://Player/player.tscn" id="2_87qvg"]
-[ext_resource type="PackedScene" uid="uid://dptn4c8o16t6p" path="res://HUD/hud.tscn" id="3_tx0iq"]
+[ext_resource type="PackedScene" uid="uid://coxtet87osx5h" path="res://HUD/hud.tscn" id="1_1lib3"]
+[ext_resource type="PackedScene" uid="uid://b5q2ngvxevsbc" path="res://Level/tutorial_map.tscn" id="2_epi70"]
+[ext_resource type="PackedScene" uid="uid://crpxmt80bemi8" path="res://Player/player.tscn" id="3_rj5ml"]
 
-[node name="Tutorial" type="Node"]
+[node name="Tutorial" type="Node" groups=["flask_reactions"]]
 
-[node name="World1" parent="." instance=ExtResource("1_5tpy3")]
+[node name="HUD" parent="." instance=ExtResource("1_1lib3")]
 
-[node name="Player" parent="." instance=ExtResource("2_87qvg")]
-position = Vector2(104, 368)
+[node name="World" parent="." groups=["flask_reactions"] instance=ExtResource("2_epi70")]
 
-[node name="HUD" parent="." instance=ExtResource("3_tx0iq")]
+[node name="Player" parent="." groups=["flask_reactions"] instance=ExtResource("3_rj5ml")]
+position = Vector2(151, 368)

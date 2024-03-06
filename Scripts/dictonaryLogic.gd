@@ -46,7 +46,7 @@ var problem_dict = {
 	}
 #create a update_phial script to wipe old phials and replace with new text
 #Call this anytime the player clicks on the phial
-func throw_phial(puddle_key, phial_compound):
+func flask_throw(puddle_key, phial_compound):
 	if phial_compound == correct_dict[puddle_key]:
 		turn_puddle_solid(puddle_key)
 		print("correct")
@@ -70,10 +70,9 @@ func startGameText():
 	var randomList = problem_dict["KCl"]
 	get_parent().puddle = "KCl"
 	randomList.shuffle()
-	get_parent().button1 = randomList[0]
+	get_parent().button_options[0] = randomList[0]
 	randomList.pop_front()
-	get_parent().button2 = randomList[0]
+	get_parent().button_options[1] = randomList[0]
 	randomList.pop_front()
-	get_parent().button3 = randomList[0]
+	get_parent().button_options[2] = randomList[0]
 	randomList.pop_front()
-	pass

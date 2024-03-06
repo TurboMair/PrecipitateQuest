@@ -1,61 +1,31 @@
 [gd_scene load_steps=522 format=3 uid="uid://crpxmt80bemi8"]
 
-[ext_resource type="Texture2D" uid="uid://cvcthda2ktkkl" path="res://Player/player_sprites/walk/char1_walk.png" id="1_pwk0t"]
-[ext_resource type="Texture2D" uid="uid://ba2n4x87yjmpc" path="res://Player/player_sprites/walk/char2_walk.png" id="2_gdphp"]
-[ext_resource type="Texture2D" uid="uid://dk1iocc8p3264" path="res://Player/player_sprites/walk/char3_walk.png" id="3_bt7ed"]
-[ext_resource type="Texture2D" uid="uid://bh5fl7dlttqnb" path="res://Player/player_sprites/walk/char5_walk.png" id="4_t2go0"]
-[ext_resource type="Texture2D" uid="uid://dadhlff2bpbgo" path="res://Player/player_sprites/walk/char6_walk.png" id="5_wae38"]
-[ext_resource type="Texture2D" uid="uid://dthsw20l11ujf" path="res://Player/player_sprites/walk/char7_walk.png" id="6_bhnfp"]
-[ext_resource type="Texture2D" uid="uid://cf7vc27w8qlyt" path="res://Player/player_sprites/walk/char8_walk.png" id="7_6gege"]
-[ext_resource type="Texture2D" uid="uid://cf25gbm6qlhqp" path="res://Player/player_sprites/walk/char4_walk.png" id="8_bfjif"]
-[ext_resource type="Texture2D" uid="uid://lx3simcutwtb" path="res://Player/player_sprites/water/char4_water (1).png" id="9_ve2c0"]
-[ext_resource type="Texture2D" uid="uid://cv5cy1a1t8okp" path="res://Player/player_sprites/walk/eyes/eyes_walk.png" id="10_oosyx"]
-[ext_resource type="Texture2D" uid="uid://buae11i5r4q6e" path="res://Player/player_sprites/water/eyes/eyes_water.png" id="11_ujy26"]
-[ext_resource type="Texture2D" uid="uid://unfvoxkrv6o2" path="res://Player/player_sprites/walk/clothes/basic_walk.png" id="12_j1jqp"]
-[ext_resource type="Texture2D" uid="uid://fo3qkxo3qtiq" path="res://Player/player_sprites/walk/clothes/clown_walk.png" id="13_1dtmq"]
-[ext_resource type="Texture2D" uid="uid://dg1pl8pu5imxp" path="res://Player/player_sprites/walk/clothes/pumpkin_walk.png" id="14_hj4rp"]
-[ext_resource type="Texture2D" uid="uid://c8uap7oi5f1ji" path="res://Player/player_sprites/walk/clothes/spooky_walk.png" id="15_vucsa"]
-[ext_resource type="Texture2D" uid="uid://brh81sgi3olxh" path="res://Player/player_sprites/walk/clothes/sporty_walk.png" id="16_ioepy"]
-[ext_resource type="Texture2D" uid="uid://bq4wtffmouc8q" path="res://Player/player_sprites/walk/clothes/suit_walk.png" id="17_nr3r1"]
-[ext_resource type="Texture2D" uid="uid://bfehpr1ux1j34" path="res://Player/player_sprites/walk/clothes/witch_walk.png" id="18_hhmlj"]
-[ext_resource type="Texture2D" uid="uid://ddgd66fws7x6c" path="res://Player/player_sprites/water/basic_water.png" id="19_w4e6v"]
-[ext_resource type="Texture2D" uid="uid://bb7776hctjkkw" path="res://Player/player_sprites/walk/clothes/pants_walk.png" id="20_jd76i"]
-[ext_resource type="Texture2D" uid="uid://c4tnb5i5r1gjf" path="res://Player/player_sprites/water/clothes/pants_water.png" id="21_t2lbq"]
-[ext_resource type="Texture2D" uid="uid://cy3kfxnq3ojv4" path="res://Player/player_sprites/walk/hair/emo_walk.png" id="22_y3gsq"]
-[ext_resource type="Texture2D" uid="uid://7hb618qgxnkp" path="res://Player/player_sprites/water/hair/emo_water.png" id="23_riaei"]
-[ext_resource type="AudioStream" uid="uid://k5xoyosmhlvb" path="res://Audio/9RLYMKT-splash.mp3" id="24_8tuft"]
-[ext_resource type="AudioStream" uid="uid://b48s6t355u3s0" path="res://Audio/concrete-footsteps-6752.mp3" id="25_kjwk1"]
-
-[sub_resource type="GDScript" id="GDScript_r2cud"]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func switch_animation(motion):
-	$Character.play(motion)
-	$Eyes.play(motion)
-	$Clothes.play(motion)
-	$Pants.play(motion)
-	$Hair.play(motion)
-
-func _on_button_pressed():
-	switch_animation(\"water\")
-	get_tree().call_group(\"phial_throw_triggers\",\"throw_phial\")
-	$Splash.play()
-
-
-func _walk():
-	switch_animation(\"walk\")
-"
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_evp2w"]
+[ext_resource type="Texture2D" uid="uid://dixh534dev3g0" path="res://Assets/player_sprites/walk/char1_walk.png" id="1_pwk0t"]
+[ext_resource type="Texture2D" uid="uid://b365m46leodbi" path="res://Assets/player_sprites/walk/char2_walk.png" id="2_gdphp"]
+[ext_resource type="Texture2D" uid="uid://cr7dl11v5icld" path="res://Assets/player_sprites/walk/char3_walk.png" id="3_bt7ed"]
+[ext_resource type="Texture2D" uid="uid://g8l3ma66djmk" path="res://Assets/player_sprites/walk/char5_walk.png" id="4_t2go0"]
+[ext_resource type="Texture2D" uid="uid://cuoq51hht3mfr" path="res://Assets/player_sprites/walk/char6_walk.png" id="5_wae38"]
+[ext_resource type="Texture2D" uid="uid://dgvoasm7y02ng" path="res://Assets/player_sprites/walk/char7_walk.png" id="6_bhnfp"]
+[ext_resource type="Texture2D" uid="uid://cxlecgkpo3ssw" path="res://Assets/player_sprites/walk/char8_walk.png" id="7_6gege"]
+[ext_resource type="Texture2D" uid="uid://bnkeb4svyhq5x" path="res://Assets/player_sprites/walk/char4_walk.png" id="8_bfjif"]
+[ext_resource type="Texture2D" uid="uid://dh5tb5e7dmq58" path="res://Assets/player_sprites/water/char4_water (1).png" id="9_ve2c0"]
+[ext_resource type="Texture2D" uid="uid://bkhxt28tro35x" path="res://Assets/player_sprites/walk/eyes/eyes_walk.png" id="10_oosyx"]
+[ext_resource type="Texture2D" uid="uid://bgmpf5outm5pb" path="res://Assets/player_sprites/water/eyes/eyes_water.png" id="11_ujy26"]
+[ext_resource type="Texture2D" uid="uid://ddgbbmbr5015c" path="res://Assets/player_sprites/walk/clothes/basic_walk.png" id="12_j1jqp"]
+[ext_resource type="Texture2D" uid="uid://de56eunb5qyv5" path="res://Assets/player_sprites/walk/clothes/clown_walk.png" id="13_1dtmq"]
+[ext_resource type="Texture2D" uid="uid://bgnmi6q523fq5" path="res://Assets/player_sprites/walk/clothes/pumpkin_walk.png" id="14_hj4rp"]
+[ext_resource type="Texture2D" uid="uid://clypikwn1ksyd" path="res://Assets/player_sprites/walk/clothes/spooky_walk.png" id="15_vucsa"]
+[ext_resource type="Texture2D" uid="uid://c5frjxfh2i6g5" path="res://Assets/player_sprites/walk/clothes/sporty_walk.png" id="16_ioepy"]
+[ext_resource type="Texture2D" uid="uid://dvjcd1htekb7v" path="res://Assets/player_sprites/walk/clothes/suit_walk.png" id="17_nr3r1"]
+[ext_resource type="Texture2D" uid="uid://dakfcn6g2ths1" path="res://Assets/player_sprites/walk/clothes/witch_walk.png" id="18_hhmlj"]
+[ext_resource type="Texture2D" uid="uid://cnhysn867insl" path="res://Assets/player_sprites/water/basic_water.png" id="19_w4e6v"]
+[ext_resource type="Texture2D" uid="uid://3n4lji850rox" path="res://Assets/player_sprites/walk/clothes/pants_walk.png" id="20_jd76i"]
+[ext_resource type="Texture2D" uid="uid://cm0b68rlbo4pe" path="res://Assets/player_sprites/water/clothes/pants_water.png" id="21_t2lbq"]
+[ext_resource type="Texture2D" uid="uid://fwoadddoga5f" path="res://Assets/player_sprites/walk/hair/emo_walk.png" id="22_y3gsq"]
+[ext_resource type="Texture2D" uid="uid://ki8f03cuy4mn" path="res://Assets/player_sprites/water/hair/emo_water.png" id="23_riaei"]
+[ext_resource type="AudioStream" uid="uid://dpxha78sdtiko" path="res://Assets/Audio/Splash.mp3" id="24_8tuft"]
+[ext_resource type="AudioStream" uid="uid://hbrl47jsgekd" path="res://Assets/Audio/Footsteps.mp3" id="25_kjwk1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aox80"]
 atlas = ExtResource("1_pwk0t")
@@ -3842,10 +3812,10 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Player" type="Node2D" groups=["phial_throw_triggers"]]
+[node name="Player" type="Node2D"]
 position = Vector2(105, 101)
 scale = Vector2(5, 5)
-script = SubResource("GDScript_r2cud")
+script = ExtResource("1_evp2w")
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_326uj")
@@ -3868,6 +3838,7 @@ sprite_frames = SubResource("SpriteFrames_jkgae")
 animation = &"water"
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 6.8
 offset_top = -17.8
 offset_right = 63.8
@@ -3876,6 +3847,7 @@ scale = Vector2(0.326503, 0.326248)
 text = "Water"
 
 [node name="Button2" type="Button" parent="."]
+visible = false
 offset_left = -17.2
 offset_top = -17.6
 offset_right = 41.8
