@@ -51,6 +51,7 @@ func throw_phial(puddle_key, phial_compound):
 		turn_puddle_solid(puddle_key)
 		print("correct")
 		startGameText()
+		
 		#update buttons and puddle
 	else:
 		handle_non_matching_compound()

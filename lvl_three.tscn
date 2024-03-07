@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://crpxmt80bemi8" path="res://Player/player.tscn" id="2_hvmx2"]
 [ext_resource type="PackedScene" uid="uid://coxtet87osx5h" path="res://HUD/hud.tscn" id="3_u4org"]
 
-[node name="lvlthree" type="Node"]
+[node name="lvlthree" type="Node" groups=["phial_throw_triggers"]]
 
-[node name="World3" parent="." instance=ExtResource("1_a24na")]
+[node name="World3" parent="." groups=["phial_throw_triggers"] instance=ExtResource("1_a24na")]
 
 [node name="Player" parent="." instance=ExtResource("2_hvmx2")]
 position = Vector2(81, 431)
 
-[node name="HUD" parent="." instance=ExtResource("3_u4org")]
+[node name="HUD" parent="." groups=["phial_throw_triggers"] instance=ExtResource("3_u4org")]

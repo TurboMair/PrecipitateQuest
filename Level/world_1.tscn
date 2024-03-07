@@ -1,9 +1,9 @@
 [gd_scene load_steps=33 format=3 uid="uid://bm5twet16p3gy"]
 
-[ext_resource type="Texture2D" path="res://Level/Background Assets/Sky_Blue.png" id="1_sos8g"]
-[ext_resource type="Texture2D" path="res://Level/Background Assets/vecteezy_mountain-clipart-design-illustration_9380801.png" id="2_76em3"]
+[ext_resource type="Texture2D" uid="uid://b6t6vva8xn1aw" path="res://Level/Background Assets/Sky_Blue.png" id="1_sos8g"]
+[ext_resource type="Texture2D" uid="uid://d4hxl8584xtyq" path="res://Level/Background Assets/vecteezy_mountain-clipart-design-illustration_9380801.png" id="2_76em3"]
 [ext_resource type="TileSet" uid="uid://64j66ierjs7n" path="res://Level/ground.tres" id="3_eli88"]
-[ext_resource type="Texture2D" path="res://Level/Godot Level Assets/puddle_splash.png" id="4_adpfc"]
+[ext_resource type="Texture2D" uid="uid://bslsrvttejxbt" path="res://Level/Godot Level Assets/puddle_splash.png" id="4_adpfc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qimto"]
 atlas = ExtResource("4_adpfc")

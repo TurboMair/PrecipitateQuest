@@ -11,4 +11,5 @@ func _process(delta):
 	pass
 
 func throw_phial():
+	
 	$Puddle.play("default")
