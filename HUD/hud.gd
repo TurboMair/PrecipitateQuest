@@ -14,6 +14,7 @@ func _ready():
 	science = $ScienceScript
 	science.startGameText()
 	updateText()
+	$Music.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -22,17 +23,11 @@ func _process(delta):
 
 func _on_pause_button_toggled(toggled_on):
 	if(toggled_on == true):
-		$Heart.hide()
-		$Heart2.hide()
-		$Heart3.hide()
 		$HelpButton.show()
 		$SoundButton.show()
 		$ExitButton.show()
 	
 	if(toggled_on == false):
-		$Heart.show()
-		$Heart2.show()
-		$Heart3.show()
 		$HelpButton.hide()
 		$SoundButton.hide()
 		$ExitButton.hide()
@@ -71,3 +66,11 @@ func _on_chem_button_3_pressed():
 
 func _on_exit_button_pressed():
 	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
+
+
+func _on_sound_button_toggled(toggled_on):
+	if(toggled_on == true):
+		$Music.stop()
+	
+	if(toggled_on == false):
+		$Music.play()

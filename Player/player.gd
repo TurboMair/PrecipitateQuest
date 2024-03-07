@@ -19,6 +19,7 @@ func switch_animation(motion):
 
 func _on_button_pressed():
 	switch_animation("water")
+	$Splash.play()
 
 
 func _walk():

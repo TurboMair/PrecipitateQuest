@@ -1,5 +1,7 @@
 extends Node
 
+var health = 3
+
 var correct_dict = {
 	"KCl":"Hg2(NO3)2",#problem 1
 	"Na2C2O4":"CaCl2", #problem 2
@@ -51,9 +53,29 @@ func throw_phial(puddle_key, phial_compound):
 		turn_puddle_solid(puddle_key)
 		print("correct")
 		#update buttons and puddle
+		$RewardSound.play()
 	else:
 		handle_non_matching_compound()
-		print("inccorect")
+		print("incorrect")
+		health -= 1
+		match health:
+			0:
+				pass
+			1:
+				pass
+			2:
+				pass
+			_:
+				pass
+		
+		if(health == 2):
+			$Heart.hide()
+		
+		if(health == 1):
+			$Heart2.hide()
+		
+		if(health == 0):
+			$Heart3.hide()
 
 func turn_puddle_solid(puddle_key):
 	#implement the logic for turning the puddle solid

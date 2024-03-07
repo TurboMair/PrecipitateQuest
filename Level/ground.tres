@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://64j66ierjs7n"]
 
-[ext_resource type="Texture2D" uid="uid://dymyc202l6nde" path="res://Level/Godot Level Assets/Starter Tiles Platformer/BasicGreen.png" id="1_ff16w"]
+[ext_resource type="Texture2D" uid="uid://gktih6yx23er" path="res://Level/Godot Level Assets/Starter Tiles Platformer/BasicGreen.png" id="1_ff16w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dyre5"]
 resource_name = "grassy"
