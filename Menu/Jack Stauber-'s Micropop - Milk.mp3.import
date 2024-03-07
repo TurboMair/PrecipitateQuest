@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7t7hpss0iau3"
+path="res://.godot/imported/Jack Stauber-'s Micropop - Milk.mp3-053d0227d6ac5b9d6d28c6a85fc3f235.mp3str"
+
+[deps]
+
+source_file="res://Menu/Jack Stauber-'s Micropop - Milk.mp3"
+dest_files=["res://.godot/imported/Jack Stauber-'s Micropop - Milk.mp3-053d0227d6ac5b9d6d28c6a85fc3f235.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
