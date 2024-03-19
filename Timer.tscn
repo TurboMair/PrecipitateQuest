@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2a1wrb0872k2"]
+
+[ext_resource type="Script" path="res://timer.gd" id="1_ph1an"]
+[ext_resource type="FontFile" uid="uid://btli3b6yd5q6f" path="res://Menu/prstart.ttf" id="2_awj0l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r74ab"]
+font = ExtResource("2_awj0l")
+font_size = 36
+
+[node name="TimerModule" type="Node"]
+script = ExtResource("1_ph1an")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_r74ab")

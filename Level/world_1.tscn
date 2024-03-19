@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://realbnb6qq40" path="res://Level/Background Assets/Sky_Blue.png" id="1_sos8g"]
 [ext_resource type="Texture2D" uid="uid://blqse1bmhvqe5" path="res://Level/Background Assets/vecteezy_mountain-clipart-design-illustration_9380801.png" id="2_76em3"]
-[ext_resource type="TileSet" uid="uid://64j66ierjs7n" path="res://Level/ground.tres" id="3_eli88"]
+[ext_resource type="TileSet" uid="uid://d0l8ge3g5ayvg" path="res://Level/ground.tres" id="3_eli88"]
 
 [node name="World1" type="Node"]
 

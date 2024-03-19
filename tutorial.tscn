@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0kwnk47mcg2e"]
+[gd_scene load_steps=8 format=3 uid="uid://d0kwnk47mcg2e"]
 
-[ext_resource type="Texture2D" path="res://Level/Godot Level Assets/Starter Tiles Platformer/Swampset.png" id="1_evw47"]
+[ext_resource type="Texture2D" uid="uid://d0u8svmnjd7xw" path="res://Level/Godot Level Assets/Starter Tiles Platformer/Swampset.png" id="1_evw47"]
 [ext_resource type="PackedScene" uid="uid://b565oesslveuk" path="res://puddle.tscn" id="1_jule7"]
-[ext_resource type="PackedScene" path="res://Player/player.tscn" id="2_87qvg"]
-[ext_resource type="PackedScene" path="res://HUD/hud.tscn" id="3_tx0iq"]
+[ext_resource type="PackedScene" uid="uid://crpxmt80bemi8" path="res://Player/player.tscn" id="2_87qvg"]
+[ext_resource type="PackedScene" uid="uid://coxtet87osx5h" path="res://HUD/hud.tscn" id="3_tx0iq"]
+[ext_resource type="PackedScene" uid="uid://b2a1wrb0872k2" path="res://Timer.tscn" id="5_3n1er"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uru4b"]
 texture = ExtResource("1_evw47")
@@ -52,3 +53,5 @@ layer_0/tile_data = PackedInt32Array(589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 5
 position = Vector2(104, 368)
 
 [node name="HUD" parent="." instance=ExtResource("3_tx0iq")]
+
+[node name="TimerModule" parent="." instance=ExtResource("5_3n1er")]
