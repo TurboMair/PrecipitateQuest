@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b1it7ahgq5vw5"]
+[gd_scene load_steps=37 format=3 uid="uid://b5q2ngvxevsbc"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_twom0"]
 [ext_resource type="Texture2D" uid="uid://70q2cs74sk6m" path="res://Assets/Level/Background/Sky_Blue.png" id="2_js5eg"]
