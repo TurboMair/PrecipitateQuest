@@ -25,7 +25,8 @@ func _on_chem_button_pressed(button):
 
 func _on_pause_button_toggled(toggled_on):
 	$Pause.visible = toggled_on
-	$Health.visible = !toggled_on
+	$HealthBar.visible = !toggled_on
+	$ProgressBar.visible = !toggled_on
 
 func _on_help_button_toggled(toggled_on):
 	$Flasks.visible = !toggled_on

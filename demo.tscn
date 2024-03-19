@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccgidtxvhbv6u"]
+
+[ext_resource type="PackedScene" uid="uid://b5q2ngvxevsbc" path="res://Level/world.tscn" id="1_07mt2"]
+[ext_resource type="PackedScene" uid="uid://dptn4c8o16t6p" path="res://HUD/hud.tscn" id="2_4nghu"]
+[ext_resource type="PackedScene" uid="uid://crpxmt80bemi8" path="res://Player/player.tscn" id="3_aomi0"]
+
+[node name="Demo" type="Node2D" groups=["phial_throw_triggers"]]
+
+[node name="World1" parent="." instance=ExtResource("1_07mt2")]
+
+[node name="HUD" parent="." instance=ExtResource("2_4nghu")]
+
+[node name="Player" parent="." instance=ExtResource("3_aomi0")]
+position = Vector2(399, 359)
