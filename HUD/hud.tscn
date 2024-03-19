@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://coxtet87osx5h"]
+[gd_scene load_steps=18 format=3 uid="uid://coxtet87osx5h"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_xi2o5"]
 [ext_resource type="Texture2D" uid="uid://b6jjqnwxrx6qy" path="res://Assets/Heart.png" id="2_v6xko"]
@@ -12,7 +12,20 @@
 [ext_resource type="Script" path="res://Scripts/dictonaryLogic.gd" id="11_6gm85"]
 [ext_resource type="Texture2D" uid="uid://dn07w2hysgkgn" path="res://Assets/Flask.png" id="12_n6dbn"]
 [ext_resource type="FontFile" uid="uid://gwmqc2djh35x" path="res://Assets/VCR_OSD_MONO_1.001.ttf" id="13_b5v7w"]
+[ext_resource type="FontFile" uid="uid://dhmgxrust5hrw" path="res://HUD/BitFontMakrSporty.ttf" id="14_tb3uh"]
 [ext_resource type="Theme" uid="uid://drvafwbkqryds" path="res://HUD/flask_buttons.tres" id="14_x38cp"]
+[ext_resource type="Script" path="res://HUD/TextboxScript.gd" id="16_dkv1s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibdl1"]
+bg_color = Color(0.00800417, 0.00538258, 0.00125689, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.988235, 0.988235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc5tt"]
+bg_color = Color(0.0666667, 0.439216, 0.372549, 1)
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_xi2o5")
@@ -195,6 +208,71 @@ offset_right = 464.0
 offset_bottom = 536.0
 theme = ExtResource("14_x38cp")
 text = "Puddle"
+
+[node name="Textbox" type="CanvasLayer" parent="."]
+
+[node name="TextboxContainer" type="MarginContainer" parent="Textbox"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 531.0
+offset_top = -65.0
+offset_right = -28.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = -67
+theme_override_constants/margin_right = -16
+theme_override_constants/margin_bottom = -16
+
+[node name="Panel" type="Panel" parent="Textbox/TextboxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ibdl1")
+
+[node name="MarginContainer" type="MarginContainer" parent="Textbox/TextboxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="Textbox/TextboxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vc5tt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Textbox/TextboxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="Textbox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("14_tb3uh")
+theme_override_font_sizes/font_size = 30
+text = "*"
+
+[node name="Label" type="Label" parent="Textbox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("14_tb3uh")
+theme_override_font_sizes/font_size = 30
+text = "The placeholder text looks like this and it will cover and autowrap the container"
+autowrap_mode = 2
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="End" type="Label" parent="Textbox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("14_tb3uh")
+theme_override_font_sizes/font_size = 30
+text = "v"
+
+[node name="TextboxScript" type="Node" parent="Textbox"]
+script = ExtResource("16_dkv1s")
 
 [connection signal="pressed" from="Flasks/FlaskHolder/Option1" to="." method="_on_chem_button_pressed" binds= [0]]
 [connection signal="pressed" from="Flasks/FlaskHolder/Option2" to="." method="_on_chem_button_pressed" binds= [1]]

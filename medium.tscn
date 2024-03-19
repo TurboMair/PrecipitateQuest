@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b5q2ngvxevsbc" path="res://Level/tutorial_map.tscn" id="2_ikahl"]
 [ext_resource type="PackedScene" uid="uid://crpxmt80bemi8" path="res://Player/player.tscn" id="3_yb7xg"]
 
-[node name="Tutorial" type="Node" groups=["flask_reactions"]]
+[node name="Medium" type="Node" groups=["flask_reactions"]]
 
 [node name="HUD" parent="." instance=ExtResource("1_kth45")]
 
