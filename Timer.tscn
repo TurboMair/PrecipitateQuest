@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2a1wrb0872k2"]
 
-[ext_resource type="Script" path="res://timer.gd" id="1_ph1an"]
+[ext_resource type="Script" path="res://timeout.gd" id="1_bu0sf"]
 [ext_resource type="FontFile" uid="uid://by5qpc3wdwu25" path="res://Menu/prstart.ttf" id="2_awj0l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_r74ab"]
@@ -8,7 +8,11 @@ font = ExtResource("2_awj0l")
 font_size = 36
 
 [node name="TimerModule" type="Node"]
-script = ExtResource("1_ph1an")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+script = ExtResource("1_bu0sf")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -22,3 +26,5 @@ grow_horizontal = 2
 unique_name_in_owner = true
 layout_mode = 2
 label_settings = SubResource("LabelSettings_r74ab")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
