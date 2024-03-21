@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2a1wrb0872k2"]
 
 [ext_resource type="Script" path="res://timer.gd" id="1_ph1an"]
-[ext_resource type="FontFile" uid="uid://btli3b6yd5q6f" path="res://Menu/prstart.ttf" id="2_awj0l"]
+[ext_resource type="FontFile" uid="uid://by5qpc3wdwu25" path="res://Menu/prstart.ttf" id="2_awj0l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_r74ab"]
 font = ExtResource("2_awj0l")
