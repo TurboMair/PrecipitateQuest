@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://p8h41i8n3sd1"]
 
-[ext_resource type="PackedScene" path="res://Level/world_1.tscn" id="1_5tpy3"]
+[ext_resource type="PackedScene" uid="uid://bm5twet16p3gy" path="res://Level/world_1.tscn" id="1_5tpy3"]
 [ext_resource type="PackedScene" uid="uid://din7t4oy4je7i" path="res://Player/player.tscn" id="2_87qvg"]
 [ext_resource type="PackedScene" uid="uid://coxtet87osx5h" path="res://HUD/hud.tscn" id="3_tx0iq"]
 [ext_resource type="AudioStream" uid="uid://2boyhlh1krms" path="res://Audio/3W6P7VF-game-reward.mp3" id="4_iw5gc"]
