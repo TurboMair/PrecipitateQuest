@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://coxtet87osx5h"]
+[gd_scene load_steps=17 format=3 uid="uid://coxtet87osx5h"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_xi2o5"]
 [ext_resource type="Texture2D" uid="uid://b6jjqnwxrx6qy" path="res://Assets/Heart.png" id="2_v6xko"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://bn4ser8ntbvaw" path="res://Assets/Exit Button.png" id="10_f6u5e"]
 [ext_resource type="Script" path="res://Scripts/dictonaryLogic.gd" id="11_6gm85"]
 [ext_resource type="Texture2D" uid="uid://dn07w2hysgkgn" path="res://Assets/Flask.png" id="12_n6dbn"]
-[ext_resource type="FontFile" uid="uid://gwmqc2djh35x" path="res://Assets/VCR_OSD_MONO_1.001.ttf" id="13_b5v7w"]
 [ext_resource type="FontFile" uid="uid://dhmgxrust5hrw" path="res://HUD/BitFontMakrSporty.ttf" id="14_tb3uh"]
 [ext_resource type="Theme" uid="uid://8k5cu77fnhnr" path="res://HUD/flask_buttons.tres" id="14_x38cp"]
 [ext_resource type="Script" path="res://HUD/TextboxScript.gd" id="16_dkv1s"]
@@ -134,67 +133,6 @@ offset_right = 281.0
 offset_bottom = 129.0
 texture_normal = ExtResource("10_f6u5e")
 stretch_mode = 0
-
-[node name="ChemButton" type="TextureButton" parent="."]
-visible = false
-offset_left = 880.0
-offset_top = 90.0
-offset_right = 925.0
-offset_bottom = 154.0
-scale = Vector2(2, 2)
-texture_normal = ExtResource("12_n6dbn")
-
-[node name="Label" type="Label" parent="ChemButton"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 35.0
-offset_right = 44.0
-offset_bottom = 58.0
-theme_override_fonts/font = ExtResource("13_b5v7w")
-text = "H20"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ChemButton2" type="TextureButton" parent="."]
-visible = false
-offset_left = 990.0
-offset_top = 90.0
-offset_right = 1035.0
-offset_bottom = 154.0
-scale = Vector2(2, 2)
-texture_normal = ExtResource("12_n6dbn")
-
-[node name="Label" type="Label" parent="ChemButton2"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 35.0
-offset_right = 44.0
-offset_bottom = 58.0
-theme_override_fonts/font = ExtResource("13_b5v7w")
-text = "H20"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ChemButton3" type="TextureButton" parent="."]
-visible = false
-offset_left = 932.0
-offset_top = 235.0
-offset_right = 977.0
-offset_bottom = 299.0
-scale = Vector2(2, 2)
-texture_normal = ExtResource("12_n6dbn")
-
-[node name="Label" type="Label" parent="ChemButton3"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 35.0
-offset_right = 44.0
-offset_bottom = 58.0
-theme_override_fonts/font = ExtResource("13_b5v7w")
-text = "H20
-"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="ProgressBar" type="Sprite2D" parent="."]
 position = Vector2(421, 59)
