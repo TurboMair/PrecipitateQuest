@@ -35,7 +35,7 @@ metadata/_edit_horizontal_guides_ = [-1.0]
 [node name="ScienceScript" type="Node" parent="."]
 script = ExtResource("11_6gm85")
 
-[node name="Flasks" type="CanvasLayer" parent="."]
+[node name="Flasks" type="Sprite2D" parent="."]
 
 [node name="FlaskHolder" type="GridContainer" parent="Flasks"]
 texture_filter = 1
@@ -126,14 +126,6 @@ texture_normal = ExtResource("7_3kgfw")
 texture_pressed = ExtResource("8_wqc0t")
 stretch_mode = 0
 
-[node name="ExitButton" type="TextureButton" parent="Pause"]
-offset_left = 20.0
-offset_top = 13.0
-offset_right = 281.0
-offset_bottom = 129.0
-texture_normal = ExtResource("10_f6u5e")
-stretch_mode = 0
-
 [node name="ProgressBar" type="Sprite2D" parent="."]
 position = Vector2(421, 59)
 scale = Vector2(16, 8)
@@ -142,14 +134,15 @@ hframes = 3
 vframes = 15
 
 [node name="Puddle" type="Label" parent="."]
-offset_left = 326.0
+offset_left = 318.0
 offset_top = 500.0
-offset_right = 464.0
+offset_right = 456.0
 offset_bottom = 536.0
 theme = ExtResource("14_x38cp")
 text = "Puddle"
 
 [node name="Textbox" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TextboxContainer" type="MarginContainer" parent="Textbox"]
 anchors_preset = 12
@@ -214,9 +207,18 @@ text = "v"
 [node name="TextboxScript" type="Node" parent="Textbox"]
 script = ExtResource("16_dkv1s")
 
+[node name="ExitButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 281.0
+offset_bottom = 129.0
+texture_normal = ExtResource("10_f6u5e")
+stretch_mode = 0
+
 [connection signal="pressed" from="Flasks/FlaskHolder/Option1" to="." method="_on_chem_button_pressed" binds= [0]]
 [connection signal="pressed" from="Flasks/FlaskHolder/Option2" to="." method="_on_chem_button_pressed" binds= [1]]
 [connection signal="pressed" from="Flasks/FlaskHolder/Option3" to="." method="_on_chem_button_pressed" binds= [2]]
 [connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
 [connection signal="toggled" from="Pause/HelpButton" to="." method="_on_help_button_toggled"]
-[connection signal="pressed" from="Pause/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

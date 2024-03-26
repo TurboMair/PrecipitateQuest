@@ -3,10 +3,13 @@ extends CanvasLayer
 var button_options = ["","",""]
 var puddle = ""
 var curr_scene = ""
+var health_var = 3
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
 	curr_scene = get_tree().current_scene.name
+	if (curr_scene == "Tutorial"):
+		$Textbox.show()
 	$Pause.hide()
 	$ScienceScript.startGameText()
 	updateText()
@@ -25,12 +28,10 @@ func _on_chem_button_pressed(button):
 	if(curr_scene == "Tutorial"):
 		get_tree().call_group("flask_reactions", "flask_throw")
 		$ScienceScript.flask_throw(puddle, button_options[button])
-		get_tree().call_group("flask_reactions", "flask_throw")
-		$ScienceScript.flask_throw(puddle, button_options[button])
 		$Textbox/TextboxScript.update_dolphin_textbox(tutorial_dict["phial"])
 	else:		
 		#if textbox is active show hints
-		if ($Textbox/TextboxContainer.visible == true):
+		if ($PauseButton.button_pressed):
 			print("Disbaling throw function while hints are being shown")
 			#show_hints(hint_dict[puddle])
 		else:
@@ -38,17 +39,28 @@ func _on_chem_button_pressed(button):
 			get_tree().call_group("flask_reactions", "flask_throw")
 			$ScienceScript.flask_throw(puddle, button_options[button])
 
+func incorrect():
+	health_var -= 1
+	$Health.get_children()[health_var].hide()
+	if(health_var == 0):
+		_on_exit_button_pressed()
+
+func correct():
+	var tween : Tween = create_tween()
+	tween.tween_property($ProgressBar, "frame", 10, 1) 
+
 func _on_pause_button_toggled(toggled_on):
-	$Pause.visible = toggled_on
+	$ExitButton.visible = toggled_on
 	$Health.visible = !toggled_on
+	$ProgressBar.visible = !toggled_on
+	$Textbox.visible = toggled_on
 	if(curr_scene == "Tutorial"):
 		$Textbox/TextboxScript.update_dolphin_textbox(tutorial_dict["pause"])
 	else:
 		$Textbox/TextboxContainer.visible = toggled_on
-	$ProgressBar.visible = !toggled_on
-	if ($Textbox/TextboxContainer.visible):
-		$Textbox/TextboxScript.update_dolphin_textbox(hint_dict[puddle])
-		print(hint_dict[puddle])
+
+	$Textbox/TextboxScript.update_dolphin_textbox(hint_dict[puddle])
+	print(hint_dict[puddle])
 	if(curr_scene == "Tutorial"):
 		$Textbox/TextboxScript.update_dolphin_textbox(tutorial_dict["pause"])
 
