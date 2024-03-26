@@ -42,18 +42,26 @@ var problem_dict = {
 	"Na4PO4OH":["Ca(NO3)2", "NaOH", "KBr"],#17 ?
 	"Na4AsO4OH":["CuCl2", "KC2H3O2", "NaI"],#18 ?
 	"Cl2Hg(II)O6":["K2S", "KBr", "NaCl"], #19
-	 "Hg(I)(NO3)2": ["Na2CO3", "KClO4", "LiNO3"]#20
+	"Hg(I)(NO3)2": ["Na2CO3", "KClO4", "LiNO3"]#20
 	}
+
+var continue_walk = true
 #create a update_phial script to wipe old phials and replace with new text
 #Call this anytime the player clicks on the phial
 func throw_phial(puddle_key, phial_compound):
 	if phial_compound == correct_dict[puddle_key]:
 		turn_puddle_solid(puddle_key)
 		print("correct")
+		await get_tree().create_timer(1).timeout
+		get_tree().call_group("flask_reactions", "_walk")
+		get_tree().call_group("flask_reactions", "move_forward")
+		await get_tree().create_timer(2).timeout
+		get_tree().call_group("flask_reactions", "_stop")
+		
 		#update buttons and puddle
 	else:
 		handle_non_matching_compound()
-		print("inccorect")
+		print("incorrect")
 
 func turn_puddle_solid(puddle_key):
 	#implement the logic for turning the puddle solid

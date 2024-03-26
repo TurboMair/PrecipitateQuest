@@ -9,7 +9,13 @@ var sfxVolume = 1;
 func _ready():
 	background_music = $"background-music"
 	background_music.play()
+<<<<<<< Updated upstream
 	
+=======
+
+func _process(delta):
+	$background.scroll_offset.x -= 60*delta
+>>>>>>> Stashed changes
 	
 # --------------------------------------------------------------
 # Main Menu code
@@ -23,7 +29,6 @@ func _on_mainstart_btn_pressed():
 	$optionMenu.visible = false
 	$descMenu.visible = false
 	
-
 # Options Button - Go to the option
 func _on_mainoption_btn_pressed():
 	$"sound-effect".play()

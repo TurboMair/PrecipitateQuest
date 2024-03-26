@@ -985,8 +985,8 @@ scale = Vector2(2.95385, 2.84167)
 texture = ExtResource("2_s1j5r")
 
 [node name="option" type="Sprite2D" parent="optionMenu"]
-position = Vector2(896, -370.375)
-scale = Vector2(2.90625, 2.52832)
+position = Vector2(889.999, -365.5)
+scale = Vector2(2.90625, 2.04297)
 texture = ExtResource("6_3imrc")
 
 [node name="option-title" type="Label" parent="optionMenu"]
@@ -995,10 +995,10 @@ anchor_left = -7.81695
 anchor_top = -0.00139648
 anchor_right = -7.81695
 anchor_bottom = -0.00139646
-offset_left = 333.001
-offset_top = -564.005
-offset_right = 4163.0
-offset_bottom = -404.005
+offset_left = 316.0
+offset_top = -488.0
+offset_right = 4146.0
+offset_bottom = -328.0
 scale = Vector2(0.3, 0.3)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 50
@@ -1013,10 +1013,10 @@ anchor_left = -0.0902343
 anchor_top = -0.119834
 anchor_right = 0.218359
 anchor_bottom = -0.041707
-offset_left = 633.0
-offset_top = -493.005
-offset_right = 753.0
-offset_bottom = -443.005
+offset_left = 626.999
+offset_top = -412.005
+offset_right = 746.999
+offset_bottom = -362.005
 size_flags_vertical = 7
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -1031,10 +1031,10 @@ anchor_left = -0.171889
 anchor_top = -0.0879538
 anchor_right = -0.137164
 anchor_bottom = -0.0879538
-offset_left = 633.0
-offset_top = -424.005
-offset_right = 758.0
-offset_bottom = -391.005
+offset_left = 626.999
+offset_top = -343.005
+offset_right = 751.999
+offset_bottom = -310.005
 size_flags_vertical = 7
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -1049,10 +1049,10 @@ anchor_left = 0.00926275
 anchor_top = 0.111634
 anchor_right = 0.00926275
 anchor_bottom = 0.111634
-offset_left = 633.0
-offset_top = -364.005
-offset_right = 873.0
-offset_bottom = -333.005
+offset_left = 626.999
+offset_top = -283.005
+offset_right = 866.999
+offset_bottom = -252.005
 size_flags_vertical = 7
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -1067,10 +1067,10 @@ anchor_left = 0.358277
 anchor_top = 0.175481
 anchor_right = 0.358277
 anchor_bottom = 0.175483
-offset_left = 818.001
-offset_top = -500.005
-offset_right = 943.001
-offset_bottom = -455.005
+offset_left = 812.0
+offset_top = -419.005
+offset_right = 937.0
+offset_bottom = -374.005
 scale = Vector2(1.5, 1.5)
 size_flags_vertical = 2
 theme_override_icons/grabber = ExtResource("7_arfjf")
@@ -1087,11 +1087,18 @@ anchor_left = -0.0776288
 anchor_top = 0.157438
 anchor_right = -0.0776288
 anchor_bottom = 0.157438
+<<<<<<< Updated upstream
 offset_left = 818.0
 offset_top = -442.0
 offset_right = 943.0
 offset_bottom = -397.0
 rotation = -0.00117935
+=======
+offset_left = 812.0
+offset_top = -359.0
+offset_right = 937.0
+offset_bottom = -314.0
+>>>>>>> Stashed changes
 scale = Vector2(1.5, 1.5)
 size_flags_vertical = 2
 theme_override_icons/grabber = ExtResource("7_arfjf")
@@ -1108,10 +1115,10 @@ anchor_left = -0.0125587
 anchor_top = 0.091293
 anchor_right = -0.0125587
 anchor_bottom = 0.091293
-offset_left = 818.001
-offset_top = -383.0
-offset_right = 943.001
-offset_bottom = -338.0
+offset_left = 812.0
+offset_top = -302.0
+offset_right = 937.0
+offset_bottom = -257.0
 scale = Vector2(1.5, 1.5)
 size_flags_vertical = 2
 theme_override_icons/grabber = ExtResource("7_arfjf")
@@ -1123,25 +1130,32 @@ step = 0.001
 value = 1.0
 
 [node name="option-masterBox" type="CheckButton" parent="optionMenu"]
-offset_left = 1025.0
-offset_top = -485.0
-offset_right = 1069.0
-offset_bottom = -461.0
+offset_left = 1019.0
+offset_top = -404.0
+offset_right = 1063.0
+offset_bottom = -380.0
 scale = Vector2(1.5, 1.5)
 
 [node name="option-sfxBox" type="CheckButton" parent="optionMenu"]
-offset_left = 1024.0
-offset_top = -367.0
-offset_right = 1068.0
-offset_bottom = -343.0
+offset_left = 1018.0
+offset_top = -286.0
+offset_right = 1062.0
+offset_bottom = -262.0
 scale = Vector2(1.5, 1.5)
 theme = SubResource("Theme_dbaha")
 
 [node name="option-musicBox" type="CheckButton" parent="optionMenu"]
+<<<<<<< Updated upstream
 offset_left = 1025.0
 offset_top = -428.0
 offset_right = 1069.0
 offset_bottom = -404.0
+=======
+offset_left = 1019.0
+offset_top = -344.0
+offset_right = 1063.0
+offset_bottom = -320.0
+>>>>>>> Stashed changes
 scale = Vector2(1.5, 1.5)
 
 [node name="option-backBtn" type="TextureButton" parent="optionMenu"]
