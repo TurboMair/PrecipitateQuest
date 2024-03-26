@@ -10,7 +10,7 @@ font_size = 36
 [node name="TimerModule" type="Node"]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 300.0
 one_shot = true
 script = ExtResource("1_bu0sf")
 

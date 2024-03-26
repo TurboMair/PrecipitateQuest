@@ -2,7 +2,7 @@ extends Timer
 @onready var label = %Label
 
 var level_time = 0.0
-var start_level_msec = 5000.0
+var start_level_msec = 300000.0
 
 func _ready():
 	start()
