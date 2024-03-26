@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm5twet16p3gy"]
+[gd_scene load_steps=3 format=3 uid="uid://rim4flcsk77y"]
 
-[ext_resource type="Texture2D" uid="uid://cn4ojvpuo3sut" path="res://Level/Background Assets/Sky_Blue.png" id="1_sos8g"]
-[ext_resource type="Texture2D" uid="uid://cif5af81sfu07" path="res://Level/Background Assets/vecteezy_mountain-clipart-design-illustration_9380801.png" id="2_76em3"]
-[ext_resource type="TileSet" uid="uid://d0l8ge3g5ayvg" path="res://Level/ground.tres" id="3_eli88"]
-[ext_resource type="PackedScene" uid="uid://b2a1wrb0872k2" path="res://Timer.tscn" id="4_nli5e"]
+[ext_resource type="TileSet" uid="uid://64j66ierjs7n" path="res://Level/ground.tres" id="3_eli88"]
+[ext_resource type="PackedScene" uid="uid://ffs1j5xk4as5" path="res://Timer.tscn" id="4_nli5e"]
 
 [node name="World1" type="Node"]
 
@@ -15,7 +13,6 @@ motion_mirroring = Vector2(2048, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(4067.5, 363.5)
 scale = Vector2(7.9308, 1.3)
-texture = ExtResource("1_sos8g")
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 
@@ -26,7 +23,6 @@ motion_mirroring = Vector2(5412, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
 position = Vector2(2592, 255)
 scale = Vector2(0.534848, 0.257782)
-texture = ExtResource("2_76em3")
 
 [node name="Grassy" type="TileMap" parent="."]
 position = Vector2(0, -7)

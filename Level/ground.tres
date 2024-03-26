@@ -1,6 +1,6 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://d0l8ge3g5ayvg"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://64j66ierjs7n"]
 
-[ext_resource type="Texture2D" uid="uid://dlwom4d8miiv2" path="res://Assets/Level/Starter Tiles Platformer/BasicGreen.png" id="1_ff16w"]
+[ext_resource type="Texture2D" path="res://Assets/Level/Starter Tiles Platformer/BasicGreen.png" id="1_ff16w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dyre5"]
 resource_name = "grassy"

@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bshnutfl6bc0"]
+[gd_scene load_steps=5 format=3 uid="uid://bg1et6fqgdf8t"]
 
-[ext_resource type="PackedScene" uid="uid://bm5twet16p3gy" path="res://Level/world_1.tscn" id="1_11jnj"]
+[ext_resource type="PackedScene" uid="uid://rim4flcsk77y" path="res://Level/world_1.tscn" id="1_11jnj"]
 [ext_resource type="PackedScene" uid="uid://crpxmt80bemi8" path="res://Player/player.tscn" id="2_o44di"]
 [ext_resource type="PackedScene" uid="uid://coxtet87osx5h" path="res://HUD/hud.tscn" id="3_7fs3g"]
-[ext_resource type="PackedScene" uid="uid://b2a1wrb0872k2" path="res://Timer.tscn" id="4_u7sg4"]
+[ext_resource type="PackedScene" uid="uid://ffs1j5xk4as5" path="res://Timer.tscn" id="4_u7sg4"]
 
 [node name="LvlOne" type="Node"]
 
