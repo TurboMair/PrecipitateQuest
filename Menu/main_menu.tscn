@@ -1,21 +1,19 @@
-[gd_scene load_steps=29 format=3 uid="uid://3wst5lguyl3g"]
+[gd_scene load_steps=27 format=3 uid="uid://3wst5lguyl3g"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_a3tfa"]
-[ext_resource type="Texture2D" uid="uid://bg6tqg46vlhj2" path="res://Menu/background.png" id="1_gqkss"]
-[ext_resource type="Texture2D" uid="uid://cd7ty7a2xchk1" path="res://Menu/pixel_map.png" id="1_p3itc"]
+[ext_resource type="Texture2D" uid="uid://kepqbi0wvonk" path="res://Menu/background.png" id="1_gqkss"]
+[ext_resource type="Texture2D" uid="uid://jk7mghld1ktc" path="res://Menu/pixel_map.png" id="1_p3itc"]
 [ext_resource type="Shader" path="res://Menu/scroll.gdshader" id="2_adine"]
-[ext_resource type="Texture2D" uid="uid://0hy4bja3etmf" path="res://Menu/menu.png.png" id="2_s1j5r"]
-[ext_resource type="Texture2D" uid="uid://bl171p5fk2ohh" path="res://Menu/paper.png" id="3_xiavd"]
-[ext_resource type="Texture2D" uid="uid://bammg3p1cuyyi" path="res://Menu/option3.png" id="6_3imrc"]
-[ext_resource type="Texture2D" uid="uid://cxunbcbilvdm" path="res://Menu/grabber.png" id="7_arfjf"]
-[ext_resource type="FontFile" uid="uid://dqjbqt4p40xcl" path="res://Menu/prstartk.ttf" id="8_3w1oe"]
-[ext_resource type="Texture2D" uid="uid://do70old2d537" path="res://Menu/back-button.png" id="9_ewsxw"]
-[ext_resource type="FontFile" uid="uid://3bb8e7jke0gt" path="res://Menu/prstart.ttf" id="10_im8wy"]
-[ext_resource type="Texture2D" uid="uid://jddftvavwgn" path="res://Menu/hover-back-button.png" id="10_p53p0"]
-[ext_resource type="Texture2D" uid="uid://bq4v4xd7bfn2b" path="res://HUD/Tiny Wonder UI Free/Progress Bar.png" id="11_kdh7d"]
+[ext_resource type="Texture2D" uid="uid://0106sfskc4ir" path="res://Menu/menu.png.png" id="2_s1j5r"]
+[ext_resource type="Texture2D" uid="uid://dfldhnqw8y8jh" path="res://Menu/paper.png" id="3_xiavd"]
+[ext_resource type="Texture2D" uid="uid://s4aiodohknl2" path="res://Menu/grabber.png" id="7_arfjf"]
+[ext_resource type="FontFile" uid="uid://bncn0hydcllwy" path="res://Menu/prstartk.ttf" id="8_3w1oe"]
+[ext_resource type="Texture2D" uid="uid://vbsr61n236t7" path="res://Menu/back-button.png" id="9_ewsxw"]
+[ext_resource type="FontFile" uid="uid://d2nvdf3b5cdxw" path="res://Menu/prstart.ttf" id="10_im8wy"]
+[ext_resource type="Texture2D" uid="uid://cdscgofw0rvmc" path="res://Menu/hover-back-button.png" id="10_p53p0"]
 [ext_resource type="Theme" uid="uid://binb8tymyiycd" path="res://Menu/mainMenu-button.tres" id="13_kyqvf"]
-[ext_resource type="AudioStream" uid="uid://bk1uw88dqwk2u" path="res://Menu/BGM.mp3" id="14_iwete"]
-[ext_resource type="AudioStream" uid="uid://tappobeeknki" path="res://Menu/sound-effect.mp3" id="14_j7oga"]
+[ext_resource type="AudioStream" uid="uid://4duhybgfikuh" path="res://Menu/BGM.mp3" id="14_iwete"]
+[ext_resource type="AudioStream" uid="uid://ch6u5gcljmyu1" path="res://Menu/sound-effect.mp3" id="14_j7oga"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ob2h1"]
 shader = ExtResource("2_adine")
@@ -134,7 +132,6 @@ texture = ExtResource("2_s1j5r")
 [node name="option" type="Sprite2D" parent="optionMenu"]
 position = Vector2(896, -370.375)
 scale = Vector2(2.90625, 2.52832)
-texture = ExtResource("6_3imrc")
 
 [node name="option-title" type="Label" parent="optionMenu"]
 anchors_preset = -1
@@ -393,7 +390,6 @@ texture = ExtResource("1_p3itc")
 position = Vector2(160.53, -8.3141)
 rotation = -1.5708
 scale = Vector2(3.05396, -1.84844)
-texture = ExtResource("11_kdh7d")
 hframes = 3
 vframes = 15
 
