@@ -1,18 +1,16 @@
-[gd_scene load_steps=17 format=3 uid="uid://coxtet87osx5h"]
+[gd_scene load_steps=15 format=3 uid="uid://coxtet87osx5h"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_xi2o5"]
 [ext_resource type="Texture2D" uid="uid://b6jjqnwxrx6qy" path="res://Assets/Heart.png" id="2_v6xko"]
 [ext_resource type="Texture2D" uid="uid://che52yai5poi7" path="res://Assets/Pause.png" id="4_yp3ev"]
 [ext_resource type="Texture2D" uid="uid://dobemjowh6w3h" path="res://Assets/Play.png" id="5_a7d0l"]
-[ext_resource type="Texture2D" uid="uid://cruwekyplwdg" path="res://Assets/Help.png" id="6_o6m5u"]
-[ext_resource type="Texture2D" uid="uid://kofq1mk00u7y" path="res://Assets/Sound.png" id="7_3kgfw"]
-[ext_resource type="Texture2D" uid="uid://wart0d4v0sp6" path="res://Assets/Mute.png" id="8_wqc0t"]
 [ext_resource type="Texture2D" uid="uid://v2cf311wr38l" path="res://Assets/Progress Bar.png" id="9_biomo"]
 [ext_resource type="Texture2D" uid="uid://bn4ser8ntbvaw" path="res://Assets/Exit Button.png" id="10_f6u5e"]
 [ext_resource type="Script" path="res://Scripts/dictonaryLogic.gd" id="11_6gm85"]
 [ext_resource type="Texture2D" uid="uid://dn07w2hysgkgn" path="res://Assets/Flask.png" id="12_n6dbn"]
 [ext_resource type="FontFile" uid="uid://dhmgxrust5hrw" path="res://HUD/BitFontMakrSporty.ttf" id="14_tb3uh"]
 [ext_resource type="Theme" uid="uid://8k5cu77fnhnr" path="res://HUD/flask_buttons.tres" id="14_x38cp"]
+[ext_resource type="Theme" uid="uid://binb8tymyiycd" path="res://Menu/mainMenu-button.tres" id="15_qf2dj"]
 [ext_resource type="Script" path="res://HUD/TextboxScript.gd" id="16_dkv1s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibdl1"]
@@ -101,29 +99,6 @@ offset_bottom = 137.0
 toggle_mode = true
 texture_normal = ExtResource("4_yp3ev")
 texture_pressed = ExtResource("5_a7d0l")
-stretch_mode = 0
-
-[node name="Pause" type="CanvasLayer" parent="."]
-
-[node name="HelpButton" type="TextureButton" parent="Pause"]
-visible = false
-offset_left = 892.0
-offset_top = 13.0
-offset_right = 1006.0
-offset_bottom = 137.0
-toggle_mode = true
-texture_normal = ExtResource("6_o6m5u")
-stretch_mode = 0
-
-[node name="SoundButton" type="TextureButton" parent="Pause"]
-visible = false
-offset_left = 753.0
-offset_top = 13.0
-offset_right = 871.0
-offset_bottom = 136.0
-toggle_mode = true
-texture_normal = ExtResource("7_3kgfw")
-texture_pressed = ExtResource("8_wqc0t")
 stretch_mode = 0
 
 [node name="ProgressBar" type="Sprite2D" parent="."]
@@ -216,9 +191,18 @@ offset_bottom = 129.0
 texture_normal = ExtResource("10_f6u5e")
 stretch_mode = 0
 
+[node name="Retry" type="Label" parent="."]
+visible = false
+offset_left = 206.0
+offset_top = 213.0
+offset_right = 988.0
+offset_bottom = 296.0
+theme = ExtResource("15_qf2dj")
+theme_override_font_sizes/font_size = 60
+text = "Sorry.. Try again next time!"
+
 [connection signal="pressed" from="Flasks/FlaskHolder/Option1" to="." method="_on_chem_button_pressed" binds= [0]]
 [connection signal="pressed" from="Flasks/FlaskHolder/Option2" to="." method="_on_chem_button_pressed" binds= [1]]
 [connection signal="pressed" from="Flasks/FlaskHolder/Option3" to="." method="_on_chem_button_pressed" binds= [2]]
 [connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
-[connection signal="toggled" from="Pause/HelpButton" to="." method="_on_help_button_toggled"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

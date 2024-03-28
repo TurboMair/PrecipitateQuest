@@ -523,7 +523,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -537,7 +537,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"water",
-"speed": 7.0
+"speed": 9.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auru8"]
@@ -1402,7 +1402,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1416,7 +1416,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"water",
-"speed": 7.0
+"speed": 9.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eovfs"]
@@ -3623,7 +3623,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -3637,7 +3637,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"water",
-"speed": 7.0
+"speed": 9.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0iudl"]
@@ -3709,7 +3709,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -3723,7 +3723,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"water",
-"speed": 7.0
+"speed": 9.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlsce"]
@@ -3795,7 +3795,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -3809,7 +3809,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"water",
-"speed": 7.0
+"speed": 9.0
 }]
 
 [node name="Player" type="Node2D"]
@@ -3835,7 +3835,7 @@ animation = &"walk"
 
 [node name="Hair" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jkgae")
-animation = &"water"
+animation = &"walk"
 
 [node name="Button" type="Button" parent="."]
 visible = false

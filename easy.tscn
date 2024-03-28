@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctxbc8rwdpxi"]
+[gd_scene load_steps=5 format=3 uid="uid://ctxbc8rwdpxi"]
 
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_6t605"]
 [ext_resource type="PackedScene" uid="uid://coxtet87osx5h" path="res://HUD/hud.tscn" id="1_wt0me"]
 [ext_resource type="PackedScene" uid="uid://cueq8k1t1rjye" path="res://Level/easy_map.tscn" id="3_ri8kg"]
 [ext_resource type="PackedScene" uid="uid://crpxmt80bemi8" path="res://Player/player.tscn" id="3_vm8ck"]
 
 [node name="Easy" type="Node" groups=["flask_reactions"]]
+script = ExtResource("1_6t605")
 
 [node name="HUD" parent="." instance=ExtResource("1_wt0me")]
 

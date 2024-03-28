@@ -7,6 +7,7 @@ func _process(delta):
 
 func flask_throw():
 	switch_animation("water")
+	await get_tree().create_timer(1).timeout
 	$Splash.play()
 
 func switch_animation(motion):
@@ -22,3 +23,11 @@ func _on_button_pressed():
 func _walk():
 	switch_animation("walk")
 	$Walk.play()
+
+func _stop():
+	$Walk.stop()
+	$Character.stop()
+	$Eyes.stop()
+	$Clothes.stop()
+	$Pants.stop()
+	$Hair.stop()

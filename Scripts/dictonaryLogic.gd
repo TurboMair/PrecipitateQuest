@@ -20,7 +20,7 @@ var correct_dict = {
 	"Na4PO4OH":"Ca(NO3)2",#17 ?
 	"Na4(AsO4)OH":"CuCl2",#18 ?
 	"Cl2Hg(II)O6": "K2S", #19
-	"Hg(I)(NO3)2": "NA2CO3"#20
+	"Hg(I)(NO3)2": "Na2CO3"#20
 	}
 var problem_dict = {
 	"KCl":["Hg2(NO3)2", "AgBr", "MgCO3"],#problem 1
@@ -48,40 +48,24 @@ var problem_dict = {
 #Call this anytime the player clicks on the phial
 func flask_throw(puddle_key, phial_compound):
 	if phial_compound == correct_dict[puddle_key]:
-		turn_puddle_solid(puddle_key)
+		get_parent().correct()
 		print("correct")
-		startGameText()
 		#update buttons and puddle
 	else:
-		handle_non_matching_compound()
+		get_parent().incorrect()
 		print("inccorect")
 
-func turn_puddle_solid(puddle_key):
-	get_parent().correct()
-	#implement the logic for turning the puddle solid
-	#change button text & puddle text Function call
-	#move background
-	#increase world index
-	return
-
-func handle_non_matching_compound():
-	get_parent().incorrect()
-	#respawn
-	#any other logic for invalid phial
-	return
-	
 func startGameText():
 	var randomIndex = randi() % problem_dict.size()
 	var randomKey = problem_dict.keys()[randomIndex]
 	var randomList = problem_dict[randomKey]
 	get_parent().puddle = randomKey
 	randomList.shuffle()
-	
-	if randomList.size() >= 3:
-		get_parent().button_options[0] = randomList.pop_front()
-		get_parent().button_options[1] = randomList.pop_front()
-		get_parent().button_options[2] = randomList.pop_front()
-	else:
-		print("Error: Not enough elements in the list associated with key:", randomKey)
-	
+	get_parent().button_options = randomList
+	#if randomList.size() >= 3:
+		#get_parent().button_options[0] = randomList.pop_front()
+		#get_parent().button_options[1] = randomList.pop_front()
+		#get_parent().button_options[2] = randomList.pop_front()
+	#else:
+		#print("Error: Not enough elements in the list associated with key:", randomKey)
 	get_parent().call("updateText")

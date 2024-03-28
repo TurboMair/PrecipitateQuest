@@ -4,13 +4,21 @@ var button_options = ["","",""]
 var puddle = ""
 var curr_scene = ""
 var health_var = 3
+var prog_jump = 0
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
 	curr_scene = get_tree().current_scene.name
-	if (curr_scene == "Tutorial"):
-		$Textbox.show()
-	$Pause.hide()
+	match curr_scene:
+		"Tutorial":
+			$Textbox.show()
+			prog_jump = 44
+		"Easy":
+			prog_jump = 15
+		"Medium":
+			prog_jump = 9
+		"Hard":
+			prog_jump = 5
 	$ScienceScript.startGameText()
 	updateText()
 
@@ -35,19 +43,51 @@ func _on_chem_button_pressed(button):
 			print("Disbaling throw function while hints are being shown")
 			#show_hints(hint_dict[puddle])
 		else:
+			$Flasks.hide()
 			#if textbox is inactive meaning player is playing, throw the chemical
 			get_tree().call_group("flask_reactions", "flask_throw")
 			$ScienceScript.flask_throw(puddle, button_options[button])
 
 func incorrect():
+	await get_tree().create_timer(2).timeout
 	health_var -= 1
 	$Health.get_children()[health_var].hide()
 	if(health_var == 0):
-		_on_exit_button_pressed()
+		$Flasks.hide()
+		$PauseButton.hide()
+		$Puddle.hide()
+		$ProgressBar.hide()
+		$Retry.show()
+		$ExitButton.show()
+	else:
+		$Flasks.show()
 
 func correct():
+	var prog_new = $ProgressBar.frame + prog_jump
+	await get_tree().create_timer(5).timeout
+	if(prog_new < 44 and curr_scene != "Hard"):
+		self.hide()
+		$ScienceScript.startGameText()
+		get_tree().call_group("flask_reactions", "_walk")
+		get_tree().call_group("flask_reactions", "move_forward")
+		await get_tree().create_timer(2).timeout
+		get_tree().call_group("flask_reactions", "_stop")
+		get_parent().question_number += 1
+		self.show()
 	var tween : Tween = create_tween()
-	tween.tween_property($ProgressBar, "frame", 10, 1) 
+	tween.tween_property($ProgressBar, "frame", prog_new, 2)
+	await tween.finished
+	$Flasks.show()
+	if(prog_new >= 44):
+		print("YES!")
+		match(curr_scene):
+			"Easy":
+				Global.pq_progress[0] = true
+			"Medium":
+				Global.pq_progress[1] = true
+			"Hard":
+				Global.pq_progress[2] = true
+		_on_exit_button_pressed()
 
 func _on_pause_button_toggled(toggled_on):
 	$ExitButton.visible = toggled_on
@@ -60,16 +100,15 @@ func _on_pause_button_toggled(toggled_on):
 		$Textbox/TextboxContainer.visible = toggled_on
 
 	$Textbox/TextboxScript.update_dolphin_textbox(hint_dict[puddle])
-	print(hint_dict[puddle])
 	if(curr_scene == "Tutorial"):
 		$Textbox/TextboxScript.update_dolphin_textbox(tutorial_dict["pause"])
 
-
-func _on_help_button_toggled(toggled_on):
-	$Flasks.visible = !toggled_on
-	$ProgressBar.visible = !toggled_on
-	$PauseButton.visible = !toggled_on
-	$Textbox/TextboxScript.update_dolphin_textbox(tutorial_dict["help"])
+#
+#func _on_help_button_toggled(toggled_on):
+	#$Flasks.visible = !toggled_on
+	#$ProgressBar.visible = !toggled_on
+	#$PauseButton.visible = !toggled_on
+	#$Textbox/TextboxScript.update_dolphin_textbox(tutorial_dict["help"])
 
 func _on_exit_button_pressed():
 	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")

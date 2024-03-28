@@ -186,7 +186,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -263,6 +263,8 @@ sprite_frames = SubResource("SpriteFrames_nolgw")
 position = Vector2(405, 345)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_upbi6")
+frame = 16
+frame_progress = 1.0
 
 [node name="Puddle2" type="AnimatedSprite2D" parent="."]
 position = Vector2(1550.4, 542.219)
