@@ -524,8 +524,14 @@ bus = &"sfx"
 [connection signal="pressed" from="optionMenu/option-backBtn" to="." method="_on_optionback_btn_pressed"]
 [connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_mapback_btn_pressed"]
 [connection signal="pressed" from="descMenu/desc/desc-backBtn" to="." method="_on_optionback_btn_pressed"]
+<<<<<<< Updated upstream
 [connection signal="pressed" from="mapMenu/map/map-easyBtn" to="." method="_on_mapeasy_btn_pressed"]
 [connection signal="pressed" from="mapMenu/map/map-mediumBtn" to="." method="_on_mapmedium_btn_pressed"]
 [connection signal="pressed" from="mapMenu/map/map-hardBtn" to="." method="_on_maphard_btn_pressed"]
+=======
+[connection signal="pressed" from="mapMenu/map/map-easyBtn" to="." method="_on_mapbtn_pressed" binds= ["easy"]]
+[connection signal="pressed" from="mapMenu/map/map-mediumBtn" to="." method="_on_mapbtn_pressed" binds= ["medium"]]
+[connection signal="pressed" from="mapMenu/map/map-hardBtn" to="." method="_on_mapbtn_pressed" binds= ["hard"]]
+>>>>>>> Stashed changes
 [connection signal="pressed" from="mapMenu/map/map-backBtn" to="." method="_on_mapback_btn_pressed"]
 [connection signal="pressed" from="mapMenu/map/map-tutorialBtn" to="." method="_on_maptutorial_btn_pressed"]
