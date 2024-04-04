@@ -2,6 +2,7 @@ extends Node
 
 var music_playing = true
 var background_music: AudioStreamPlayer2D
+@onready var button_order = ["mapMenu/map/map-easyBtn", "mapMenu/map/map-mediumBtn", "mapMenu/map/map-hardBtn"]
 
 func _ready():
 	background_music = $"background-music"
@@ -20,13 +21,9 @@ func _on_mainstart_btn_pressed():
 	$mainMenu.visible = false
 	$optionMenu.visible = false
 	$descMenu.visible = false
-	if(Global.pq_progress[0]):
-		$"mapMenu/map/map-easyBtn".add_theme_color_override("font_color", "Green")
-	if(Global.pq_progress[1]):
-		$"mapMenu/map/map-mediumBtn".add_theme_color_override("font_color", "Green")
-	if(Global.pq_progress[2]):
-		$"mapMenu/map/map-hardBtn".add_theme_color_override("font_color", "Green")
-	
+	for x in button_order.size():
+		if(Global.pq_progress[x]):
+			get_node(button_order[x]).add_theme_color_override("font_color", "Green")
 
 # Options Button - Go to the option
 func _on_mainoption_btn_pressed():

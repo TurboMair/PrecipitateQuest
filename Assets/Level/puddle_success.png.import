@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3t03kuy8gedp"
-path="res://.godot/imported/BasicGreenGrid.png-532551c6348fdff00fc8201511e6bb0a.ctex"
+uid="uid://comn55s0itvc2"
+path="res://.godot/imported/puddle_success.png-105763d84f6238f383e58dcb94bf2c48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Level/Starter Tiles Platformer/BasicGreenGrid.png"
-dest_files=["res://.godot/imported/BasicGreenGrid.png-532551c6348fdff00fc8201511e6bb0a.ctex"]
+source_file="res://Assets/Level/puddle_success.png"
+dest_files=["res://.godot/imported/puddle_success.png-105763d84f6238f383e58dcb94bf2c48.ctex"]
 
 [params]
 

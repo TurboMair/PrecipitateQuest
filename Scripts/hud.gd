@@ -40,7 +40,7 @@ func _on_chem_button_pressed(button):
 	else:		
 		#if textbox is active show hints
 		if ($PauseButton.button_pressed):
-			print("Disbaling throw function while hints are being shown")
+			print("Disabling throw function while hints are being shown")
 			#show_hints(hint_dict[puddle])
 		else:
 			$Flasks.hide()
@@ -64,7 +64,9 @@ func incorrect():
 
 func correct():
 	var prog_new = $ProgressBar.frame + prog_jump
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(2).timeout
+	get_tree().call_group("flask_reactions", "success")
+	await get_tree().create_timer(3).timeout
 	if(prog_new < 44 and curr_scene != "Hard"):
 		self.hide()
 		$ScienceScript.startGameText()
@@ -83,11 +85,13 @@ func correct():
 		match(curr_scene):
 			"Easy":
 				Global.pq_progress[0] = true
+				_on_exit_button_pressed()
 			"Medium":
 				Global.pq_progress[1] = true
+				_on_exit_button_pressed()
 			"Hard":
 				Global.pq_progress[2] = true
-		_on_exit_button_pressed()
+				_on_exit_button_pressed()
 
 func _on_pause_button_toggled(toggled_on):
 	$ExitButton.visible = toggled_on

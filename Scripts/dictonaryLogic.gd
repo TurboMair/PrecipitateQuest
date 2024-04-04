@@ -53,7 +53,7 @@ func flask_throw(puddle_key, phial_compound):
 		#update buttons and puddle
 	else:
 		get_parent().incorrect()
-		print("inccorect")
+		print("incorrect")
 
 func startGameText():
 	var randomIndex = randi() % problem_dict.size()

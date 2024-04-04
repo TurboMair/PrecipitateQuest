@@ -11,7 +11,7 @@
 [ext_resource type="FontFile" uid="uid://dhmgxrust5hrw" path="res://HUD/BitFontMakrSporty.ttf" id="14_tb3uh"]
 [ext_resource type="Theme" uid="uid://8k5cu77fnhnr" path="res://HUD/flask_buttons.tres" id="14_x38cp"]
 [ext_resource type="Theme" uid="uid://binb8tymyiycd" path="res://Menu/mainMenu-button.tres" id="15_qf2dj"]
-[ext_resource type="Script" path="res://HUD/TextboxScript.gd" id="16_dkv1s"]
+[ext_resource type="Script" path="res://Scripts/TextboxScript.gd" id="16_dkv1s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibdl1"]
 bg_color = Color(0.00800417, 0.00538258, 0.00125689, 1)
