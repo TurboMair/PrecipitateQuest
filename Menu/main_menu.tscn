@@ -169,8 +169,8 @@ metadata/_edit_use_anchors_ = true
 visible = false
 
 [node name="option" type="Sprite2D" parent="optionMenu"]
-position = Vector2(896, -370.375)
-scale = Vector2(2.90625, 2.52832)
+position = Vector2(877.999, -375.5)
+scale = Vector2(2.90625, 1.99609)
 texture = ExtResource("6_3imrc")
 
 [node name="option-title" type="Label" parent="optionMenu"]
@@ -179,10 +179,10 @@ anchor_left = -7.81695
 anchor_top = -0.00139648
 anchor_right = -7.81695
 anchor_bottom = -0.00139646
-offset_left = 333.001
-offset_top = -564.005
-offset_right = 4163.0
-offset_bottom = -404.005
+offset_left = 315.0
+offset_top = -491.005
+offset_right = 4145.0
+offset_bottom = -331.005
 scale = Vector2(0.3, 0.3)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 50
@@ -197,10 +197,10 @@ anchor_left = -0.0902343
 anchor_top = -0.119834
 anchor_right = 0.218359
 anchor_bottom = -0.041707
-offset_left = 633.0
-offset_top = -493.005
-offset_right = 753.0
-offset_bottom = -443.005
+offset_left = 614.999
+offset_top = -420.005
+offset_right = 734.999
+offset_bottom = -370.005
 size_flags_vertical = 7
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -215,10 +215,10 @@ anchor_left = -0.171889
 anchor_top = -0.0879538
 anchor_right = -0.137164
 anchor_bottom = -0.0879538
-offset_left = 633.0
-offset_top = -424.005
-offset_right = 758.0
-offset_bottom = -391.005
+offset_left = 614.999
+offset_top = -351.005
+offset_right = 739.999
+offset_bottom = -318.005
 size_flags_vertical = 7
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -233,10 +233,10 @@ anchor_left = 0.00926275
 anchor_top = 0.111634
 anchor_right = 0.00926275
 anchor_bottom = 0.111634
-offset_left = 633.0
-offset_top = -364.005
-offset_right = 873.0
-offset_bottom = -333.005
+offset_left = 614.999
+offset_top = -291.005
+offset_right = 854.999
+offset_bottom = -260.005
 size_flags_vertical = 7
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -251,10 +251,10 @@ anchor_left = 0.358277
 anchor_top = 0.175481
 anchor_right = 0.358277
 anchor_bottom = 0.175483
-offset_left = 818.001
-offset_top = -500.005
-offset_right = 943.001
-offset_bottom = -455.005
+offset_left = 800.0
+offset_top = -427.005
+offset_right = 925.0
+offset_bottom = -382.005
 scale = Vector2(1.5, 1.5)
 size_flags_vertical = 2
 theme_override_icons/grabber = ExtResource("7_arfjf")
@@ -271,10 +271,10 @@ anchor_left = -0.0776288
 anchor_top = 0.157438
 anchor_right = -0.0776288
 anchor_bottom = 0.157438
-offset_left = 818.001
-offset_top = -440.0
-offset_right = 943.001
-offset_bottom = -395.0
+offset_left = 800.0
+offset_top = -367.0
+offset_right = 925.0
+offset_bottom = -322.0
 scale = Vector2(1.5, 1.5)
 size_flags_vertical = 2
 theme_override_icons/grabber = ExtResource("7_arfjf")
@@ -291,10 +291,10 @@ anchor_left = -0.0125587
 anchor_top = 0.091293
 anchor_right = -0.0125587
 anchor_bottom = 0.091293
-offset_left = 818.001
-offset_top = -383.0
-offset_right = 943.001
-offset_bottom = -338.0
+offset_left = 800.0
+offset_top = -310.0
+offset_right = 925.0
+offset_bottom = -265.0
 scale = Vector2(1.5, 1.5)
 size_flags_vertical = 2
 theme_override_icons/grabber = ExtResource("7_arfjf")
@@ -306,24 +306,24 @@ step = 0.001
 value = 1.0
 
 [node name="option-masterBox" type="CheckButton" parent="optionMenu"]
-offset_left = 1025.0
-offset_top = -485.0
-offset_right = 1069.0
-offset_bottom = -461.0
+offset_left = 1007.0
+offset_top = -412.0
+offset_right = 1051.0
+offset_bottom = -388.0
 scale = Vector2(1.5, 1.5)
 
 [node name="option-sfxBox" type="CheckButton" parent="optionMenu"]
-offset_left = 1024.0
-offset_top = -367.0
-offset_right = 1068.0
-offset_bottom = -343.0
+offset_left = 1006.0
+offset_top = -294.0
+offset_right = 1050.0
+offset_bottom = -270.0
 scale = Vector2(1.5, 1.5)
 
 [node name="option-musicBox" type="CheckButton" parent="optionMenu"]
-offset_left = 1025.0
-offset_top = -425.0
-offset_right = 1069.0
-offset_bottom = -401.0
+offset_left = 1007.0
+offset_top = -352.0
+offset_right = 1051.0
+offset_bottom = -328.0
 scale = Vector2(1.5, 1.5)
 
 [node name="option-backBtn" type="TextureButton" parent="optionMenu"]
@@ -550,8 +550,8 @@ stream = ExtResource("14_j7oga")
 
 [connection signal="pressed" from="mainMenu/main-startBtn" to="." method="_on_mainstart_btn_pressed"]
 [connection signal="pressed" from="mainMenu/main-optionBtn" to="." method="_on_mainoption_btn_pressed"]
-[connection signal="pressed" from="mainMenu/main-descBtn" to="." method="_on_maindesc_btn_pressed"]
 [connection signal="pressed" from="mainMenu/main-descBtn" to="." method="_on_mainexit_btn_pressed"]
+[connection signal="pressed" from="mainMenu/main-descBtn" to="." method="_on_maindesc_btn_pressed"]
 [connection signal="value_changed" from="optionMenu/option-masterSlider" to="." method="_on_master_value_changed"]
 [connection signal="value_changed" from="optionMenu/option-musicSlider" to="." method="_on_music_value_changed"]
 [connection signal="value_changed" from="optionMenu/option-sfxSlider" to="." method="_on_sfx_value_changed"]
