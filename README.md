@@ -1,4 +1,4 @@
-# ![Game Icon](Icon.png) Precipitate Quest 
+# ![Game Icon](pq/icon.png) Precipitate Quest 
 ## Description
 
 Precipitate Quest is a point and click game that teaches students about precipitate reactions. The game features levels of varying difficulty, each designed to help students understand how to read a solubility chart and figure out what combinations of chemicals will cause precipitate reactions.
