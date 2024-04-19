@@ -9,7 +9,7 @@ The aim of this game is to help students understand how to read a solubility cha
 
 ## Gameplay
 
-The game is played through itch.io https://turbomair.itch.io/precipitate-quest. It involves a precipitation reaction, which is an exchange reaction with two soluble ionic compounds. An example of this is removing ions from the environment such as Pb2+.
+The game is played through itch.io https://turbomair.itch.io/precipitate-quest, or by installing the .exe and .pkg files on the release tab here. It involves a precipitation reaction, which is an exchange reaction with two soluble ionic compounds. An example of this is removing ions from the environment such as Pb2+.
 
 ## Screenshots
 
