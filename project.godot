@@ -13,7 +13,7 @@ config_version=5
 config/name="Precipitate Quest"
 run/main_scene="res://pq/Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-boot_splash/bg_color=Color(0.564706, 0.678431, 0.756863, 1)
+boot_splash/bg_color=Color(0.407843, 1, 0.886275, 1)
 boot_splash/image="res://pq/icon.png"
 config/icon="res://pq/icon.png"
 
