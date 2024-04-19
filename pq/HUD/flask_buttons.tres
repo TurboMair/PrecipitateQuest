@@ -1,0 +1,37 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://8k5cu77fnhnr"]
+
+[ext_resource type="FontFile" uid="uid://gwmqc2djh35x" path="res://pq/Assets/VCR_OSD_MONO_1.001.ttf" id="1_ctyhk"]
+[ext_resource type="Texture2D" uid="uid://c658ndgqjf186" path="res://pq/Assets/Flask_btn.png" id="2_1t3nu"]
+[ext_resource type="Texture2D" uid="uid://disxb3dnpm7ir" path="res://pq/Assets/Flask_btn_pressed.png" id="3_hnf70"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ybphw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rvahi"]
+texture = ExtResource("2_1t3nu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2hcqq"]
+texture = ExtResource("2_1t3nu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_31rrv"]
+texture = ExtResource("3_hnf70")
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0.0352941, 0.192157, 0.121569, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_ctyhk")
+Button/styles/focus = SubResource("StyleBoxEmpty_ybphw")
+Button/styles/hover = SubResource("StyleBoxTexture_rvahi")
+Button/styles/normal = SubResource("StyleBoxTexture_2hcqq")
+Button/styles/pressed = SubResource("StyleBoxTexture_31rrv")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0.184314, 0.2, 0.282353, 0.568627)
+Label/constants/outline_size = 10
+Label/constants/shadow_offset_x = 5
+Label/constants/shadow_offset_y = 5
+Label/constants/shadow_outline_size = 15
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_ctyhk")

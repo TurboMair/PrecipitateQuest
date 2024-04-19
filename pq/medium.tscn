@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyslkgnd2jnvb"]
+
+[ext_resource type="PackedScene" uid="uid://coxtet87osx5h" path="res://pq/HUD/hud.tscn" id="1_kth45"]
+[ext_resource type="Script" path="res://pq/Scripts/level.gd" id="1_xo1q3"]
+[ext_resource type="PackedScene" uid="uid://crpxmt80bemi8" path="res://pq/Player/player.tscn" id="3_yb7xg"]
+[ext_resource type="PackedScene" uid="uid://cln5n67tv5iir" path="res://pq/Level/medium_map.tscn" id="4_f5quh"]
+
+[node name="Medium" type="Node" groups=["flask_reactions"]]
+script = ExtResource("1_xo1q3")
+
+[node name="HUD" parent="." instance=ExtResource("1_kth45")]
+
+[node name="Player" parent="." groups=["flask_reactions"] instance=ExtResource("3_yb7xg")]
+position = Vector2(151, 368)
+
+[node name="World" parent="." groups=["flask_reactions"] instance=ExtResource("4_f5quh")]

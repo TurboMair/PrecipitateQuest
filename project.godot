@@ -11,13 +11,19 @@ config_version=5
 [application]
 
 config/name="Precipitate Quest"
-run/main_scene="res://Menu/main_menu.tscn"
+run/main_scene="res://pq/Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://Icon.png"
+boot_splash/bg_color=Color(0.564706, 0.678431, 0.756863, 1)
+boot_splash/image="res://pq/icon.png"
+config/icon="res://pq/icon.png"
+
+[audio]
+
+buses/default_bus_layout="res://pq/default_bus_layout.tres"
 
 [autoload]
 
-Global="*res://global.gd"
+Global="*res://pq/global.gd"
 
 [display]
 
